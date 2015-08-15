@@ -6,6 +6,8 @@ categories: jailbreak tutorial
 ---
 Like me you're probably itching to get the latest iOS jailbreak on your iPhone, but alas! The newest jailbreaking software is written for ..._Windows only?!?_. Fret not. Regardless if you're using OSX or Ubuntu, if it can run Virtualbox you can still jailbreak your iPhone very easily.
 
+In this tutorial we're going to be using a Virtual Machine running on Virtualbox to perform the jailbreak. In order for your Windows Virtual Machine to be able to communicate to your physically plugged in iPhone, we're going to need to perform a few steps. Don't worry, no code needed.
+
 ## You'll need
 
 * [Virtualbox installed] on your computer (aka the "host machine")
