@@ -1,0 +1,12 @@
+# Site settings
+title: /home/pierce
+email: me@dylanjpierce.com
+description: > # this means to ignore newlines until "baseurl:"
+  Straight forward tutorials for tech minded people.
+baseurl: # the subpath of your site, e.g. /blog/
+url: "http://blog.dylanjpierce.com" # the base hostname & protocol for your site
+twitter_username: ctrlaltdylan
+github_username:  ctrlaltdylan
+
+# Build settings
+markdown: kramdown
