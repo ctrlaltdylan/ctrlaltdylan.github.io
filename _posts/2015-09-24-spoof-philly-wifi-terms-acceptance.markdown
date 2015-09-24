@@ -83,6 +83,6 @@ http://goo.gl/fVbtah
 
 That link will acknowledge you'd like to connect to the wifi network and you'll be that much closer to forgetting how uncomfortable these chairs are. 
 
-![Woo connected to interwebz!](https://en.wikipedia.org/wiki/MAC_address)
+![Woo connected to interwebz!](/assets/philly_airport/woo-connection.png)
 
 **TL;DR** If you find yourself unable to find the "Get Connected" button on the Philadephia Airport's wifi network portal page: visit this link: http://goo.gl/fVbtah
