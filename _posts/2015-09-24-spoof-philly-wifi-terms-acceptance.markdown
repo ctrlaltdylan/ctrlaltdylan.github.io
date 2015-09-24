@@ -12,7 +12,7 @@ You can't connect to the Philadelphia International Airport's free wifi because 
 
 You can refresh the page 100 times if you want to, that "Get Connected" button they claim is there will never appear. Trust me.
 
-> So with time to kill and no internet, let's take a deeper look into why that button isn't there and how to fix it.
+**So with time to kill and no internet, let's take a deeper look into why that button isn't there and how to fix it.**
 
 1. Open up the page's source code (⌘ + u)
 
@@ -20,7 +20,7 @@ You can refresh the page 100 times if you want to, that "Get Connected" button t
 
 ![No link or button found what so ever.](/assets/philly_airport/alleged-get-connected-button.png)
 
-    * There definitely isn't any button or link here to go to a URL to accept the terms and conditions. So we now know there's some fancy javascript that _should_ be creating this promotion box. My theory right now is that the javascript for that isn't working propery, and the code to render the mythical "Get Connected" button is somehow tied. Therefore, 2 heads and no stones so to speak.
+There definitely isn't any button or link here to go to a URL to accept the terms and conditions. So we now know there's some fancy javascript that _should_ be creating this promotion box. My theory right now is that the javascript for that isn't working propery, and the code to render the mythical "Get Connected" button is somehow tied. Therefore, 2 heads and no stones so to speak.
 
 3. Cool, so let's start going through the javascript files on the page and see if we can find anything related to generating the promotions on the page or the "Get Connected" button.
 
