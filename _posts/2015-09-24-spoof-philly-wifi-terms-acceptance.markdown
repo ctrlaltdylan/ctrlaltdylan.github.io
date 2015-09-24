@@ -28,7 +28,7 @@ There definitely isn't any button or link here to go to a URL to accept the term
 
 Ah ha! Found it: 
 
-```
+
     function showSvAd(activity,client){
     var promo = document.getElementById('promo');
     if (!activity) {
@@ -52,7 +52,6 @@ Ah ha! Found it:
         tall=$(document).height();
 
     });
-```
 
 So long story short on this function, the promotion should've rendered that button with a laptop graphic (just a hunch based off of the source of the link: `src='/graphics/aws/laptop/button_getconnected.png'` and the title of the link: `alt='Get Connected!'`)
 
