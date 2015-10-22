@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "How to actually get free wifi at Philadelphia Internation Airport."
+title:  "How to actually get free wifi at Philadelphia International Airport."
 date:   2015-09-24 14:09:39
 categories: web security
 ---

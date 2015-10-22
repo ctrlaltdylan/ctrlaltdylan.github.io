@@ -1,0 +1,3 @@
+module.exports = {
+	CHANGE_PERMISSION : 'CHANGE_PERMISSION',
+}
