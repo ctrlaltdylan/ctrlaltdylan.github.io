@@ -106,7 +106,7 @@ Now comes the fun parts. Ideally you want to have only one cord coming out of th
 
 Then all of the components fit nicely together with a bit of painters tape:
 
-![Cable management lol](/assets/mirrormirror/13_cable_management.jpg "Cable Management lol")
+![Cable management lol](/assets/mirrormirror/13_cable_management.jpg)
 
 Now you can supply power to both the monitor and raspberry pi with one cable. Simply hook up the raspberry pi to the monitor, and ethernet to your router. I won't go into super detail on how to install Raspian (the official linux distro of raspberry pi's) because it would do [this tutorial](https://www.raspberrypi.org/documentation/installation/installing-images/) a disservice.
 
@@ -179,9 +179,11 @@ ifup wlan0
 ```
 
 Don't worry if you see an obscure error, I did too. You can experiment to make sure your change worked by using 
+
 ```
 ifconfig
 ```
+
 If you're `wlan0` device has an assigned IP address you're free to disconnect the ethernet connection and install your backboard. I just used some cheap breadboard like material held against the back of the monitor with 4 screws halfway in.
 
 ![With backboard](/assets/mirrormirror/14_breadboard_added.jpg)
@@ -194,6 +196,7 @@ I decided to use the PHP micro-framework Lumen with some jQuery and MomentJs.
 
 ### Installing a web server
 In order to host the webpage you'll need to install a web server and to run Lumen you'll need php installed:
+
 ```
 sudo apt-get update
 sudo apt-get install nginx php5-fpm php5-cli php5-mcrypt git
@@ -204,6 +207,7 @@ That might take awhile, but once that completes you need to configure nginx to k
 sudo nano /etc/nginx/sites-available/mirror.conf
 ```
 And paste this configuration in:
+
 ```
 server {
     listen 80;
@@ -244,28 +248,38 @@ server {
     }
 }
 ```
+
 Now activate this configuration by running:
+
 ```
 sudo ln -s /etc/nginx/sites-available/mirror.conf /etc/nginx/sites-enabled/mirror.conf
 sudo service nginx reload
 ```
+
 You now have a php enabled web server running on your pi!
 
 ## Installing MirrorMirror
 This is the final step of the project, installing the actual web page. Make a folder `projects` inside of `/home/pi` and move into it:
+
 ```
 mkdir /home/pi/projects
 cd /home/pi/projects
 ```
+
 Clone the MirrorMirror web app with this command:
+
 ```
 git clone https://github.com/ctrlaltdylan/MirrorMirror.git
 ```
+
 Install Composer which will install Lumen's dependencies:
+
 ```
 curl -sS https://getcomposer.org/installer | sudo php -- --install-dir=/usr/local/bin --filename=composer
 ```
+
 And use composer into install Lumen's dependencies to get MirrorMirror up and running:
+
 ```
 cd MirrorMirror
 composer install
@@ -280,3 +294,5 @@ Current Features:
 * Displays a random greeting, currently there's only one but planning on adding more.
 
 There definitely needs to be more work to make this installation and customization process easier but I'm already thinking of ways to improve it. I hope you enjoy building/using your own magic mirror was much as I did mine!
+
+Big thank you to [Michael Teeuw](http://michaelteeuw.nl/post/84026273526/and-there-it-is-the-end-result-of-the-magic) for the original inspiration and documentation on the project.
