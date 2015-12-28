@@ -78,7 +78,7 @@ But another snag, originally the plan was to use a kreig jeg to make little pock
 
 Now I could just use some liquid nails at the joints and this tool would hold them for a few hours to let them dry. No screws required. My only regret is not buying two so I could get this part done twice as fast.
 
-[Frame building picture)(/assets/mirrormirror/8_building_frame.jpg)
+![Frame building picture](/assets/mirrormirror/8_building_frame.jpg)
 
 ## Attaching the frame to the case
 
@@ -125,10 +125,25 @@ You can google around yourself but these commands worked for me to install it:
 
 ```
 wget http://ftp.us.debian.org/debian/pool/main/libg/libgcrypt11/libgcrypt11_1.5.0-5+deb7u3_armhf.deb
+```
+
+```
 wget http://launchpadlibrarian.net/218525709/chromium-browser_45.0.2454.85-0ubuntu0.14.04.1.1097_armhf.deb
+```
+
+```
 wget http://launchpadlibrarian.net/218525711/chromium-codecs-ffmpeg-extra_45.0.2454.85-0ubuntu0.14.04.1.1097_armhf.deb
+```
+
+```
 sudo dpkg -i libgcrypt11_1.5.0-5+deb7u3_armhf.deb
+```
+
+```
 sudo dpkg -i chromium-codecs-ffmpeg-extra_45.0.2454.85-0ubuntu0.14.04.1.1097_armhf.deb
+```
+
+```
 sudo dpkg -i chromium-browser_45.0.2454.85-0ubuntu0.14.04.1.1097_armhf.deb
 ```
 
