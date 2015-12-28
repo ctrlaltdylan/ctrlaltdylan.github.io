@@ -168,7 +168,6 @@ And add the following lines:
 @xset s off
 @xset -dpms
 @xset s noblank
-
 /usr/bin/chromium --noerrdialogs --kiosk --incognito "http://localhost"
 ```
 
