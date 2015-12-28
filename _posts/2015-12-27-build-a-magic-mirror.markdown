@@ -136,14 +136,19 @@ sudo dpkg -i chromium-browser_45.0.2454.85-0ubuntu0.14.04.1.1097_armhf.deb
 Now that you have chromium installed, you can configure it to open on startup and in full screen mode:
 
 Open the autostart settings:
+
 ```
 sudo nano /etc/xdg/lxsession/LXDE-pi/autostart
 ```
+
 Disable the screensaver by adding a `#` in front of the line:
+
 ```
 @xscreensaver -no-splash
 ```
+
 And add the following lines:
+
 ```
 @xset s off
 @xset -dpms
@@ -151,6 +156,7 @@ And add the following lines:
 
 /usr/bin/chromium --noerrdialogs --kiosk --incognito "http://localhost"
 ```
+
 Exit and save.
 Now you've disabled the screensaver, disabled power management settings and have the chromium browser opening in kiosk mode on `localhost` on startup.
 
@@ -163,6 +169,7 @@ sudo nano /etc/network/interfaces
 ```
 
 And edit the network setting:
+
 ```
 network={
     ssid="Network name here"
@@ -201,11 +208,13 @@ In order to host the webpage you'll need to install a web server and to run Lume
 sudo apt-get update
 sudo apt-get install nginx php5-fpm php5-cli php5-mcrypt git
 ```
+
 That might take awhile, but once that completes you need to configure nginx to know where the MirrorMirror site is located:
 
 ```
 sudo nano /etc/nginx/sites-available/mirror.conf
 ```
+
 And paste this configuration in:
 
 ```
