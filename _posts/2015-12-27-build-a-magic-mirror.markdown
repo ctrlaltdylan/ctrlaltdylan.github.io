@@ -232,7 +232,7 @@ sudo nano /etc/nginx/sites-available/mirror.conf
 And paste the configuration in this gist:
 
 
-![mirror.conf](https://gist.github.com/ctrlaltdylan/18d78a608a3d81c964e7)
+[mirror.conf](https://gist.github.com/ctrlaltdylan/18d78a608a3d81c964e7)
 
 Save, and exit.
 
