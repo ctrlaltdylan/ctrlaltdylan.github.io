@@ -6,11 +6,14 @@ categories: raspberrypi magicmirror tutorial
 ---
 # MirrorMirror
 
+## Update
+I've created a forum at [mirrormirror.tech](http://mirrormirror.tech) for discussion and a place to get help if you're stuck. All new updates to this guide will be hosted there. Thank you!
+
 ### A Raspberry Pi powered Magic Mirror
 
 A magic mirror is a raspberry pi powered monitor behind a double sided mirror. A mostly black web page allows you to add some widgets to the mirror's reflection as if by magic. This version includes widgets for displaying the weather forecast, the date/time and a nice randomly generated greeting. No low level hardware hacking required, just some basic woodworking and some code I've already put together.
 
-![Pretty much done](/assets/mirrormirror/16_pretty_much_done.jpg)
+![Pretty much done](/assets/mirrormirror/16_pretty_much_done.png)
 
 
 ![Close up](/assets/mirrormirror/17_close_up.jpg)
