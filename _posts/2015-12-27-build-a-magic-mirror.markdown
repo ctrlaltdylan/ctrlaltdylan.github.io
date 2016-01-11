@@ -275,6 +275,12 @@ cd MirrorMirror
 composer install
 ```
 
+One last thing, nginx needs to be able to write/read files inside of the `storage` directory for the Lumen application to work.
+
+```
+sudo chmod -R 777 storage
+```
+
 Goto to `http://localhost` and you should see your version of Mirror Mirror up and running!
 
 Current Features:
