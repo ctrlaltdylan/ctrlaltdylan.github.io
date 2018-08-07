@@ -1,0 +1,115 @@
+---
+layout: post
+title:  "Building MirrorMirror"
+date:   2017-04-25 13:22:00
+categories: reactjs javascript tutorial
+---
+# You don't need to be a Facebook Engineer to Server Side Render a React App
+
+### Why bother with Server Side Rendering anyway?
+
+SSR (Server Side Rendering) React.js applications has been this dark art for awhile. Walmart recently talked about the benefits of SSR'ing their applications in a blog post but I'll paraphrase. React.js applications are rendered on the client's browser, so when the web crawlers at Google find your site, it's perceived that it's harder for Google to effectively crawl your site because the content and functionality aren't available till the React.js application is loaded and made it's API calls. If the initial state of the React application was rendered on the server's side before shipping out to the browser then web scrapers would not need to emulate a browser or wait to have the content they need for calculating your SEO worth. 
+
+Aside from the SEO benefits there are also performance benefits. Without server side rendering, your users will not have to wait for the bundled Javascript to execute on their browser and the roundtrip API call(s) needed to populate the app with the necessary data. Server side rendering essentially renders the initial state of the application *before* the user's browser just like how we did web apps before Javascript starting taking a larger role on the frontend with AJAX and SPA's.
+
+### ELI5 - Cool, so how exactly does SSR even work? Do you need to emulate a browser on the server side to create the HTML?
+
+Nope. You don't need jsdom or Phantomjs (RIP) or Selenium or the new headless Chrome to turn your React components into the pure HTML. There's a sparsely documented function in the ReactDOM package `renderToString()` that accepts a component and props to inject. In return it will happily give you the rendered HTML of the component. Pretty slick. Since this is in the ReactDOM library you will need to host this function on a Node server. However - this doesn't mean your PHP, Ruby, Python, whatever-language-fits-your-fancy server side application can't use this Node server to SSR your React. 
+
+### But I'm using PHP/Python/Ruby/Whatever as my backend, how can I execute ReactDOM.renderToString()?
+
+You will need to create a small Node server that will expose an HTTP endpoint. For example your Laravel application will ask this Node server for the rendered component through an API request. However, instead of the Node application sending a JSON object as a response it will send the HTML your client's browser so desparately needs.
+
+If you need to pass arguments (like ...props) to the React app, you can add it to the body of the request for the Node app to parse and pass to the `ReactDOM.renderToString()`
+
+In the tutorial below I'll show you how to create a small Node HTTP API that will host this React SSR jawn and be able to communicate with another server side application. 
+
+## Building your own SSR setup (that you can be proud of!)
+
+Ok, so you've decided to see what all of the hype is about. Let's break down the 3 pieces needed for this SSR dance.
+
+1. The Server - this is the Node application that's accepting a query for a certain React component with certain props. It will use `ReactDOM.renderToString()` to create the HTML partial and inject it into the full HTML response.
+2. The Client - this is your exisiting server side application. The Ruby community has `react-rails` so I'm going to do this with a PHP application
+3. The React Component (or full blown Application) - this is your exisiting React application. Our example is going to be pretty "Hello World"-y but you can pass in your own <App /> component.
+
+### Starting with the Server
+
+This is where all the meat and potatoes of SSR happens anyway; this guy is responsible for doing pretty much all of the work. We'll need to create a small HTTP server with node that exposes an endpoint we can ask it for HTML. You can follow these step by step with a new project or clone the github repository I have setup (https://github.com/ctrlaltdylan/react-ssr-example)
+
+### 1. Install dependencies 
+
+First things first, we're actually going to need to install React + React DOM + Webpack. 
+
+```
+  yarn add react react-dom webpack
+```
+
+### 2. Create a basic HTTP server
+
+Create a file in the root of the project named `ssr-server.js` and create the basic node server inside:
+
+```
+  var http = require('http'),
+      React = require('react'),
+      ReactDOMServer = require('react-dom/server')
+  ;
+
+
+  http.createServer(function(req, res) {
+
+      // We need to create some HTML to make the client's browser happy
+      var html = ` 
+        <!doctype html>
+          <html lang="en">
+          <head>
+            <meta charset="utf-8">
+            <title>This jawn has been rendered on the Server Side</title>
+          </head>
+          <body>
+            <div id="root"></div>
+          </body>
+        </html>
+      `;
+
+      // Return the page to the browser
+      // and don't forget to tell the client this is an HTML document
+      res.setHeader('Content-Type', 'text/html; charset=utf-8')
+      res.end(html);
+    
+  }).listen(8000, function(err) {
+    if (err) throw err
+    console.log('SSR server listening on port 8000 👂');
+  });
+```
+
+Pretty simple. We're just going to return and HTML document to the client. If you vist http://localhost:8000 you should see a blank page. Technically this is server side rendered but we need to add the React part to make this beyond a normal "Node Webserver 101" type tutorial.
+
+### 3. Create a React Component
+
+Create a new file within `/src/components` called `app.js`. We're just going to use a really dumbed down React component here but you can use your own component if you'd like.
+
+```
+  import React, { Component } from 'react';
+
+  // just a simple React component
+  const App = (props) => {
+    return (
+      <div>
+        <h1>Hey babe, take a walk on the server side</h1>
+      </div>
+    )
+  }
+
+```
+
+## 
+
+
+
+
+
+
+## Existing Open Source Solutions
+
+Unfortunately there are only a few off-the-shelf SSR rendering solutions out there in the running wild in the open source jungle. There's a Ruby gem that essentially hooks into the V8 Javascript runtime, used in (rails-react)[] making it dead simple to use this in Rails. There's also a PHP runtime released by Facebook itself, but it's documentation is already showing signs of rust and the only example I could find was a pre-ES6 example with some strange React syntax. 
+The most complete example and language agnostic solution I could find is from Airbnb, one of the leaders in the React.js ecosystem. They have has open sourced their SSR package dubbed "Hypernova". It claims to provide a client + server and common API for other languages to implement the client. There's even a 3rd party PHP client implementation that claims to consume the server component. However I've made my own SSR solution and I still find their interface confusing and wouldn't recommend it for beginners.
