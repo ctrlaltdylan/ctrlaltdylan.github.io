@@ -163,3 +163,107 @@ Three general methodologies:
 * Feature Construction
 * Mapping Data to a new Space
 
+## Similarity and Dissimiliarity
+
+### Similarity
+
+Numerical measure of how alike two data objects are
+Is high when objects are more alike
+Often falls in range [0,1]
+
+### Dissimilarity
+
+Numerical mesaure of how different 2 data objects are
+
+
+## Euclidean Distance
+
+A method of measuring dissimilarity
+
+## Cosine Similarity
+
+Used with documents and comparing document vectors. It's used to measure document simiarlity
+
+## Correlation
+
+Correlation measures the linear relationship between objects
+
+Standardize data objects (p & q) and then take their dot product
+
+Which gives a value from 1 to -1
+
+-1 is the strongest negative correlation
+
+1 is the strongest positive correlation
+
+## Data Exploration and Visualization
+
+What is data exploration?
+
+Visualization and calulation to better understand characteristics of data
+
+* Helping to select the right tool for preprocessing or analysis
+* Making use of human abilities to recognize patterns
+  * People can recognize patterns not captured by data analysis tools
+
+Related to the area of Exploratory Data Analysis (EDA)
+
+## Summary Statistics
+
+Numbers that usmmarize porperties of the data
+
+Examples:
+  * Frequency - counts
+  * Center - mean
+  * Spread - standard deviation
+
+## Frequency and Mode
+
+The frequency of an attribute value is a percentage measuring how often the value occurs in the data set
+
+Example: gender
+
+In a representative population of people 'Female' occurs about 50% of the time
+
+The mode of an attribute is the most frequent attribute value
+
+Both are typically used with categorical data
+
+## Percentiles
+
+For continous data, the notion of a percentile is more useful
+
+## Measures of Center: Mean & Median
+
+The mean is the most common measure of the center of a set of points
+  * Very sensitive to outliers
+
+The median or a tirmmed mean is also commonly used
+
+## Measures of Spread: Range & Variance
+
+Range is the difference between max and min
+
+Variance and standard deviation are the most common measure of the spread of a set of points
+
+These are senitive to outliers, other measure used in include:
+
+A low standard deviation suggests the spread of the data is low
+A high standard deviation suggests tthe spread of the data is high
+
+
+68% - 95% - 99.7%
+
+68% of all data in a set will be within 1 standard deviation
+
+## Representation
+
+The mapping of information to a visual format
+
+Histogram
+
+* Show the distribution of values of a single variable
+* Divide the values into bins
+* Count the frequency of distinct values
+
+
