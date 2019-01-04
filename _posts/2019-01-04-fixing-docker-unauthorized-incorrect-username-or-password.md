@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Fixing Docker error unauthorized: incorrect username or password"
+title: "Fixing Docker error unauthorized&#58; incorrect username or password"
 date: 2019-01-04 09:46 -0800
 ---
 
