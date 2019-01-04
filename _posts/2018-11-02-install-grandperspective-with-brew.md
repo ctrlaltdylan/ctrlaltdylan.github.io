@@ -19,7 +19,7 @@ After about 10 minutes of chugging along - poor Disk Inventory X couldn't handle
 
 ## Introducing GrandPerspective
 
-Apparently, while I was focusing on other tools and a newer competitior emerged on the market and it's eloquently named [GrandPerspective](http://grandperspectiv.sourceforge.net/).
+Apparently, while I was busy being gluttonous with my storage and a newer competitior emerged on the market and it's eloquently named [GrandPerspective](http://grandperspectiv.sourceforge.net/).
 
 ![GrandPerspective](http://grandperspectiv.sourceforge.net/ScreenShots/1_0-FoldersBujumbura.png "GrandPerspective")
 
