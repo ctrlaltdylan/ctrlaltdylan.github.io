@@ -19,7 +19,7 @@ A magic mirror is a raspberry pi powered monitor behind a double sided mirror. A
 ![Happy Happy](/assets/mirrormirror/18_happy_happy.jpg)
 
 ### What you'll need
-  - A monitor
+  - [A monitor](https://www.amazon.com/gp/product/B06XT58FMC/ref=as_li_tl?ie=UTF8&tag=dylanpierce-20&camp=1789&creative=9325&linkCode=as2&creativeASIN=B06XT58FMC&linkId=670c887c92519a9c178e62a286f7570a)
   - A double sided acryllic mirror fit to the size of the monitor
   - A few 2 x 4's to build a case around the monitor
   - Thin wood to build the forward facing mirror frame, I used 1/8 x 3' board
@@ -30,7 +30,7 @@ A magic mirror is a raspberry pi powered monitor behind a double sided mirror. A
 ## Choosing the monitor
 The size of the mirror is really dictated by the kind of monitor you get. I wanted to get something large as possible but also with a removeable arm so it could fit inside of a case. Another important aspect is making sure you get a monitor with the inputs towards the center of the monitor rather than the sides.
 
-I was cautious to get a monitor with it's inputs on the bottom or side because it would be hard to make the frame to fit and have the raspberry pi's HDMI cord also fit. I ended up picking the [BenQ GL2760H 27 inch monitor](http://www.amazon.com/BenQ-GL2760H-27-inch-LED-lit-Monitor/dp/B00IZBIMLK). Turned out perfect for the job.
+I was cautious to get a monitor with it's inputs on the bottom or side because it would be hard to make the frame to fit and have the raspberry pi's HDMI cord also fit. I ended up picking the [BenQ GW2760HL 27 inch monitor](https://www.amazon.com/gp/product/B06XT58FMC/ref=as_li_tl?ie=UTF8&tag=dylanpierce-20&camp=1789&creative=9325&linkCode=as2&creativeASIN=B06XT58FMC&linkId=670c887c92519a9c178e62a286f7570a). Turned out perfect for the job.
 
 ![Inputs are closer to the middle of the monitor](http://ecx.images-amazon.com/images/I/91ElqprbpeL._SL1500_.jpg "You'll want inputs closer to the middle of the monitor")
 
@@ -100,7 +100,7 @@ But volia! A mirror that allows light to shine through it. Right now that light 
 
 ## Installing the Raspberry Pi
 
-Now comes the fun parts. Ideally you want to have only one cord coming out of the bottom of the case to supply power. There are ways to splice power from a cord with electronics and soldering and all kinds of stuff...but me, I'm simple. I just bought a 2-way power splitter:
+Now comes the fun parts. Ideally you want to have only one cord coming out of the bottom of the case to supply power. There are ways to splice power from a cord with electronics and soldering and all kinds of stuff...but me, I'm simple. I just bought a [2-way power splitter](https://www.amazon.com/gp/product/B00FRODUR4/ref=as_li_tl?ie=UTF8&tag=dylanpierce-20&camp=1789&creative=9325&linkCode=as2&creativeASIN=B00FRODUR4&linkId=d324fbbe33c3e8219ff0cdf6e16ea627):
 
 ![Power cord splitter](http://ecx.images-amazon.com/images/I/41Mg6CLjRBL.jpg)
 
