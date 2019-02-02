@@ -24,7 +24,7 @@ A magic mirror is a raspberry pi powered monitor behind a double sided mirror. A
   - A few 2 x 4's to build a case around the monitor
   - Thin wood to build the forward facing mirror frame, I used 1/8 x 3' board
   - A raspberry pi and it's needed components, i.e. the power supply, HDMI cord, wifi usb dongle, and a keyboard for initial setup
-     - Or just buy a complete [CanaKit Raspberry Pi 3 kit](https://www.amazon.com/gp/product/B01C6EQNNK/ref=as_li_tl?ie=UTF8&tag=dylanpierce-20&camp=1789&creative=9325&linkCode=as2&creativeASIN=B01C6EQNNK&linkId=104b631bf9963e440aad89bc1d08466f) for convienence 
+     - Or just buy a complete [CanaKit Raspberry Pi 3 kit](https://www.amazon.com/gp/product/B01C6EQNNK/ref=as_li_tl?ie=UTF8&tag=dylanpierce-20&camp=1789&creative=9325&linkCode=as2&creativeASIN=B01C6EQNNK&linkId=104b631bf9963e440aad89bc1d08466f) for convienence so you don't have to buy individual parts.
   - Basic woodworking tools like a saw, sander, screwdriver
   - Screws, liquid nails
 
