@@ -5,7 +5,7 @@ gem "jekyll"
 
 require 'json'
 require 'open-uri'
-require 'pry'
+# require 'pry'
 versions = JSON.parse(open('https://pages.github.com/versions.json').read)
 # for drafting via cli
 gem 'jekyll-compose', group: [:jekyll_plugins]
