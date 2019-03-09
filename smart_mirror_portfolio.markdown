@@ -54,6 +54,14 @@ I also supplied the build list for the project and defined the technical require
 
 Source: <a href="https://www.imdb.com/name/nm9691948/?ref_=epc_pc">IMDB profile</a>
 
+### Gesture Control
+
+Smart Mirrors can also utilize a A.I. to track a user's movements. This allows the user to control the mirror with hand gestures.
+
+Below is a prototype showing how you can "swipe" left and right on the mirror's home screen:
+
+<iframe width="100%" height="515" src="https://www.youtube.com/embed/O_nIjyMHPKk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
 ## Remote Controls
 
 Smart Mirrors can be remotely controlled in real time, below is an example of a prototype with a web dashboard to drag and drop widgets onto the mirror.
