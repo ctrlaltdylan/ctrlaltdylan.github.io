@@ -64,7 +64,7 @@ However, the triggers could be based off voice or any other external event. Just
 
 ## Form Factors
 
-The mirrors can be built from Original Gameboy size all the way up to full wall width.
+The mirrors can be built from 12' x 12' size all the way up to encompass full walls. This technology is no limited by size!
 
 <div class="slick">
   <div>
