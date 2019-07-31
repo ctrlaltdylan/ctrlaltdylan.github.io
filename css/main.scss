@@ -9,8 +9,16 @@
 font-family: 'Gotham Book';
 font-style: normal;
 font-weight: normal;
-src: local('Gotham Book'), url('/assets/css/fonts/GothamBook.woff') format('woff');
+src: url("/assets/css/fonts/GothamBook.eot"); /* IE9 Compat Modes */
+src: url("/assets/css/fonts/GothamBook.eot?#iefix") format("embedded-opentype"), /* IE6-IE8 */
+    url("/assets/css/fonts/GothamBook.otf") format("opentype"), /* Open Type Font */
+    url("/assets/css/fonts/GothamBook.svg") format("svg"), /* Legacy iOS */
+    url("/assets/css/fonts/GothamBook.ttf") format("truetype"), /* Safari, Android, iOS */
+    url("/assets/css/fonts/GothamBook.woff") format("woff"), /* Modern Browsers */
+    url("/assets/css/fonts/GothamBook.woff2") format("woff2"); /* Modern Browsers */
 }
+
+
 
 @font-face {
 font-family: 'Gotham Black Regular';
