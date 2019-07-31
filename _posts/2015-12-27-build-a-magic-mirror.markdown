@@ -5,6 +5,7 @@ date:   2015-12-27 18:39:39
 category: raspberry-pi
 permalink: /raspberrypi/magicmirror/tutorial/2015/12/27/build-a-magic-mirror.html
 tag: raspberrypi magicmirror tutorial
+post_image: /assets/mirrormirror/happy_amy.jpg
 comments: true
 ---
 # MirrorMirror
