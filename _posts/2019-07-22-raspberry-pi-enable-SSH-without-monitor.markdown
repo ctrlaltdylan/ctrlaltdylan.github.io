@@ -1,8 +1,11 @@
 ---
 title: Enable SSH access on a Raspberry Pi without a Monitor or Keyboard
-categories: raspberry-pi
+category: raspberry-pi
+preview_image: '/assets/img/tunnel-preview.jpg'
+post_image: '/assets/img/tunnel-preview.jpg'
 layout: post
 date: '2019-07-22 12:57:34'
+excerpt: 'How to enable SSH access on a Rasberry Pi headlessly. No keyboard or mouse required.'
 ---
 
 Sometimes you just want to start a Raspberry Pi without plugging it into a monitor or keyword/mouse and you'd like to start it headless. This is super convienent if your Pi project doesn't necessarily require a monitor to function. I just learned this trick to enable SSH access on a Pi without having to plug it into a Monitor at all. It's awesome.

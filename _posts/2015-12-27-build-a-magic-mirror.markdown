@@ -2,7 +2,9 @@
 layout: post
 title:  "Building MirrorMirror"
 date:   2015-12-27 18:39:39
-categories: raspberrypi magicmirror tutorial
+category: raspberry-pi
+tag: raspberrypi magicmirror tutorial
+comments: true
 ---
 # MirrorMirror
 

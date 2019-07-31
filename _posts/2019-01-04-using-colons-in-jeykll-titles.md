@@ -2,6 +2,7 @@
 layout: post
 title: Using colons in Jeykll titles
 date: 2019-01-04 10:01 -0800
+category: jekyll
 ---
 
 ## Colons in Jekyll titles or front matter

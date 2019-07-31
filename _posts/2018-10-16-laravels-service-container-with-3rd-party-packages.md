@@ -2,7 +2,8 @@
 layout: post
 title:  How to use Laravel's Service Container with 3rd party packages
 date:   2018-10-16 18:39:39
-categories: tutorial laravel dependency-injection service-container
+category: laravel 
+tags: tutorial laravel dependency-injection service-container
 ---
 
 This is a pretty common scenario in day to day programming. You want to include an official 3rd party PHP package in your Laravel application. However, the API provider like Google Spreadsheets doesn't provide a Laravel PHP package.

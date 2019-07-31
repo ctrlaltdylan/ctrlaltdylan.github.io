@@ -1,7 +1,10 @@
 ---
 title: Find your Raspberry Pi's IP Address
 layout: post
+category: raspberry-pi
 date: '2019-07-22 12:57:34'
+preview_image: /assets/img/magnifying-glass-computer-preview.jpg
+post_image: /assets/img/magnifying-glass-computer.jpg
 ---
 
 Luckily it only takes 1 command to find your Raspberry Pi's IP address on your local network:

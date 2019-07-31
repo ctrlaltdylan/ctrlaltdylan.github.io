@@ -3,6 +3,7 @@ layout: post
 title:  How to install GrandPerspective with Brew
 date:   2018-11-02 18:39:39
 categories: tutorial
+category: mac
 ---
 
 Back in my day (circa early 2000's), we used this awesome tool called Disk Inventory X to peek into our limited hard drives to find old legally sourced .avi's that were chewing up valuable disk space.
