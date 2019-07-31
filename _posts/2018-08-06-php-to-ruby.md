@@ -2,7 +2,8 @@
 layout: post
 title:  PHP to Ruby
 date:   2018-08-06 18:39:39
-categories: tutorial php ruby
+category: learning
+tags: tutorial php ruby
 ---
 
 I'm super proud to annouce I've completed a project I've been working on for quite some time - [PHP to Ruby :: Learn Ruby through PHP Examples](https://phptoruby.io).

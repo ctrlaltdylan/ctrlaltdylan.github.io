@@ -2,7 +2,7 @@
 layout: post
 title:  DialogFlow first impressions
 date:   2018-10-17 18:39:39
-categories: service-review
+category: service-review
 ---
 
 Some background before I start my review of DialogFlow:

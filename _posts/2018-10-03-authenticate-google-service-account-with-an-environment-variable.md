@@ -2,7 +2,8 @@
 layout: post
 title:  Authenticate Google Service Account Credentials with an Environment Variable
 date:   2018-10-03 18:39:39
-categories: tutorial google google-api environment-variables
+tag: google-cloud
+category: tutorial google google-api environment-variables
 ---
 
 I can't believe I have to write a blog post on what is essentially Google breaking best practices for storing application configuration in 2018. But here we are.

@@ -2,6 +2,10 @@
 title: Add Wifi credentials to your Raspberry Pi without a montior and keyboard
 layout: post
 date: '2019-07-22 12:57:34'
+excerpt: How to connect a Raspberry Pi to Wifi headlessly. No keyboard or mouse required.
+preview_image: /assets/img/wifi-preview.jpg
+post_img: /assets/img/wifi.jpg
+category: raspberry-pi
 ---
 
 Sometimes you just want to enable Wifi on your Raspberry Pi without leaving your laptop or desktop. I get it.
