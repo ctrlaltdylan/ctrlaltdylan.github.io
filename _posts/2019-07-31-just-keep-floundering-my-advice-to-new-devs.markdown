@@ -2,7 +2,7 @@
 title: New developers - just keep flailing
 category: personal
 post_image: "/assets/img/rocket-launch.jpg"
-preview_image: "/assets/img/rocket-launch.jpg"
+preview_image: "/assets/img/rocket-launch-preview-square.jpg"
 layout: post
 ---
 
