@@ -1,5 +1,10 @@
-{% case category %}
-{% when raspberry-pi %}
+{% case include.category %}
+{% when 'personal' %}
+  <span class="badge" style="border: 1px solid black;">
+    <i class="fas fa-feather"></i>
+    Personal
+  </span>
+{% when 'raspberry-pi' %}
   <span class="badge rpi-purple">
     <i class="fab fa-raspberry-pi"></i>
     Raspberry Pi
