@@ -172,7 +172,8 @@ img.rounded {
     }
 
     img {
-      max-width: 500px;
+      width: 470px;
+      max-width: unset;
       height: 300px;
       object-fit: cover;
     }
