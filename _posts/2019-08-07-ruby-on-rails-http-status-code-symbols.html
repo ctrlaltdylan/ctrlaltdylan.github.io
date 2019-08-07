@@ -1,0 +1,301 @@
+---
+layout: post
+title:  "Rails HTTP Status Symbols"
+date:   2019-08-07 18:39:39
+category: ruby-on-rails
+comments: true
+---
+
+<p>
+  Below are the available Ruby on Rails symbols that correspond with HTTP statuses. These are used in controllers to let the client know how the their request performed.
+</p>
+<h2>Common Examples</h2>
+  <article>
+  <p>
+      <h3>200 JSON response</h3>
+  </p>
+  <p>
+      <code>
+        render json: { message: 'This request succeeded, sweet.' }, status: :ok
+      </code>
+  </p>
+</article>
+<article>
+  <p>
+      <h3>401 JSON response</h3>
+  </p>
+  <p>
+    <code>
+      render json: { message: 'Sorry, you can\'t do that.' }, status: :unauthorized
+    </code>
+
+  </p>
+</article>
+<article>
+<p>
+    <h3>500 JSON response</h3>
+</p>
+<p>
+    <code>
+      render json: { message: 'Whoops. Something back here is all sorts of broken.' }, status: :internal_server_error
+    </code>
+</p>
+<p>
+  Below is the complete list of statuses. If there are any missing or have changed since Rails v5 <a href="/contact" target="_blank">please let me know</a>
+</p>
+
+<h2>1xx Statuses</h2>
+<table>
+  <tr>
+    <td>100</td>
+    <td>:continue</td>
+  </tr>
+  <tr>
+    <td>101</td>
+    <td>:switching_protocols</td>
+  </tr>
+  <tr>
+    <td>102</td>
+    <td>:processing</td>
+  </tr>
+</table>
+
+<h2>2xx Statuses</h2>
+<table>
+  <tr>
+    <td>
+      200
+    <td>
+    <td>
+     :ok
+    </td>
+  </tr>
+  <tr>
+    <td>
+      201
+    <td>
+    <td>
+     :created
+    </td>
+  </tr>
+  <tr>
+    <td>
+      202
+    <td>
+    <td>
+     :accepted
+    </td>
+  </tr>
+  <tr>
+    <td>
+      203
+    <td>
+    <td>
+     :non_authoritative_information
+    </td>
+  </tr>
+  <tr>
+    <td>
+      204
+    <td>
+    <td>
+     :no_content
+    </td>
+  </tr>
+  <tr>
+    <td>
+      205
+    <td>
+    <td>
+     :reset_content
+    </td>
+  </tr>
+  <tr>
+    <td>
+      206
+    <td>
+    <td>
+     :partial_content
+    </td>
+  </tr>
+  <tr>
+    <td>
+      207
+    <td>
+    <td>
+     :multi_status
+    </td>
+  </tr>
+  <tr>
+    <td>
+      226
+    <td>
+    <td>
+     :im_used
+    </td>
+  </tr>
+</table>
+
+<h2>3xx Statuses</h2>
+<table>
+  <tr>
+    <td>300</td>
+    <td>:multiple_choices</td>
+  </tr>
+  <tr>
+    <td>301</td>
+    <td>:moved_permanently</td>
+  </tr>
+  <tr>
+    <td>302</td>
+    <td>:found</td>
+  </tr>
+  <tr>
+    <td>303</td>
+    <td>:see_other</td>
+  </tr>
+  <tr>
+    <td>304</td>
+    <td>:not_modified</td>
+  </tr>
+  <tr>
+    <td>305</td>
+    <td>:use_proxy</td>
+  </tr>
+  <tr>
+    <td>307</td>
+    <td>:temporary_redirect</td>
+  </tr>
+</table>
+
+<h2>4xx Statuses</h2>
+<table>
+  <tr>
+    <td>4xx</td>
+    <td>Client Error</td>
+  </tr>
+  <tr>
+    <td>400</td>
+    <td>:bad_request</td>
+  </tr>
+  <tr>
+    <td>401</td>
+    <td>:unauthorized</td>
+  </tr>
+  <tr>
+    <td>402</td>
+    <td>:payment_required</td>
+  </tr>
+  <tr>
+    <td>403</td>
+    <td>:forbidden</td>
+  </tr>
+  <tr>
+    <td>404</td>
+    <td>:not_found</td>
+  </tr>
+  <tr>
+    <td>405</td>
+    <td>:method_not_allowed</td>
+  </tr>
+  <tr>
+    <td>406</td>
+    <td>:not_acceptable</td>
+  </tr>
+  <tr>
+    <td>407</td>
+    <td>:proxy_authentication_required</td>
+  </tr>
+  <tr>
+    <td>408</td>
+    <td>:request_timeout</td>
+  </tr>
+  <tr>
+    <td>409</td>
+    <td>:conflict</td>
+  </tr>
+  <tr>
+    <td>410</td>
+    <td>:gone</td>
+  </tr>
+  <tr>
+    <td>411</td>
+    <td>:length_required</td>
+  </tr>
+  <tr>
+    <td>412</td>
+    <td>:precondition_failed</td>
+  </tr>
+  <tr>
+    <td>413</td>
+    <td>:request_entity_too_large</td>
+  </tr>
+  <tr>
+    <td>414</td>
+    <td>:request_uri_too_long</td>
+  </tr>
+  <tr>
+    <td>415</td>
+    <td>:unsupported_media_type</td>
+  </tr>
+  <tr>
+    <td>416</td>
+    <td>:requested_range_not_satisfiable</td>
+  </tr>
+  <tr>
+    <td>417</td>
+    <td>:expectation_failed</td>
+  </tr>
+  <tr>
+    <td>422</td>
+    <td>:unprocessable_entity</td>
+  </tr>
+  <tr>
+    <td>423</td>
+    <td>:locked</td>
+  </tr>
+  <tr>
+    <td>424</td>
+    <td>:failed_dependency</td>
+  </tr>
+  <tr>
+    <td>426</td>
+    <td>:upgrade_required</td>
+  </tr>
+</table>
+
+<h2>5xx</h2>
+<table>
+  <tr>
+    <td>500</td>
+    <td>:internal_server_error</td>
+  </tr>
+  <tr>
+    <td>501</td>
+    <td>:not_implemented</td>
+  </tr>
+  <tr>
+    <td>502</td>
+    <td>:bad_gateway</td>
+  </tr>
+  <tr>
+    <td>503</td>
+    <td>:service_unavailable</td>
+  </tr>
+  <tr>
+    <td>504</td>
+    <td>:gateway_timeout</td>
+  </tr>
+  <tr>
+    <td>505</td>
+    <td>:http_version_not_supported</td>
+  </tr>
+  <tr>
+    <td>507</td>
+    <td>:insufficient_storage</td>
+  </tr>
+  <tr>
+    <td>510</td>
+    <td>:not_extended</td>
+  </tr>
+</table>
