@@ -8,7 +8,6 @@ tag: raspberrypi magicmirror tutorial
 post_image: /assets/mirrormirror/happy_amy.jpg
 comments: true
 ---
-# MirrorMirror
 
 ## A Raspberry Pi powered Magic Mirror
 
