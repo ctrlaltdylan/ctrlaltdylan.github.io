@@ -10,7 +10,6 @@ github_username:  ctrlaltdylan
 
 plugins:
   - jekyll-sitemap
-  - jekyll-redirect-from
 
 
 # Build settings
