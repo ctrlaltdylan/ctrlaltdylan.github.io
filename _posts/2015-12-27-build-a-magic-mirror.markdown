@@ -7,6 +7,7 @@ permalink: /raspberrypi/magicmirror/tutorial/2015/12/27/build-a-magic-mirror.htm
 tag: raspberrypi magicmirror tutorial
 post_image: /assets/mirrormirror/happy_amy.jpg
 comments: true
+redirect_to: http://www.dylanjpierce.com/raspberrypi/magicmirror/tutorial/2015/12/27/build-a-magic-mirror.html
 ---
 
 ## A Raspberry Pi powered Magic Mirror

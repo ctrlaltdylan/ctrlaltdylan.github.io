@@ -295,6 +295,7 @@ DEPENDENCIES
   jekyll
   jekyll-admin
   jekyll-compose
+  jekyll-redirect-from
   s3_website
 
 BUNDLED WITH
