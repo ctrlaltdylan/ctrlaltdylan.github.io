@@ -2,14 +2,13 @@
 layout: post
 title: How to install a Touchscreen on Raspberry Pi - the missing manual
 date: 2019-10-28 18:39:39
-#post_image: /assets/img/raspberry-pi-touchscreen-finished-product.jpg
 preview_image: /assets/img/raspberry-pi-touchscreen-finished-product-preview.jpg
 permalink: /raspberry-pi/install-raspberry-pi-touchscreen
 category: raspberry-pi
 comments: true
 ---
 
-![Raspberry Pi + Touchscreen](/assets/img/raspberry-pi-touchscreen-finished-product.jpg)
+
 
 Installing a touchscreen on a Raspberry Pi is a cheap and easy way to start out an awesome project. It's a great introductory build for those who want to start building out incredible home-built things like custom car dashboards, beer serving robots, and so much more.
 
@@ -18,6 +17,8 @@ One of the best things about these touchscreens is that you don't need to solder
 The official Raspberry Pi Touchscreen by Element 14 just works right out of the box.
 
 One oddity I noticed immediately when opening the package is that it doesn't come with a manual. So consider this the missing manual for installing a touchscreen for your Raspberry Pi.
+
+![Raspberry Pi + Touchscreen](/assets/img/raspberry-pi-touchscreen-finished-product.jpg)
 
 ## Things you'll need
 
