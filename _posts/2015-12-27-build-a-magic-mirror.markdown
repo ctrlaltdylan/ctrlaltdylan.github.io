@@ -16,9 +16,7 @@ A magic mirror is a raspberry pi powered monitor behind a double sided mirror. A
 
 ![Pretty much done](/assets/mirrormirror/16_pretty_much_done.png)
 
-
 ![Close up](/assets/mirrormirror/17_close_up.jpg)
-
 
 ![Happy Happy](/assets/mirrormirror/18_happy_happy.jpg)
 

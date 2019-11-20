@@ -304,7 +304,8 @@ img.rounded {
 }
 
 .post-content {
-    // padding: $spacing-unit 0;
+    padding: $spacing-unit 0;
+    max-width: 100%;
 }
 
 .content {
