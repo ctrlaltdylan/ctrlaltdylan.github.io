@@ -50,7 +50,9 @@ ul, ol, dl, figure,
  * Images
  */
 img {
-    max-width: 100%;
+    width: 100%;
+    min-width: 300px;
+    height: auto;
     vertical-align: middle;
 }
 
