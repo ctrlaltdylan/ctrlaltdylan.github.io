@@ -1,6 +1,10 @@
 ---
-title: Future thoughts: Instacart/Amazon Fresh + an API + Food Bloggers
+layout: post
+title: "Instacart/Amazon Fresh - the missing API"
 category: personal
+date:   2019-11-08 18:39:39
+except: The idea is that Instacart & Amazon Fresh already provide the grocery delivering experience. However, the missing link is the ability to port a receipe you find online directly into your online shopping cart.
+comments: true
 ---
 
 This is just another business idea post.
