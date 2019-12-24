@@ -155,15 +155,15 @@ font_settings:
 advanced_settings:
   ajax_loading: true
   analytics_code: |
-  <!-- Global site tag (gtag.js) - Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-38271182-3"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-38271182-3"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
 
-    gtag('config', 'UA-38271182-3');
-  </script>
+      gtag('config', 'UA-38271182-3');
+    </script>
   custom_styles: ""
   header_js: ""
   footer_js: ""
