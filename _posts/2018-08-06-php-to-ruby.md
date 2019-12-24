@@ -9,7 +9,7 @@ tags: tutorial php ruby
 I'm super proud to annouce I've completed a project I've been working on for quite some time - [PHP to Ruby :: Learn Ruby through PHP Examples](https://phptoruby.io).
 
 
-<img alt="PHP to Ruby - The resource for learning Ruby coming from a PHP background" src="http://phptoruby.io/assets/images/final_v2_whitebg.png" width="300" style="float: left;">
+<img alt="PHP to Ruby - The resource for learning Ruby coming from a PHP background" src="https://phptoruby.io/assets/images/final_v2_whitebg.png" width="300" style="float: left;">
 
 
 PHP to Ruby is a short list of 40 some posts that will teach you the basics to the Ruby language for developers like me that came from a PHP background.
