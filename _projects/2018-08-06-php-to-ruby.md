@@ -1,9 +1,12 @@
 ---
-layout: post
 title:  PHP to Ruby
 date:   2018-08-06 18:39:39
 category: learning
 tags: tutorial php ruby
+preview_image: 'https://phptoruby.io/assets/images/final_v2_whitebg.png'
+subtitle: Learn Ruby syntax & concepts from rhyming PHP examples.
+excerpt: |
+  Learn Ruby efficently and quickly from PHP concepts you already understand. This e-course is a collection of all of the lessons that I wish someone would have shared with me while I was transitioning from PHP & Laravel development to Ruby on Rails.
 ---
 
 I'm super proud to annouce I've completed a project I've been working on for quite some time - [PHP to Ruby :: Learn Ruby through PHP Examples](https://phptoruby.io).

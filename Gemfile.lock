@@ -290,10 +290,12 @@ PLATFORMS
 
 DEPENDENCIES
   github-pages (= 203)
-  jekyll
+  jekyll (= 3.8.5)
   jekyll-admin
   jekyll-compose
+  jekyll-paginate
   jekyll-redirect-from
+  jekyll-sitemap
   s3_website
 
 BUNDLED WITH

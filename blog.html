@@ -1,29 +1,68 @@
 ---
+title: Blog
+description: Personal includes a simple blog with pagination.
+featured_image: '/assets/img/me_and_beartooths.jpg'
 layout: default
-title: Blog | Dylan Pierce
 ---
 
-<div class="content">
-  <article class="post-list">
-    <h2>Blog</h2>
+<section class="hero hero--single">
+
+  <div class="hero__image" style="background-image: url({{ page.featured_image | relative_url }})">
+    <div class="hero__overlay"></div>
+  </div>
+
+  <div class="wrap">
+
+    <h1>What I've been up to</h1>
+    <p>My musing on technology related articles and what I've been up to.</p>
+
+  </div>
+
+</section>
+
+<section class="listing">
+
+  <div class="wrap">
+
     {% for post in site.posts %}
-      <div class="post-card">
-        <a href="{{ post.url | prepend: site.baseurl }}">
-          <img src="{{ post.preview_image }}" />
-        </a>
-        <div class="post-card-description">
-          <h3>
-            <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-          </h3>
-          <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
-          <p>
-            {{ post.excerpt }}
-          </p>
-          {% if post.category %}
-            {% include post_badge.html category=post.category %}
-          {% endif %}
+
+    <article class="post">
+
+      <div class="post__image-wrap">
+        <div class="post__image" style="background-image: url({{ post.preview_image | relative_url }})"></div>
+      </div>
+
+      <div class="post__content-wrap">
+        <div class="post__content">
+          <h2 class="post__title"><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h2>
+          <p class="post__subtitle">{{ post.subtitle }}</p>
+          <p class="post__description">{{ post.excerpt }}</p>
         </div>
       </div>
+
+    </article>
+
     {% endfor %}
-  </article>
-</div>
+
+  </div>
+
+</section>
+
+{% if paginator.total_pages > 1 %}
+
+<section class="pagination">
+
+  <div class="wrap">
+
+    {% if paginator.previous_page %}
+    <a href="{{ paginator.previous_page_path | relative_url }}" class="button pagination__prev"><i class="fa fa-arrow-left" aria-hidden="true"></i> <span>Newer Posts</span></a>
+    {% endif %}
+    {% if paginator.next_page %}
+    <a href="{{ paginator.next_page_path | relative_url }}" class="button pagination__next"><span>Older Posts</span> <i class="fa fa-arrow-right" aria-hidden="true"></i></a>
+    {% endif %}
+
+  </div>
+
+</section>
+
+{% endif %}
