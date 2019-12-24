@@ -3,7 +3,7 @@ title:  PHP to Ruby
 date:   2018-08-06 18:39:39
 category: learning
 tags: tutorial php ruby
-preview_image: 'http://phptoruby.io/assets/images/final_v2_whitebg.png'
+preview_image: 'https://phptoruby.io/assets/images/final_v2_whitebg.png'
 subtitle: Learn Ruby syntax & concepts from rhyming PHP examples.
 excerpt: |
   Learn Ruby efficently and quickly from PHP concepts you already understand. This e-course is a collection of all of the lessons that I wish someone would have shared with me while I was transitioning from PHP & Laravel development to Ruby on Rails.
@@ -12,7 +12,7 @@ excerpt: |
 I'm super proud to annouce I've completed a project I've been working on for quite some time - [PHP to Ruby :: Learn Ruby through PHP Examples](https://phptoruby.io).
 
 
-<img alt="PHP to Ruby - The resource for learning Ruby coming from a PHP background" src="http://phptoruby.io/assets/images/final_v2_whitebg.png" width="300" style="float: left;">
+<img alt="PHP to Ruby - The resource for learning Ruby coming from a PHP background" src="https://phptoruby.io/assets/images/final_v2_whitebg.png" width="300" style="float: left;">
 
 
 PHP to Ruby is a short list of 40 some posts that will teach you the basics to the Ruby language for developers like me that came from a PHP background.
