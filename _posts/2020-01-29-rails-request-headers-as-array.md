@@ -1,9 +1,9 @@
-
 ---
 layout: post
-title:  "Get an array of Rails Request HTTP Headers"
-date:   2015-08-14 18:39:39
-categories: ruby-on-rails
+title:  "Rails HTTP Status Symbols"
+date:   2020-01-29 18:39:39
+category: ruby-on-rails
+comments: true
 ---
 
 You'd think `request.headers` would contain an array of HTTP headers. However, in Rails this variable includes _the entire rack environment_.
