@@ -46,3 +46,17 @@ ORIGINAL_FULLPATH
 ORIGINAL_SCRIPT_NAME
 
 ```
+
+## Actually, use request.filtered_env instead
+
+The problem with `request.env` is that it includes a field called `RAW_POST_BODY`. The problem with this is particularly with login actions peformed by users.
+
+The `request.env['RAW_POST_BODY']` will include unobfuscated passwords, credit card data, API keys, anything. Whereas `request.filtered_env` will filter out this sensitive data.
+
+So rewriting what I recommended above, but with sensitive parameters blocked:
+
+```
+  http_headers = request.filtered_env.select { |k, _v| k =~ /\A[A-Za-z0-9\-_]+\z/ }
+
+```
+
