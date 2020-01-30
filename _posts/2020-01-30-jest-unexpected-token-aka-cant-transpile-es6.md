@@ -40,6 +40,7 @@ module.exports = {
   },
   transformIgnorePatterns: ['/node_modules/(?!@fortawesome)'],
 };
+```
 
 However, I was still getting this error. What eventually fixed it for me was renaming the babel configuration file from `.babelrc` to `babel.config.js`.
 
