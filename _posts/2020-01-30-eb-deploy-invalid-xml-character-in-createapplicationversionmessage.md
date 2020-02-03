@@ -2,7 +2,7 @@
 layout: post
 title:  "Elasticbeanstalk can't deploy with an InvalidParameterValueError"
 date:   2020-01-30 11:39:39
-category: react
+categories: aws, elasticbeanstalk
 comments: true
 ---
 
