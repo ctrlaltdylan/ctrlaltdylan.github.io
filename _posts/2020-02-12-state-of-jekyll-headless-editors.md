@@ -1,5 +1,6 @@
 ---
 published: true
+layout: post
 ---
 ## A GUI + Jekyll = peanut butter & chocolate
 
@@ -57,8 +58,3 @@ Below is me trying out the images uploading feature. You thought this post was a
 So far I'm liking Prose.io. I know my past gripes with Netlify CMS was that it wasn't possible to run locally. But now that I'm seeing the power of just writing online, it's pretty nice. You don't have to make the cognitive break to switch to your jeykll project, start up the jekyll server, write, `git add` the files, and then `git commit` the files, then `git push` the thing.
 
 Instead you just write online, and publish. Maybe that crazy WordPress idea was up to something after all.
-
-
-
-
-
