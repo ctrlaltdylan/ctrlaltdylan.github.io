@@ -1,5 +1,5 @@
 ---
-published: false
+published: true
 ---
 ## A GUI + Jekyll = peanut butter & chocolate
 
