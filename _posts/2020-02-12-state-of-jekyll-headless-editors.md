@@ -49,12 +49,18 @@ That said, I really hope they get their game together. I love their deployment p
 
 I'm just working my way down the top 3 contenders as it comes to github stars. Prose.io is very similar to Netlify CMS in that it's service based. You authenticate with Github and simply navigate to your blog repository.
 
+Bonus points, it's open source so if you're _motivated_ you can deploy your own Prose instance, even forking is possible.
+
 It seems to automatically understand Jekyll conventions and it was pretty easy to get started. Heck this post was written with Prose.io.
 
 Below is me trying out the images uploading feature. You thought this post was a well written and edited piece of writing? Ha. I'm trying this out as I go, that's agile baby.
 
-![Photo on 6-28-19 at 12.57 PM #2.jpg]({{site.baseurl}}/_drafts/Photo on 6-28-19 at 12.57 PM #2.jpg)
+![Photo on 6-28-19 at 12.57 PM #2.jpg]({{site.baseurl}}/assets/Photo on 6-28-19 at 12.57 PM #2.jpg)
 
 So far I'm liking Prose.io. I know my past gripes with Netlify CMS was that it wasn't possible to run locally. But now that I'm seeing the power of just writing online, it's pretty nice. You don't have to make the cognitive break to switch to your jeykll project, start up the jekyll server, write, `git add` the files, and then `git commit` the files, then `git push` the thing.
 
 Instead you just write online, and publish. Maybe that crazy WordPress idea was up to something after all.
+
+** UPDATE: ** that image doesn't load. Which means out of the box default image handling in Prose is broken for Jekyll drafts. Bummer.
+
+** UPDATE #2 ** remembering your metadata needed for a post is kind of annoying too. Not a fan of that. But metadata is editable from the GUI which is really nice.
