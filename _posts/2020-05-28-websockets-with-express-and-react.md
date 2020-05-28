@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Websockets with Express & React"
-categories: frontend, websockets, reactjs
+categories: frontend websockets reactjs
 featured_image: 'https://res.cloudinary.com/tinyhouse/image/upload/v1590696133/personal%20site/node-express-react-websockets.png'
 post_image: 'https://res.cloudinary.com/tinyhouse/image/upload/c_scale,w_635/v1590696133/personal%20site/node-express-react-websockets.png'
 
