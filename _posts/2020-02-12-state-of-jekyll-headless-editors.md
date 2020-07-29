@@ -1,6 +1,9 @@
 ---
 published: true
 layout: post
+title: State of Headless Jekyll Headers in 2020
+date: 2020-02-13T00:54:18.694Z
+comments: true
 ---
 ## A GUI + Jekyll = peanut butter & chocolate
 
@@ -17,12 +20,14 @@ So for this post, I'm just going to share my experiences with the options out th
 This is a cool gem you can install on your Jekyll instance just via a gem. It's alright, I didn't stick with it for a couple of reasons. From what I remember here's my pros & cons list:
 
 Pros
+
 * Easy install (2 min max)
 * It runs locally
 * Free
 * Metadata & post creation is purty nice
 
 Cons
+
 * Dated and it shows. Last substantial commit was 2 months ago
 * Documentation is sparse at best
 * Image uploading a little confusing
@@ -49,7 +54,7 @@ That said, I really hope they get their game together. I love their deployment p
 
 I'm just working my way down the top 3 contenders as it comes to github stars. Prose.io is very similar to Netlify CMS in that it's service based. You authenticate with Github and simply navigate to your blog repository.
 
-Bonus points, it's open source so if you're _motivated_ you can deploy your own Prose instance, even forking is possible.
+Bonus points, it's open source so if you're *motivated* you can deploy your own Prose instance, even forking is possible.
 
 It seems to automatically understand Jekyll conventions and it was pretty easy to get started. Heck this post was written with Prose.io.
 
@@ -61,6 +66,8 @@ So far I'm liking Prose.io. I know my past gripes with Netlify CMS was that it w
 
 Instead you just write online, and publish. Maybe that crazy WordPress idea was up to something after all.
 
-** UPDATE: ** that image doesn't load. Which means out of the box default image handling in Prose is broken for Jekyll drafts. Bummer.
+ **UPDATE:**  that image doesn't load. Which means out of the box default image handling in Prose is broken for Jekyll drafts. Bummer.
 
-** UPDATE #2 ** remembering your metadata needed for a post is kind of annoying too. Not a fan of that. But metadata is editable from the GUI which is really nice.
+ **UPDATE #2**  remembering your metadata needed for a post is kind of annoying too. Not a fan of that. But metadata is editable from the GUI which is really nice.
+
+**UPDATE #3** got over my grips about local logins with Netlify CMS. This latest edit is done directly on "prod" with Netlify CMS and it *feels* great. I'll be using this editor for awhile.
