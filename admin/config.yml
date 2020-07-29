@@ -17,6 +17,6 @@ collections:
       - { label: 'Title', name: 'title', widget: 'string' }
       - { label: 'Publish Date', name: 'date', widget: 'datetime' }
       - { label: 'Comments allowed?', name: 'comments', widget: 'boolean' }
-      - { label: 'Post Image', name: 'post_image', widget: 'image', default: 'assets/img/me/profile_photo.jpg' }
+      - { label: 'Post Image', name: 'post_image', widget: 'image', default: 'assets/img/me/profile_photo.jpg', required: false }
       - { label: 'Body', name: 'body', widget: 'markdown' }
 
