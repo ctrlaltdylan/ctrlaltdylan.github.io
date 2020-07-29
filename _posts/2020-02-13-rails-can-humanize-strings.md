@@ -2,6 +2,9 @@
 published: true
 layout: post
 category: ruby-on-rails
+title: Rails can humanize strings too
+date: 2020-07-29T23:52:40.357Z
+comments: true
 ---
 ## Enumerated values are not people friendly
 
@@ -15,7 +18,6 @@ Frameworks typically don't include this kind of method out of the box with Strin
 
 If you ever wanted to print out the `vehicle_type` in a string, your users would be a little confused as to why there would be underscores in the text:
 
-
 ```
    @vehicle.vehicle_type = :semi_truck
    puts "This type of vehicle is a #{@vehicle.vehicle_type}"
@@ -28,7 +30,7 @@ If you ever wanted to print out the `vehicle_type` in a string, your users would
 
 Developer happiness is exactly what Rails so famously preaches above all else. And the `String#humanize` method is a great example.
 
-Without even having to create a mapping of _cannoncial_ names to their given machine names, you can use `.humanize` to convert underscores into spaces:
+Without even having to create a mapping of *cannoncial* names to their given machine names, you can use `.humanize` to convert underscores into spaces:
 
 ```
    @vehicle.vehicle_type = :semi_truck
