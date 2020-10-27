@@ -3,12 +3,12 @@ layout: post
 title:  "Building a Glass River Table"
 categories: woodworking
 preview_image: 'https://res.cloudinary.com/tinyhouse/image/upload/c_scale,w_1620/v1603749516/personal%20site/river%20table/finished/IMG_0870.jpg'
-featured_image: 'https://res.cloudinary.com/tinyhouse/image/upload/c_scale,w_1620/v1603749516/personal%20site/river%20table/finished/IMG_0870.jpg'
+featured_image: /assets/img/me_at_river_table.jpg
 excerpt: 'I built a custom river table with live edge wood, shaped glass and metal legs. This project took me the better part of a year and is now my personal desk.'
 comments: true
 ---
 
-Alright time for a a little break from technobabble on this blog. 
+Alright time for a little break from technobabble on this blog. 
 
 This a story of how this desk I'm currently writing this post from came to be. By the end of it you'll know how to make your own. And you'll know exactly which pitfalls to avoid from my mistakes.
 
@@ -28,7 +28,7 @@ How did I make it? I'll do my best to tell.
 
 December 2019, Cleveland OH - my wife and I are at an Christmas Bazaar, and one of the last fronts we visit is this art gallery. Immediately I'm drawn to this coffee table that somehow looks like a levitating river.
 
-![The piece that inspired this project](https://res.cloudinary.com/tinyhouse/image/upload/c_scale,w_900/v1603639375/personal%20site/river%20table/IMG_20191214_165933.jpg)
+![The piece that inspired this project](https://res.cloudinary.com/tinyhouse/image/upload/c_scale,w_400/v1603639375/personal%20site/river%20table/IMG_20191214_165933.jpg)
 
 I'm struck. This thing is just goregous. It has live edge wood facing _inwards_ with a flowing glass piece on top. It immediately reminds me the crystal clear pale plue rivers of the Pacific Northwest.
 
