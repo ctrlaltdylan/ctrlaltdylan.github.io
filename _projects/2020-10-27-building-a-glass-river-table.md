@@ -4,6 +4,7 @@ date:   2020-10-27 08:39:39
 preview_image: /assets/img/river_table/me_at_river_table.jpg
 featured_image: /assets/img/river_table/me_at_river_table.jpg
 excerpt: 'I built a custom river table with live edge wood, shaped glass and metal legs. This project took me the better part of a year and is now my personal desk.'
+description: 'How to build a river table with live edge wood, shaped glass and metal legs. Including full parts list, tools required and basic guide to get started.'
 comments: true
 ---
 
