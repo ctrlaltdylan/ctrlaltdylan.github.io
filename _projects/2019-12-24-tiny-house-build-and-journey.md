@@ -1,6 +1,6 @@
 ---
 title: Tiny House Build & Journey
-date:   2019-12-24 08:00:39
+date: 2019-12-24 08:00:39
 preview_image: /assets/img/tiny_house/amy_and_i_siding_done.jpg
 featured_image: /assets/img/tiny_house/amy_and_i_siding_done.jpg
 subtitle: I built a tiny house with my wife and then travelled across the country in it.
