@@ -3,7 +3,7 @@ source "https://rubygems.org"
 
 # gem "jekyll"
 
-gem 'jekyll', '3.8.7'
+gem 'jekyll', '3.9.0'
 gem "s3_website"
 
 require 'json'

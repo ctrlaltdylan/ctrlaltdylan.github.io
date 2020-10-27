@@ -26,8 +26,8 @@ description: A sleek, modern Jekyll theme for personal websites. Personal is the
 <section class="listing">
 
   <div class="wrap">
-
-    {% for post in site.projects %}
+    {% assign projects = site.projects | reverse %}
+    {% for post in projects %}
 
     <article class="post">
 
