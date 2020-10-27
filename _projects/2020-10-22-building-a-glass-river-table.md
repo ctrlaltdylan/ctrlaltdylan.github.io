@@ -2,7 +2,8 @@
 layout: post
 title:  "Building a Glass River Table"
 categories: woodworking
-preview_image: 'https://res.cloudinary.com/tinyhouse/image/upload/c_scale,w_1620/v1603749516/personal%20site/river%20table/finished/IMG_0870.jpg'
+# preview_image: 'https://res.cloudinary.com/tinyhouse/image/upload/c_scale,w_1620/v1603749516/personal%20site/river%20table/finished/IMG_0870.jpg'
+preview_image: /assets/img/me_at_river_table.jpg
 featured_image: /assets/img/me_at_river_table.jpg
 excerpt: 'I built a custom river table with live edge wood, shaped glass and metal legs. This project took me the better part of a year and is now my personal desk.'
 comments: true
@@ -10,7 +11,7 @@ comments: true
 
 Alright time for a little break from technobabble on this blog. 
 
-This a story of how this desk I'm currently writing this post from came to be. By the end of it you'll know how to make your own. And you'll know exactly which pitfalls to avoid from my mistakes.
+This is the story of how this desk I'm currently writing this post from came to be. By the end of it you'll know the gist of how to make your own. And you'll know exactly which pitfalls to avoid from my mistakes.
 
 ![The finished product - a live edge wood river table](https://res.cloudinary.com/tinyhouse/image/upload/v1603749517/personal%20site/river%20table/finished/IMG_0850.jpg)
 
