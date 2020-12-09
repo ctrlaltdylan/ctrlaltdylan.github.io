@@ -44,7 +44,7 @@ I designed a basic layout on paper and based it on my optimal ergonmic measureme
 
 I've never even bought hardwood before, let alone custom glass. So learning the how part of the project was almost as hard as actually doing it.
 
-Finding live edge wood turned out to be the easiest part. Facebook Marketplace had a lot of listings and I was abled to find a kilmed nice white maple piece from a local seller. Thanks Charlie!
+Finding live edge wood turned out to be the easiest part. Facebook Marketplace had a lot of listings and I was abled to find a kiln-dried white maple piece from a local seller. Thanks Charlie!
 
 ![The raw live edge hardwood. This is white maple.](https://res.cloudinary.com/tinyhouse/image/upload/c_scale,w_900/v1603373812/personal%20site/river%20table/IMG_20200222_161002.jpg)
 
@@ -208,7 +208,7 @@ I took measurements and designed the table legs. I made a super professional dia
 
 But I will not be sharing their shop name because I'm disappointed with the finished product and their service and I honestly wouldn't recommend them to anyone else.
 
-But I definitely recommendaing drawing up a basic diagram like mine before you contact sellers, it's so much easier to communicate with them.
+But I definitely recommending drawing up a basic diagram like mine before you contact sellers, it's so much easier to communicate with them.
 
 ### Getting the legs
 
@@ -256,9 +256,9 @@ I loosely screwed in a couple lag bolts on each end of the leg. The first bracke
 
 This is the moment when I realized the table legs weren't exact matches. On top of that the brackets holes had no measurements to them, the manufacturer just drilled willy nilly wherever they felt like.
 
-Honestly I was mad as hell. But my wife kept a cooler head and we just decided to keep rotating and switching the table legs in the 16 possible combinations until they matched. It was tedious as it sounds.
+Honestly I was mad as hell. Thankfully my wife kept a cooler head and we just decided to keep rotating and switching the table legs in the 16 possible combinations until they matched. It was tedious as it sounds.
 
-So lesson learned, mark the table leg bracket with the corresponding pilot holes so you can keep the exact match. And don't trust a custom fab job's measurements.
+So lesson learned, don't trust a custom fab job's measurements. Mark the table leg bracket with the corresponding pilot holes _during the dry fit stage_ so you can keep the exact match when it comes time to assemble for real.
 
 ![Starting to assemble](https://res.cloudinary.com/tinyhouse/image/upload/c_scale,w_900/v1603373793/personal%20site/river%20table/PXL_20201021_221322041.jpg)
 
