@@ -4,15 +4,7 @@
 
 <head>
 
-
-  <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-
-  {{ site.data.settings.basic_settings.site_title }}
-
-  Personal Theme by https://jekyllthemes.io
-  Premium + free Jekyll themes for your blog or website.
-
-  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+  <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
 
 
   <meta charset="utf-8">
@@ -100,7 +92,18 @@
   {{ site.data.settings.advanced_settings.footer_js }}
   {% endif %}
 
-
+  <!-- Netlify admin login stuff -->
+  <script>
+    if (window.netlifyIdentity) {
+      window.netlifyIdentity.on("init", user => {
+        if (!user) {
+          window.netlifyIdentity.on("login", () => {
+            document.location.href = "/admin/";
+          });
+        }
+      });
+    }
+  </script>
 </body>
 
 </html>
