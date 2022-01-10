@@ -117,8 +117,8 @@ All of these events have clear primary objectives in your businesses application
 
 More often than not a good tool will do the following:
 
-- Organizing complexity
-- Lowering the bar to entry
+- Organize complexity
+- Lower the bar to entry
 - Empower a wider audience to build solutions they couldn't before
 
 Pipedream is checks all of these boxes above, and is just getting started.
