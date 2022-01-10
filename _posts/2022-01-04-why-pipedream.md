@@ -11,11 +11,13 @@ I just wanted to make a quick write up on the next team I've joined and the prod
 
 ## What is Pipedream?
 
+![Pipedream - connect APIs remarkably fast](https://res.cloudinary.com/tinyhouse/image/upload/v1641424488/Blog/Pipedream/pipedream_banner.png)
+
 In layman's terms, Pipedream is a workflow builder. It's a platform where you can build workflows from a series of pre-built steps - or build your own.
 
 For example, with just a few clicks in Pipedream you can build a workflow to listen for a specific hashtag on Twitter and add them onto a Google Spreadsheet:
 
-![https://cln.sh/ipFt3m](Example creating a twitter mentions spreadsheet with a Pipedream workflow)
+<iframe width="560" height="315" src="https://www.youtube.com/embed/6eq813uEExc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 What's even more amazing is that this workflow will keep populating this spreadsheet the the newest tweets. Your spreadsheet is now a real time database, with just a few clicks.
 
