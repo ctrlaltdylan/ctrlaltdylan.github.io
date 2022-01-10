@@ -55,7 +55,7 @@ But it's the backbone for many "side" effect work in businesses for one off task
 
 On the flipside - a high code solutions are much closer to concrete - they're much more rigid, slow and expensive to implement. The pro side is they are the operating closer to bare metal - a custom application can fit any mold, withstand change management thanks to [Git](https://github.com) and make custom interfaces.
 
-![https://res.cloudinary.com/tinyhouse/image/upload/v1641606146/Blog/Pipedream/Screen_Shot_2022-01-07_at_8.41.52_PM.png](No code vs code-ful vs high code)
+![No code vs code-ful vs high code](https://res.cloudinary.com/tinyhouse/image/upload/v1641606146/Blog/Pipedream/Screen_Shot_2022-01-07_at_8.41.52_PM.png)
 
 Pipedream is not another application framework, nor is it a replacement for no-code tools like Zapier or IFTT. Instead it's enchancing the productivity for all by building a solution in the sweet spot of low code.
 
