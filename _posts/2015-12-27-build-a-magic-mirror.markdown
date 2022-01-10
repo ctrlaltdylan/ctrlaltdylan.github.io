@@ -107,7 +107,7 @@ But volia! A mirror that allows light to shine through it. Right now that light 
 
 Now comes the fun parts. Ideally you want to have only one cord coming out of the bottom of the case to supply power. There are ways to splice power from a cord with electronics and soldering and all kinds of stuff...but me, I'm simple. I just bought a [2-way power splitter](https://www.amazon.com/gp/product/B00FRODUR4/ref=as_li_tl?ie=UTF8&tag=dylanpierce-20&camp=1789&creative=9325&linkCode=as2&creativeASIN=B00FRODUR4&linkId=d324fbbe33c3e8219ff0cdf6e16ea627):
 
-![Power cord splitter](http://ecx.images-amazon.com/images/I/41Mg6CLjRBL.jpg)
+![Power cord splitter](https://ecx.images-amazon.com/images/I/41Mg6CLjRBL.jpg)
 
 Then all of the components fit nicely together with a bit of painters tape:
 
