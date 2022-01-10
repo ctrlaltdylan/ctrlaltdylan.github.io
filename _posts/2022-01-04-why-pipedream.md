@@ -59,10 +59,6 @@ On the flipside - a high code solutions are much closer to concrete - they're mu
 
 Pipedream is not another application framework, nor is it a replacement for no-code tools like Zapier or IFTT. Instead it's enchancing the productivity for all by building a solution in the sweet spot of low code.
 
-## Low code, the best of both worlds
-
-Pipedream allows
-
 ## At the end of the day, we're all just internet plumbers
 
 Whether we like to admit it or not, too much or most of our time as developers is spent on wiring our application with 3rd party services. We give ourselves lofty titles like Full Stack Engineer, Software Developer, etc. But let's be honest, we know our apps just are clever integrations of 2 or more APIs with some custom logic between and the right interface for our audience.
