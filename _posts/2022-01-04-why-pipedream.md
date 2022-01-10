@@ -82,6 +82,7 @@ The reality is we have to provide operational, marketing, accounting, and
 ![How we think we're spending out time](https://res.cloudinary.com/tinyhouse/image/upload/v1641424463/Blog/Pipedream/Untitled-2022-01-05-1729.png)
 
 **The reality**
+
 ![How we're actually spending our time](https://res.cloudinary.com/tinyhouse/image/upload/v1641424463/Blog/Pipedream/reality.png)
 
 After the first 3 dozen times installing a official package for your language or framework of choice, wiring it up to your business logic - you've already fallen for the maintainence trap.
