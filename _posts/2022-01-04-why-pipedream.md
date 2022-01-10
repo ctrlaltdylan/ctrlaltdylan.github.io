@@ -77,11 +77,11 @@ The reality is engineers have to not only provide solutions for customers - but 
 
 **How developers would like to spend their time:**
 
-![How we think we're spending out time](https://res.cloudinary.com/tinyhouse/image/upload/c_scale,h_250/v1641424463/Blog/Pipedream/Untitled-2022-01-05-1729.png)
+![How we think we're spending out time](https://res.cloudinary.com/tinyhouse/image/upload/c_scale,w_450/v1641424463/Blog/Pipedream/Untitled-2022-01-05-1729.png)
 
 **The reality:**
 
-![How we're actually spending our time](https://res.cloudinary.com/tinyhouse/image/upload/c_scale,h_250/v1641424463/Blog/Pipedream/reality.png)
+![How we're actually spending our time](https://res.cloudinary.com/tinyhouse/image/upload/c_scale,w_450/v1641424463/Blog/Pipedream/reality.png)
 
 After the first 3 dozen times installing a official package for your language or framework of choice, wiring it up to your business logic - you've already fallen for the maintainence trap.
 
