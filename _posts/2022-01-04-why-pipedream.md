@@ -99,7 +99,9 @@ The real benefits of serverless are only harvested by large teams that had dedic
 
 Since Pipedream's interface to your application is really just HTTP webhooks, you get an event based serverless workflow without learning a new framework or an complex event system like Kafka.
 
-With Pipedream you can create workflows that trigger on your business events, freeing up your developers to concentrate on building the best experience for your customers:
+With Pipedream you can create workflows that trigger on your business events, freeing up your developers to concentrate on building the best experience for your customers.
+
+Examples of common businesses events you can map to Pipeline Workflows:
 
 - `customer.registered`
 - `order.created`
