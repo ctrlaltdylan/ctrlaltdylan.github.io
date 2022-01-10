@@ -4,6 +4,7 @@ source "https://rubygems.org"
 # gem "jekyll"
 
 gem 'jekyll', '3.9.0'
+gem "s3_website"
 
 require 'json'
 require 'open-uri'
@@ -17,6 +18,6 @@ group :jekyll_plugins do
   gem 'jekyll-paginate'
   gem 'jekyll-sitemap'
 end
-
 gem 'jekyll-redirect-from'
-gem "kramdown-parser-gfm"
+
+gem 'github-pages', versions['github-pages']
