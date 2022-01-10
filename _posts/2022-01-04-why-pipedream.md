@@ -2,7 +2,7 @@
 layout: post
 title: "Why Pipedream?"
 categories: low-code, personal
-preview_image: "https://res.cloudinary.com/tinyhouse/image/upload/v1641424488/Blog/Pipedream/pipedream_banner.png"
+featured_image: "https://res.cloudinary.com/tinyhouse/image/upload/v1641424488/Blog/Pipedream/pipedream_banner.png"
 post_image: "https://res.cloudinary.com/tinyhouse/image/upload/v1641424488/Blog/Pipedream/pipedream_banner.png"
 comments: true
 ---
@@ -122,4 +122,6 @@ Interested in learning more?
 
 - [Build your first workflow](https://pipedream.com/docs/quickstart/hello-world/)
 - [Develop a Pipedream integration](https://pipedream.com/docs/components/quickstart/nodejs/actions/)
-- [Tweet me](https://twitter.com/ctrlaltdylan) || [email me](pierce@pipedream.com) || [make a community post](https://pipedream.com/community) || [join our Slack community](https://join.slack.com/t/pipedream-users/shared_invite/zt-ernlymsn-UHfPg~Dfp08uGkAd8dpkww)
+- [Tweet @ me](https://twitter.com/ctrlaltdylan)
+- [Email me](pierce@pipedream.com)
+- [Join our Slack community](https://join.slack.com/t/pipedream-users/shared_invite/zt-ernlymsn-UHfPg~Dfp08uGkAd8dpkww)
