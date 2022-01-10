@@ -19,7 +19,7 @@ For example, with just a few clicks in Pipedream you can build a workflow to lis
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/6eq813uEExc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-What's even more amazing is that this workflow will keep populating this spreadsheet the the newest tweets. Your spreadsheet is now a real time database, with just a few clicks.
+What's even more amazing is that this workflow will keep populating this spreadsheet the the newest tweets _in real time_. Your spreadsheet is now a living database, just a few clicks.
 
 There are over 500 integrations available out of the box, which means you can build nearly limitless applications.
 
