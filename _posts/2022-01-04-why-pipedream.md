@@ -61,7 +61,9 @@ Pipedream is not another application framework, nor is it a replacement for no-c
 
 ## At the end of the day, we're all just internet plumbers
 
-Whether we like to admit it or not, too much or most of our time as developers is spent on wiring our application with 3rd party services. We give ourselves lofty titles like Full Stack Engineer, Software Developer, etc. But let's be honest, we know our apps just are clever integrations of 2 or more APIs with some custom logic between and the right interface for our audience.
+Whether we like to admit it or not, too much of our time is spent on wiring our application with 3rd party services.
+
+We give ourselves lofty titles like Full Stack Engineer, Software Developer, etc. But let's be honest, we know our apps just are clever integrations of 2 or more APIs with some custom logic between and the right interface for our audience.
 
 We could ship more and faster, but we're held back by necessary yet trivial work.
 
