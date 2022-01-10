@@ -1,7 +1,7 @@
 ---
 layout: post
-title:  "Building MirrorMirror"
-date:   2015-12-27 18:39:39
+title: "Building MirrorMirror"
+date: 2015-12-27 18:39:39
 category: raspberry-pi
 permalink: /raspberrypi/magicmirror/tutorial/2015/12/27/build-a-magic-mirror.html
 tag: raspberrypi magicmirror tutorial
@@ -21,27 +21,29 @@ A magic mirror is a raspberry pi powered monitor behind a double sided mirror. A
 ![Happy Happy](/assets/mirrormirror/18_happy_happy.jpg)
 
 ### What you'll need
-  - [A monitor](https://www.amazon.com/gp/product/B06XT58FMC/ref=as_li_tl?ie=UTF8&tag=dylanpierce-20&camp=1789&creative=9325&linkCode=as2&creativeASIN=B06XT58FMC&linkId=670c887c92519a9c178e62a286f7570a){:target="_blank"}
-  - A double sided acryllic mirror fit to the size of the monitor
-  - A few 2 x 4's to build a case around the monitor
-  - Thin wood to build the forward facing mirror frame, I used 1/8 x 3' board
-  - A raspberry pi and it's needed components, i.e. the power supply, HDMI cord, wifi usb dongle, and a keyboard for initial setup
-     - Or just buy a complete [CanaKit Raspberry Pi 3 kit](https://www.amazon.com/gp/product/B01C6EQNNK/ref=as_li_tl?ie=UTF8&tag=dylanpierce-20&camp=1789&creative=9325&linkCode=as2&creativeASIN=B01C6EQNNK&linkId=104b631bf9963e440aad89bc1d08466f){:target="_blank"} for convienence so you don't have to buy individual parts.
-  - Basic woodworking tools like a saw, sander, screwdriver
-  - Screws, liquid nails
+
+- [A monitor](https://www.amazon.com/gp/product/B06XT58FMC/ref=as_li_tl?ie=UTF8&tag=dylanpierce-20&camp=1789&creative=9325&linkCode=as2&creativeASIN=B06XT58FMC&linkId=670c887c92519a9c178e62a286f7570a){:target="\_blank"}
+- A double sided acryllic mirror fit to the size of the monitor
+- A few 2 x 4's to build a case around the monitor
+- Thin wood to build the forward facing mirror frame, I used 1/8 x 3' board
+- A raspberry pi and it's needed components, i.e. the power supply, HDMI cord, wifi usb dongle, and a keyboard for initial setup
+  - Or just buy a complete [CanaKit Raspberry Pi 3 kit](https://www.amazon.com/gp/product/B01C6EQNNK/ref=as_li_tl?ie=UTF8&tag=dylanpierce-20&camp=1789&creative=9325&linkCode=as2&creativeASIN=B01C6EQNNK&linkId=104b631bf9963e440aad89bc1d08466f){:target="\_blank"} for convienence so you don't have to buy individual parts.
+- Basic woodworking tools like a saw, sander, screwdriver
+- Screws, liquid nails
 
 ## Choosing the monitor
+
 The size of the mirror is really dictated by the kind of monitor you get. I wanted to get something large as possible but also with a removeable arm so it could fit inside of a case. Another important aspect is making sure you get a monitor with the inputs towards the center of the monitor rather than the sides.
 
 I was cautious to get a monitor with it's inputs on the bottom or side because it would be hard to make the frame to fit and have the raspberry pi's HDMI cord also fit. I ended up picking the [BenQ GW2760HL 27 inch monitor](https://www.amazon.com/gp/product/B06XT58FMC/ref=as_li_tl?ie=UTF8&tag=dylanpierce-20&camp=1789&creative=9325&linkCode=as2&creativeASIN=B06XT58FMC&linkId=670c887c92519a9c178e62a286f7570a). Turned out perfect for the job.
 
-![Inputs are closer to the middle of the monitor](http://ecx.images-amazon.com/images/I/91ElqprbpeL._SL1500_.jpg "You'll want inputs closer to the middle of the monitor")
+![Inputs are closer to the middle of the monitor](https://ecx.images-amazon.com/images/I/91ElqprbpeL._SL1500_.jpg "You'll want inputs closer to the middle of the monitor")
 
 ## Getting the Mirror
 
 The mirror is definitely the most essential piece to the whole project. However what I didn't know was that these double sided mirrors are actually acryllic and plastic like. They're much more forgiving than actual mirrors and you can cut them in several different ways to fit what you need. So order a mirror that's close to the size of your monitor (only the screen part, do not include the bezel in your measurement). But don't worry too much about ordering slightly too big, you can cut to fit the size you need.
 
-I ordered my mirror from TAPPlastics.com but you can get them from several other vendors online. [This is the exact product I ordered.](http://www.tapplastics.com/product/plastics/cut_to_size_plastic/two_way_mirrored_acrylic/558)
+I ordered my mirror from TAPPlastics.com but you can get them from several other vendors online. [This is the exact product I ordered.](https://www.tapplastics.com/product/plastics/cut_to_size_plastic/two_way_mirrored_acrylic/558)
 
 ![Mirror and monitor side by side](/assets/mirrormirror/1_mirror.jpg)
 
@@ -73,11 +75,11 @@ Final side note, remember to make one of those holes at the bottom of the case b
 
 ## Building the frame
 
-At first I wanted to make a fancy frame with 45 degree angles at each of the corners. Key phrase: at first. Remember when I said I wasn't an expert craftsman? Yea, that bit me a little bit. I didn't get pieces long enough to make that kind of cut possible. Instead I said I was a "minimalist" and wanted simple cuts 90 degree cuts on purpose. 
+At first I wanted to make a fancy frame with 45 degree angles at each of the corners. Key phrase: at first. Remember when I said I wasn't an expert craftsman? Yea, that bit me a little bit. I didn't get pieces long enough to make that kind of cut possible. Instead I said I was a "minimalist" and wanted simple cuts 90 degree cuts on purpose.
 
-But another snag, originally the plan was to use a kreig jeg to make little pocket holes to screw in. But however 3/8 thick wood, just like jihadst groups, are cowardly and easily splintered under the slightest pressure. But luckily a helpful employee at Home Depot showed me this awesome tool: 
+But another snag, originally the plan was to use a kreig jeg to make little pocket holes to screw in. But however 3/8 thick wood, just like jihadst groups, are cowardly and easily splintered under the slightest pressure. But luckily a helpful employee at Home Depot showed me this awesome tool:
 
-![Awesome 90 degree corner holder](http://ecx.images-amazon.com/images/I/51yQ4H20ZFL._SY355_.jpg)
+![Awesome 90 degree corner holder](https://ecx.images-amazon.com/images/I/51yQ4H20ZFL._SY355_.jpg)
 
 Now I could just use some liquid nails at the joints and this tool would hold them for a few hours to let them dry. No screws required. My only regret is not buying two so I could get this part done twice as fast.
 
@@ -85,9 +87,9 @@ Now I could just use some liquid nails at the joints and this tool would hold th
 
 ## Attaching the frame to the case
 
-This part of the project I thought the least about and when I make another I'll definitely do it differently. Essentially I was in a bit of trouble because the mirror didn't fit flush with the frame, causing a gap between the case and frame. Luckily it's really easy to cut a double sided mirror. You can do it a number of ways, [TAPPlastics has a whole tutorial series on it](http://www.tapplastics.com/product_info/videos/how_to_cut_plastic_sheet).
+This part of the project I thought the least about and when I make another I'll definitely do it differently. Essentially I was in a bit of trouble because the mirror didn't fit flush with the frame, causing a gap between the case and frame. Luckily it's really easy to cut a double sided mirror. You can do it a number of ways, [TAPPlastics has a whole tutorial series on it](https://www.tapplastics.com/product_info/videos/how_to_cut_plastic_sheet).
 
-I happened to have a band saw available and put that puppy to use. My only word of advice here is taken from *Will it Blend?* : "Don't breathe this". By this I mean the plastic dust.
+I happened to have a band saw available and put that puppy to use. My only word of advice here is taken from _Will it Blend?_ : "Don't breathe this". By this I mean the plastic dust.
 
 ![Band saw works with double sided mirror, who knew?](/assets/mirrormirror/9_cutting_mirror.jpg)
 
@@ -122,20 +124,21 @@ Once you go through the NOOBS installation process, you should finally be reward
 Now it doesn't make sense for the mirror to just show the raspberry pi desktop. There are a few different ways to get your raspberry pi to work like a "kiosk" but here are the steps I took.
 
 ### Install Chromium
+
 Depending on your raspbian version you may have some trouble with this. I know I did. The raspberry pi behind this mirror is running version Jessie of the Raspbian OS. Apparently there have been some changes to the raspbian repository, including the removal of Chromium which is the easiest browser to set up as a kiosk.
 
 You can google around yourself but these commands worked for me to install it:
 
 ```
-wget http://ftp.us.debian.org/debian/pool/main/libg/libgcrypt11/libgcrypt11_1.5.0-5+deb7u3_armhf.deb
+wget https://ftp.us.debian.org/debian/pool/main/libg/libgcrypt11/libgcrypt11_1.5.0-5+deb7u3_armhf.deb
 ```
 
 ```
-wget http://launchpadlibrarian.net/218525709/chromium-browser_45.0.2454.85-0ubuntu0.14.04.1.1097_armhf.deb
+wget https://launchpadlibrarian.net/218525709/chromium-browser_45.0.2454.85-0ubuntu0.14.04.1.1097_armhf.deb
 ```
 
 ```
-wget http://launchpadlibrarian.net/218525711/chromium-codecs-ffmpeg-extra_45.0.2454.85-0ubuntu0.14.04.1.1097_armhf.deb
+wget https://launchpadlibrarian.net/218525711/chromium-codecs-ffmpeg-extra_45.0.2454.85-0ubuntu0.14.04.1.1097_armhf.deb
 ```
 
 ```
@@ -151,6 +154,7 @@ sudo dpkg -i chromium-browser_45.0.2454.85-0ubuntu0.14.04.1.1097_armhf.deb
 ```
 
 ### Run Chromium on startup
+
 Now that you have chromium installed, you can configure it to open on startup and in full screen mode:
 
 Open the autostart settings:
@@ -193,6 +197,7 @@ network={
     psk="password"
 }
 ```
+
 I'm assuming you're smart and not using the ancient and insecure WEP protocol on your router.
 
 Now restart your wifi connection with these 2 commands:
@@ -202,7 +207,7 @@ ifdown wlan0
 ifup wlan0
 ```
 
-Don't worry if you see an obscure error, I did too. You can experiment to make sure your change worked by using 
+Don't worry if you see an obscure error, I did too. You can experiment to make sure your change worked by using
 
 ```
 ifconfig
@@ -219,6 +224,7 @@ Now we have a pretty functional kiosk. The missing piece is the actual webpage. 
 I decided to use the PHP micro-framework Lumen with some jQuery and MomentJs.
 
 ### Installing a web server
+
 In order to host the webpage you'll need to install a web server and to run Lumen you'll need php installed:
 
 ```
@@ -234,7 +240,6 @@ sudo nano /etc/nginx/sites-available/mirror.conf
 
 And paste the configuration in this gist:
 
-
 [mirror.conf](https://gist.github.com/ctrlaltdylan/18d78a608a3d81c964e7)
 
 Save, and exit.
@@ -249,6 +254,7 @@ sudo service nginx reload
 You now have a php enabled web server running on your pi!
 
 ## Installing MirrorMirror
+
 This is the final step of the project, installing the actual web page. Make a folder `projects` inside of `/home/pi` and move into it:
 
 ```
@@ -285,10 +291,10 @@ Goto to `http://localhost` and you should see your version of Mirror Mirror up a
 
 Current Features:
 
-* Displays forecast and animated weather icon.
-* Displays Date and Time.
-* Displays a random greeting, currently there's only one but planning on adding more.
+- Displays forecast and animated weather icon.
+- Displays Date and Time.
+- Displays a random greeting, currently there's only one but planning on adding more.
 
 There definitely needs to be more work to make this installation and customization process easier but I'm already thinking of ways to improve it. I hope you enjoy building/using your own magic mirror was much as I did mine!
 
-Big thank you to [Michael Teeuw](http://michaelteeuw.nl/post/84026273526/and-there-it-is-the-end-result-of-the-magic) for the original inspiration and documentation on the project.
+Big thank you to [Michael Teeuw](https://michaelteeuw.nl/post/84026273526/and-there-it-is-the-end-result-of-the-magic) for the original inspiration and documentation on the project.
