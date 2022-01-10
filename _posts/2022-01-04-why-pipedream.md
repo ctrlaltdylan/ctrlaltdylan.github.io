@@ -43,7 +43,7 @@ Pipedream is like that, except for maybe renting an RV once a year, I have used 
 
 You might be saving to yourself, yea doesn't Zapier & IFFT kind of do the same thing?
 
-In a ways yes, but Pipedream takes it a step further because you can create artibitrary living Node scripts on the fly.
+In a ways yes, but Pipedream takes it a step further because you can create artibitrary living scripts on the fly.
 
 ## The difference between high code & no code
 
@@ -71,15 +71,15 @@ How many times have you had to program
 - Make a one off CLI task to upload some data to a Google Sheet for accounting?
 - Make a Slack message on a specific event or on a timer for debugging or operation purposes?
 
-The reality is we have to provide operational, marketing, accounting, and
+The reality is engineers have to not only provide solutions for customers - but support internal departments as well.
 
-**How developers would like to spend their time**
+**How developers would like to spend their time:**
 
-![How we think we're spending out time](https://res.cloudinary.com/tinyhouse/image/upload/v1641424463/Blog/Pipedream/Untitled-2022-01-05-1729.png)
+![How we think we're spending out time](https://res.cloudinary.com/tinyhouse/image/upload/c_scale,h_250/v1641424463/Blog/Pipedream/Untitled-2022-01-05-1729.png)
 
-**The reality**
+**The reality:**
 
-![How we're actually spending our time](https://res.cloudinary.com/tinyhouse/image/upload/v1641424463/Blog/Pipedream/reality.png)
+![How we're actually spending our time](https://res.cloudinary.com/tinyhouse/image/upload/c_scale,h_250/v1641424463/Blog/Pipedream/reality.png)
 
 After the first 3 dozen times installing a official package for your language or framework of choice, wiring it up to your business logic - you've already fallen for the maintainence trap.
 
