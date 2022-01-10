@@ -1,10 +1,7 @@
 # use ruby 2.6.6
 source "https://rubygems.org"
 
-# gem "jekyll"
-
 gem 'jekyll', '3.9.0'
-gem "s3_website"
 
 require 'json'
 require 'open-uri'
@@ -20,4 +17,3 @@ group :jekyll_plugins do
 end
 gem 'jekyll-redirect-from'
 
-gem 'github-pages', versions['github-pages']
