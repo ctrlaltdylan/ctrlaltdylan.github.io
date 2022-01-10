@@ -25,7 +25,9 @@ There are over 500 integrations available out of the box, which means you can bu
 
 You might be saying - ok cool Dylan; but I can do this same thing in Zapier or IFTT? What's the big deal?
 
-The big deal is that with Pipedream you can jump down into code _at any time_. You don't need to register as a developer, you don't need to jump through hops to customize a workflow to meet your needs. It's abstracted just enought to get started, and flexible enough to grow with your requirements.
+The big deal is that with Pipedream you can jump down into code _at any time_. You don't need to register as a developer, you don't need to jump through anyhops to customize a workflow to meet your needs.
+
+It's abstracted just enough to get started, and flexible enough to grow with your requirements.
 
 ## The dog food tastes good
 
