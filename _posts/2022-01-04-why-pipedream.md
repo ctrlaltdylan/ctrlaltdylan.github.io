@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Why Pipedream?"
-categories: low-code, personal
+categories: tech
 featured_image: "https://res.cloudinary.com/tinyhouse/image/upload/v1641424488/Blog/Pipedream/pipedream_banner.png"
 post_image: "https://res.cloudinary.com/tinyhouse/image/upload/v1641424488/Blog/Pipedream/pipedream_banner.png"
 comments: true
