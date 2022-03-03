@@ -145,3 +145,8 @@ $grid-spacing: {{ site.data.settings.post_settings.grid_spacing }}px;
 @import "_includes/_hero";
 
 
+//------ custom components
+@import "_effects";
+
+@import "_includes/_copy_pd_workflow";
+@import "_includes/_flex";
