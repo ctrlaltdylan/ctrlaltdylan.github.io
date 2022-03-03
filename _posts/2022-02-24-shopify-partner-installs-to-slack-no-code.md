@@ -6,6 +6,7 @@ featured_image: "https://res.cloudinary.com/tinyhouse/image/upload/v1645803252/B
 post_image: "https://res.cloudinary.com/tinyhouse/image/upload/v1645803252/Blog/Pipedream/New_Project_1.png"
 preview_image: "https://res.cloudinary.com/tinyhouse/image/upload/v1646325290/Blog/Pipedream/New_Project_3.png"
 excerpt: Get notifications to your Slack channel every time your Shopify app is installed, subscribed to or uninstalled.
+description: Get notifications to your Slack channel every time your Shopify app is installed, subscribed to or uninstalled.
 comments: true
 ---
 
