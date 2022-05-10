@@ -2,9 +2,9 @@
 layout: post
 title: "Funding my son's college with a Shopify app"
 categories: motivation blog
-featured_image: "https://res.cloudinary.com/tinyhouse/image/upload/v1652145543/Blog/Photos/PXL_20220509_225120347.MP_1.jpg"
-post_image: "https://res.cloudinary.com/tinyhouse/image/upload/v1652149906/Blog/Photos/PXL_20220509_225112536.jpg"
-preview_image: "https://res.cloudinary.com/tinyhouse/image/upload/v1652145543/Blog/Photos/PXL_20220509_225120347.MP_1.jpg"
+featured_image: "https://res.cloudinary.com/tinyhouse/image/upload/c_scale,w_800/v1652145543/Blog/Photos/PXL_20220509_225120347.MP_1.jpg"
+post_image: "https://res.cloudinary.com/tinyhouse/image/upload/c_scale,w_800/v1652149906/Blog/Photos/PXL_20220509_225112536.jpg"
+preview_image: "https://res.cloudinary.com/tinyhouse/image/upload/c_scale,w_800/v1652145543/Blog/Photos/PXL_20220509_225120347.MP_1.jpg"
 excerpt: Funding my son's college account with a Shopify App
 description: I funded my son's college 529 account with a single Shopify app's earnings for the past 2 years.
 comments: true
@@ -14,7 +14,7 @@ comments: true
 
 This is the story of how I finally built and shipped my first actual revenue generating app.
 
-![Swag from Shopify Devs](https://res.cloudinary.com/tinyhouse/image/upload/v1652150850/Blog/Photos/IMG_2890.jpg)
+![Swag from Shopify Devs](https://res.cloudinary.com/tinyhouse/image/upload/c_scale,w_1200/v1652150850/Blog/Photos/IMG_2890.jpg)
 
 The year was 2020, a dark and infamous year of course; but simultaneously a golden age of side projects. I was a dad to be and with faced with a lot of time to think about the future.
 
@@ -109,7 +109,7 @@ Looking back, sure the pandemic had an influence on my first profit generating a
 
 ### 5. They send you awesome swag!
 
-![My son opening up the Shopify Swag](https://res.cloudinary.com/tinyhouse/image/upload/v1652147650/Blog/Photos/PXL_20220509_224723253.MP.jpg)
+![My son opening up the Shopify Swag](https://res.cloudinary.com/tinyhouse/image/upload/c_scale,w_800/v1652147650/Blog/Photos/PXL_20220509_224723253.MP.jpg)
 
 So long story short, like Sublime Text 2 I will ride out my micro app until it dies. But until then I'm just glad knowing that I built something that will widen my son's horizons just a little, or at least give him more options. 
 
