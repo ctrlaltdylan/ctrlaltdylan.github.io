@@ -1,0 +1,57 @@
+---
+title: Save your up arrow key, use history more
+published: true
+description: Utilizing command history is easy and saves you for spamming your poor up arrow key.
+tags: linux, productivity
+---
+
+One common day to day scenario we face everyday is reusing a terminal command that we carefully crafted maybe hours before we went on a ~reddit binge~ rabbit hole during other work.
+
+To find a past used command I would normal just keep pressing the up arrow key until I finally found the command I was looking for.
+
+However, `history` is really simple and saves you *time* and *typing*. Check it out.
+
+```
+$ history
+
+12100  git commit  --allow-empty -m "triggering deployment"
+....
+12107  ga app/controllers/
+12108  ga app/models
+12109  gst
+12110  gcmsg "Adding some missing methods for user authentication"
+12111  gp
+```
+
+`history` is kind of self explainatory, it shows your shell command history. 
+
+The first column is the command ID, whereas the 2nd column is the string of the command itself.
+
+You might be tempted to reach out to your mouse to copy & paste the command you were searching for, but there's a better way:
+
+`$ !<command entry ID you want>`
+
+So for example, if I were to enter `!121000` it would pluck the command with the ID `121000` and now it appears in my terminal prompt like magic. Woo!
+
+## Extra Fun
+
+You can utilize Linux pipe operators to search your history for specific things, maybe you want to see your last copy operations:
+
+`history | grep cp`
+
+This will give you a last of your last `cp` commands. Now you can find where you lost that file you meant to copy to your home directory.
+
+
+## Extra Extra Fun
+
+To make life even _easier_ you don't even have to spend the mental energy piping commands or reading your history line by line.
+
+Built in you can use a search function that's activated with `ctrl + r`. It will activate a reverse search, this allows you to search for past commands by name.
+
+For example, enter `history` then `ctrl + r`. You'll be greeted with a prompt similar to (depending on your *nix environment):
+
+```
+bck-i-search:
+```
+
+You can type in the beginning of the command you're racking your brain for, and it'll give you the first result of the last command you ran beginning with your search term. Amazing.
