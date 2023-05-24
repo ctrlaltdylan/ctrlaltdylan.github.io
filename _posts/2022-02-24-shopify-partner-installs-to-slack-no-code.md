@@ -34,11 +34,11 @@ Sure, you can accomplish this functionality with coding directly within your app
 
 Read on for detailed setup instructions, or just copy my Shopify App to Slack notifications workflow here and riff on your own:
 
-{% include copy_pd_workflow.html url='https://pipedream.com/@pierce/shopify-partner-to-slack-p_q6CKZNR' %}
+{% include copy_pd_workflow.html url='https://pipedream.com/@pierce/shopify-partner-to-slack-p_q6CKZNR?via=dylan' %}
 
 ## Enter Pipedream
 
-[Pipedream](https://pipedream.com) is the perfect solution for this kind of integration.
+[Pipedream](https://pipedream.com?via=dylan) is the perfect solution for this kind of integration.
 
 I wrote a Shopify Partner API Integration for Pipedream, it's free and open source to use in your Pipedream workflows.
 
@@ -52,7 +52,7 @@ Here's how to do it.
 
 First, copy my workflow that already connects Shopify App events to Slack:
 
-{% include copy_pd_workflow.html url='https://pipedream.com/@pierce/shopify-partner-to-slack-p_q6CKZNR' %}
+{% include copy_pd_workflow.html url='https://pipedream.com/@pierce/shopify-partner-to-slack-p_q6CKZNR?via=dylan' %}
 
 After your register, click **Copy** in the top right of the workflow to copy it to your Pipedream account:
 

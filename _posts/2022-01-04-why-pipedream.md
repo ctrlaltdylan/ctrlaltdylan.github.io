@@ -126,8 +126,8 @@ Pipedream is checks all of these boxes above, and is just getting started.
 
 Interested in learning more?
 
-- [Build your first workflow](https://pipedream.com/docs/quickstart/hello-world/)
-- [Develop a Pipedream integration](https://pipedream.com/docs/components/quickstart/nodejs/actions/)
+- [Build your first workflow](https://pipedream.com?via=dylan)
+- [Develop a Pipedream integration](https://pipedream.com/docs/components/quickstart/nodejs/actions/?via=dylan)
 - [Tweet @ me](https://twitter.com/ctrlaltdylan)
 - [Email me](pierce@pipedream.com)
 - [Join our Slack community](https://join.slack.com/t/pipedream-users/shared_invite/zt-ernlymsn-UHfPg~Dfp08uGkAd8dpkww)
