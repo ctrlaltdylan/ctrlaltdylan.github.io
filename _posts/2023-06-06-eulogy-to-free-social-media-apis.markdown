@@ -9,8 +9,6 @@ excerpt: A reflection on the heavy restrictions on the Twitter & Reddit APIs tha
 comments: true
 ---
 
-# A Eulogy to Free Social Media APIs
-
 Recently both Twitter and Reddit have effectively killed their APIs to the public. Much to the chagrin of their users. [A handful of the most popular subreddits like /r/videos, /r/reactiongifs and /r/lifeprotips are staging a protest by voluntarily shutting down June](https://www.theverge.com/2023/6/5/23749188/reddit-subreddit-private-protest-api-changes-apollo-charges); some even threating to shut down permanently.
 
 This new user hostile policy will also end 3rd party clients to Reddit as well, leaving the only option left analytics leaden spyware that is the official Reddit client.
