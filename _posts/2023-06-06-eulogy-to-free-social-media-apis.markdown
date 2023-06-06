@@ -35,6 +35,10 @@ It's not all bad. On one hand, never before has learning software development be
 
 Sure, you can learn a weather, Pokemon or Star Wars character API - the fundamentals are the same. But it's just not that compelling to new learners.
 
+However, the fun of interacting with `/r/gifs` programmatically is now over for the future generation without the means to pay:
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/G73P6PJBnBs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
 I specifically remember my first successful API call to search Twitter with a simple API I registered with on the same day. The rush of understanding the possibilities that lay before me. Now those opportunities are locked behind an approval process and a credit card.
 
 Now, it's possible that I'm just overly nostaglic, but all of the fringes of the internet that were open and free are now closing. There must be new edges the next generation of learners are finding, and it's just out of my perspective. But I reflect on how lucky I was to find these while they were open.
