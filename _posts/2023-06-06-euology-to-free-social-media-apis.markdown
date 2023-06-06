@@ -42,3 +42,5 @@ I specifically remember my first successful API call to search Twitter with a si
 Now, it's possible that I'm just overly nostaglic, but all of the fringes of the internet that were open and free are now closing. There must be new edges the next generation of learners are finding, and it's just out of my perspective. But I reflect on how lucky I was to find these while they were open.
 
 Thanks for the good times!
+
+Disagree? [@ me](https://twitter.com/ctrlaltdylan).
