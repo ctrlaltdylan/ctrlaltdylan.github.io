@@ -33,7 +33,9 @@ Even if that isn't the primary reason, consider the hosting costs of unlimited a
 
 ## Mourn for the next generation
 
-It's not all bad. On one hand, never before has learning software development been so accessible also thanks to LLMs. However, there's a stark difference between learning `"Hello, world"` on an isolated computer and actually retrieving real time content from social media platforms that are the lowest barrier to entry for learning programming - text based and simple API key authentication.
+It's not all bad. On one hand, never before has learning software development been so accessible also thanks to LLMs. However, there's a stark difference between learning `"Hello, world"` on an isolated computer and actually retrieving real time content from social media platforms that are the lowest barrier to entry for learning API interactions that actually leverage the power of the internet.
+
+Sure, you can learn a weather, Pokemon or Star Wars character API - the fundamentals are the same. But it's just not that compelling to new learners.
 
 I specifically remember my first successful API call to search Twitter with a simple API I registered with on the same day. The rush of understanding the possibilities that lay before me. Now those opportunities are locked behind an approval process and a credit card.
 
