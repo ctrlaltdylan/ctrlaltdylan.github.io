@@ -19,7 +19,7 @@ Looking back at the decade plus that these APIs offered a real-time firehose int
 
 These platforms that opened up their APIs saw innovations exceed their own capabilities, and often enriched the platform. [The RemindMe bot on Reddit](https://www.reddit.com/r/RemindMeBot/comments/24duzp/remindmebot_info/) was one of my favorite examples, especially when it came to internet strangers holding a grunge over some prediction of a future event: `RemindMe! 2 years "Was the term 'highly regarded' used in the Presidential Debate?"`
 
-We, I, took these APIs for granted. I leveraged them to power my first startup client, a social media aggregator aimed for university administrators. I'll always look back fondly learnining to build an ETL pipeline to load, abstract and store these feeds of content into a normalized database (heck even [reverse engineering one](https://prezi.com/p/bs1ogovpxxsg/copy-of-yakattack/)). There was no gate, I didn't need capital. Just armed with my laptop, a few PHP tutorials and a will to learn.
+We, I, took these APIs for granted. I leveraged them to power my first startup client, a social media aggregator aimed for university administrators. I'll always look back fondly learning to build an ETL pipeline to load, abstract and store these feeds of content into a normalized database (heck even [reverse engineering one](https://prezi.com/p/bs1ogovpxxsg/copy-of-yakattack/)). There was no gate, I didn't need capital. Just armed with my laptop, a few PHP tutorials and a will to learn.
 
 ## Don't hate the players, hate the A.I.
 
