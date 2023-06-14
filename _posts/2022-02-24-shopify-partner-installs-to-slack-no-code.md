@@ -34,7 +34,7 @@ Sure, you can accomplish this functionality with coding directly within your app
 
 Read on for detailed setup instructions, or just copy my Shopify App to Slack notifications workflow here and riff on your own:
 
-{% include copy_pd_workflow.html url='https://pipedream.com/@pierce/shopify-partner-to-slack-p_q6CKZNR?via=dylan' %}
+{% include copy_pd_workflow.html url='https://pipedream.com/new?h=tch_3KDf8Z?via=dylan' %}
 
 ## Enter Pipedream
 
@@ -52,7 +52,7 @@ Here's how to do it.
 
 First, copy my workflow that already connects Shopify App events to Slack:
 
-{% include copy_pd_workflow.html url='https://pipedream.com/@pierce/shopify-partner-to-slack-p_q6CKZNR?via=dylan' %}
+{% include copy_pd_workflow.html url='https://pipedream.com/new?h=tch_3KDf8Z?via=dylan' %}
 
 After your register, click **Copy** in the top right of the workflow to copy it to your Pipedream account:
 
