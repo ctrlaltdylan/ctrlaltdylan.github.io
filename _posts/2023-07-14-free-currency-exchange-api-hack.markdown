@@ -5,7 +5,7 @@ categories: tutorial shopify pipedream
 featured_image: "https://res.cloudinary.com/tinyhouse/image/upload/v1689352272/Blog/Photos/DALL_E_2023-07-14_12.30.49.png"
 post_image: "https://res.cloudinary.com/tinyhouse/image/upload/v1689352272/Blog/Photos/DALL_E_2023-07-14_12.30.49.png"
 preview_image: "https://res.cloudinary.com/tinyhouse/image/upload/v1689352272/Blog/Photos/DALL_E_2023-07-14_12.30.49.png"
-excerpt: A reflection on the heavy restrictions on the Twitter & Reddit APIs that helped build my early career over 10 years ago.
+excerpt: My workaround leveraging Pipedream workflows to build a free currency exchange API for my Shopify apps.
 comments: true
 ---
 
