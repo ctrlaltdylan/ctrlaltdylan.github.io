@@ -25,7 +25,7 @@ This hack essentially offers a free exchange API with an hourly refresh on curre
 
 The sole purpose of this workflow is to retrieve and store the current currency exchange rates for USD into a Data Store.
 
-[Copy this workflow to your Pipedream account to get started.](https://pipedream.com/new?h=tch_ORVfvQ)
+[Copy this workflow to your Pipedream account to get started.](https://pipedream.com/new?h=tch_ORVfvQ&via=p)
 
 The first step is to set up a workflow that will update a Data Store of current exchange rates. We're going to use the Open Exchange Rate API that grants a generous 1,000 API requests per month.
 
@@ -49,7 +49,7 @@ Then after deploying, when you open your Data Store you'll see the `rates` prope
 
 The second and last workflow we need to copy will create a simple GET endpoint to allow us to query this data store of fresh exchange rates.
 
-[Copy this workflow to your Pipedream account to create the endpoint.]()
+[Copy this workflow to your Pipedream account to create the endpoint.](https://pipedream.com/new?h=tch_OL4fzx&via=p)
 
 The only step you need to perform here is connecting your brand new `Exchange Rates` data store, and you're good to go!
 
