@@ -15,7 +15,7 @@ Unfortunately, I couldn't find a currency conversion API in Shopify, but I did f
 
 Great. But in this case I'm processing quite well over that, and I can't afford the usage here for the value provided.
 
-Yes, I'm known to be frugal, I drive a 2003 Corrolla. 
+Yes, I'm known to be frugal, I drive a 2003 Corolla. 
 
 So I've found a way to leverage Pipedream workflows and a data store to cache the prices and then serve a real time API endpoint to respond to requests.
 
