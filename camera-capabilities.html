@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Camera Access Example</title>
+</head>
+
+<body>
+  <h1>Camera Access Example</h1>
+  <video id="videoElement" width="640" height="480" autoplay></video>
+  <p><strong>Camera Capabilities:</strong></p>
+  <pre id="capabilities"></pre>
+
+  <script>
+    // Check if the browser supports getUserMedia
+    if (navigator.mediaDevices && navigator.mediaDevices.getUserMedia) {
+      // Constraints for the getUserMedia call (we want to access the camera)
+      const constraints = { video: true };
+
+      // Access the user's camera
+      navigator.mediaDevices
+        .getUserMedia(constraints)
+        .then(function (stream) {
+          // Get the video element
+          const videoElement = document.getElementById("videoElement");
+
+          // Set the video stream as the source for the video element
+          videoElement.srcObject = stream;
+
+          // Play the video
+          videoElement.play();
+
+          // Get the selected video track
+          const videoTrack = stream.getVideoTracks()[0];
+
+          // Display the camera capabilities
+          const capabilities = videoTrack.getCapabilities();
+          const capabilitiesString = JSON.stringify(capabilities, null, 2);
+          document.getElementById(
+            "capabilities"
+          ).textContent = capabilitiesString;
+        })
+        .catch(function (error) {
+          console.error("Error accessing the camera:", error);
+        });
+    } else {
+      alert("getUserMedia is not supported in this browser.");
+    }
+  </script>
+</body>
+
+</html>
