@@ -7,41 +7,83 @@
 
 <body>
   <h1>Camera Access Example</h1>
+  <div>
+    <label for="devices">Select a media device:</label>
+    <select id="devices"></select>
+  </div>
   <video id="videoElement" width="640" height="480" autoplay></video>
   <p><strong>Camera Capabilities:</strong></p>
   <pre id="capabilities"></pre>
 
   <script>
-    // Check if the browser supports getUserMedia
+    // Check if the browser supports navigator.mediaDevices
     if (navigator.mediaDevices && navigator.mediaDevices.getUserMedia) {
+      // Get the video and select elements
+      const videoElement = document.getElementById("videoElement");
+      const devicesSelect = document.getElementById("devices");
+
       // Constraints for the getUserMedia call (we want to access the camera)
       const constraints = { video: true };
 
-      // Access the user's camera
+      // Get available media devices
       navigator.mediaDevices
-        .getUserMedia(constraints)
-        .then(function (stream) {
-          // Get the video element
-          const videoElement = document.getElementById("videoElement");
+        .enumerateDevices()
+        .then(function (devices) {
+          // Clear any existing options
+          devicesSelect.innerHTML = "";
 
-          // Set the video stream as the source for the video element
-          videoElement.srcObject = stream;
+          devices.forEach(function (device) {
+            if (device.kind === "videoinput") {
+              // Create an option for each video input device
+              const option = document.createElement("option");
+              option.value = device.deviceId;
+              option.text =
+                device.label || "Camera " + (devicesSelect.length + 1);
+              devicesSelect.appendChild(option);
+            }
+          });
 
-          // Play the video
-          videoElement.play();
+          // Add event listener for device change
+          devicesSelect.addEventListener("change", function () {
+            const selectedDeviceId = devicesSelect.value;
+            constraints.video = { deviceId: selectedDeviceId };
 
-          // Get the selected video track
-          const videoTrack = stream.getVideoTracks()[0];
+            // Access the selected media device
+            navigator.mediaDevices
+              .getUserMedia(constraints)
+              .then(function (stream) {
+                // Set the video stream as the source for the video element
+                videoElement.srcObject = stream;
 
-          // Display the camera capabilities
-          const capabilities = videoTrack.getCapabilities();
-          const capabilitiesString = JSON.stringify(capabilities, null, 2);
-          document.getElementById(
-            "capabilities"
-          ).textContent = capabilitiesString;
+                // Play the video
+                videoElement.play();
+
+                // Get the selected video track
+                const videoTrack = stream.getVideoTracks()[0];
+
+                // Display the camera capabilities
+                const capabilities = videoTrack.getCapabilities();
+                const capabilitiesString = JSON.stringify(
+                  capabilities,
+                  null,
+                  2
+                );
+                document.getElementById(
+                  "capabilities"
+                ).textContent = capabilitiesString;
+              })
+              .catch(function (error) {
+                console.error("Error accessing the camera:", error);
+              });
+          });
+
+          // Trigger the change event for the first device in the list to show its capabilities
+          if (devicesSelect.options.length > 0) {
+            devicesSelect.dispatchEvent(new Event("change"));
+          }
         })
         .catch(function (error) {
-          console.error("Error accessing the camera:", error);
+          console.error("Error enumerating devices:", error);
         });
     } else {
       alert("getUserMedia is not supported in this browser.");
