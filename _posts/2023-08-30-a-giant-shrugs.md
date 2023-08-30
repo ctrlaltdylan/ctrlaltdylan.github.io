@@ -4,7 +4,7 @@ title: "A giants shrug - how platform risk hurt my business"
 categories: indie-hacking
 comments: true
 ---
-# A giants shrugs
+# A giant shrugs
 
 Building on the shoulders of giants is great advice. But at any time a platform can make a change that will unintentionally harm your business, and instantly it changes your businesses trajectory.
 
