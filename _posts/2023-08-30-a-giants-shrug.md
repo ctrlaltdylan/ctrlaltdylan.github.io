@@ -3,6 +3,7 @@ layout: post
 title: "A giant shrugs, platform risk is real"
 categories: indie-hacking
 comments: true
+excerpt: Platform risk is real, even if it's not nefarious.
 ---
 
 Building on the shoulders of giants is great advice. But at any time a platform can make a change that will unintentionally harm your business, and instantly it changes your businesses trajectory.
