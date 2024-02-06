@@ -1,0 +1,305 @@
+#Next.js from Heroku to Vercel
+
+### Context
+
+
+As a solo developer with primarily 6-7 years of MVC framework experience (Rails & Laravel) I wanted to try Next.js as a full stack framework.
+
+
+I developed two Shopify apps in the period of 4 months, and to minimize unknowns I deployed them to Heroku.
+
+
+After around a year of production experience and with the help of a good friend, I eventually switched hosts from Heroku to Vercel.
+
+
+This is a short list of key differences I’ve learned along this journey.
+
+
+![]()
+
+
+## Why Next.js?
+
+
+Nine times out of ten, I recommend using Rails or Laravel, etc to build the initial version of a SaaS app.
+
+
+However, with Shopify apps - I noticed they were pushing the [AppBridge](https://shopify.dev/apps/tools/app-bridge), which renders your app inside of the Shopify admin itself.
+
+
+Shopify officially supports React and packages for integrating with this AppBridge.
+
+
+So my early bet was that merchants would prefer to use apps in Shopify, and I hoped one day Shopify would rank AppBridge apps higher in their App Store. Which eventually that happened.
+
+
+So I sacrificed my own comfort with MVC frameworks and started with the UI in mind first. Instead of nice DX (Developer Experience) I went for building a product that customer UX in mind from the start.
+
+
+I have integrated React in Laravel and Rails projects in the past. It always becomes a burden to run two separate processes and manage the linking of the API and the React app.
+
+
+Configuring yet another tool to connect these 2 concerns - front end and backend was always slow, brittle and just not fun.
+
+
+At the time, Next.js just released [API routes](https://nextjs.org/docs/api-routes/introduction), which were are still are simple HTTP handlers.
+
+
+I thought this was a nice, simple approach. I hoped it would reduce my development overhead and keep my stack to one language, which it did.
+
+
+## Background jobs
+
+
+In Heroku, I was able to add a [Redis add-on](https://elements.heroku.com/addons/heroku-redis) and use [Bull.js](https://github.com/OptimalBits/bull) as a self hosted queue.
+
+
+Vercel does not include background job handling.
+
+
+And unfortunately Heroku Redis add-ons are not accessible outside of Heroku. So I decided to build a queue system with a HTTP interface.
+
+
+This service abstracts Bull.js jobs with an HTTP API, and calls back to the main Next.js API routes as standard API messages.
+
+
+Since then, other alternatives have hit the market, including [QStash](https://docs.upstash.com/qstash). Which I haven’t evaluated with this app yet, but I have written [Pipedream components](https://pipedream.com/apps/qstash) for.
+
+
+I have also made a short video showing how to integrate QStash with Next.js:
+
+
+
+[image](https://www.youtube.com/watch?v=mQnQaAEC-6I)
+
+
+### Redis
+
+
+Yes this section might sound redundant, but Redis is non synonymous with background jobs alone.
+
+
+My first Shopify app needs to respond to HTTP requests from the merchants storefront as quickly as possible.
+
+
+At a certain point I needed to create a Redis cache to keep this query performant.
+
+
+I originally reached for Heroku Redis, but TLS issues and quirks with connection address changes with maintenance windows meant I had to manually adjust ENV vars to connect to a brand new Redis cluster occasionally.
+
+
+One time I was boarding a plane as Heroku started a maintenance window on my apps Redis cluster. I had to race to swap the ENV variables from the Heroku Redis settings to the apps ENV config and restart the instance before the plane took off. True story.
+
+
+Another time it happened while I was with my family at an amusement park. That was the final straw. I switched to [Upstash](https://upstash.com) and have never had an issue since.
+
+
+### Logging
+
+
+Heroku wins in usability and ease in this category. [Papertrail](https://elements.heroku.com/addons/papertrail) is a free add-on for Heroku apps, and I was able to use it for close to a year for easy log searching and debugging.
+
+Logging on Vercel is a different story.
+
+
+You can view a log stream on individual API routes in the Vercel dashboard. But there are several downfalls:
+
+- Logs are only streamed, you can’t search past logs
+- The searching is restricted to API path only
+
+There’s no one easy provider with Vercel when I initially investigated. Nor is it straightforward to set this up.
+
+I ended up trying all providers in the Vercel app integrations marketplace, and the best one for my needs ended up being [Logflare](https://logflare.app/).
+
+It’s a nice UI, easy to set up searches, alarms and graphs. However, due to Lambda timeouts and how `pino` (the JS logging client) doesn’t block executions, you _don’t_ see 100% of your logs.
+
+
+But this system is nice in that you can send all backend or frontend logs to one service.
+
+In terms of alarming me for issues, Sentry is still king. But logging is still important to see a flow of system logs.
+
+
+## Environment Variable size limits
+
+
+My buddy makes fun of me for this, but I tend to use **a lot** of environment variables.
+
+
+At the time, I used them for feature flagging while I experimented with privately released features, or use them for 3rd party service configuration depending on the environment.
+
+
+However, because each Next.js API route is an individual Lambda, you’re limited to **64 kilobytes** of ENV variable storage
+
+
+It’s improved since, but if you rely on large amounts of ENV variables, just be aware of that.
+
+
+## Cold starts
+
+
+AWS Lambdas are great because you don’t pay for them when you don’t use them. In comparison, the traditional virtual private server will incur cost regardless if you’re making good use of the resource or not.
+
+
+the downside of this flexibility with Lambdas is they will “hibernate” if not in use for more than 5 to 6 minutes.
+
+
+This means your users might hit cold starts on uncommon API routes.
+
+
+I personally have not seen a user churn from this problem specifically or even bring it up. But it can happen if you have a very wide API with many infrequently used routes.
+
+
+### Request Size Limits
+
+
+Another gotcha with Vercel as a host, is that Next.js API routes have a hard **4.5 MB** limit on the size of the body.
+
+If your application needs to handle files or large payloads, try to offload those requests to other services as much as possible. Think Cloudinary, S3, etc.
+
+Just another gotcha you may not realize until your requests are rejected and you didn’t realize that you can’t manipulate accept files in your API routes.
+
+
+## Scaling
+
+
+This is short and sweet. Next.js API routes on Vercel _just work._ One of my Shopify apps process over 5,000 full orders a day from just one webhook alone.
+
+
+Whereas in Heroku, there were several times I had to scale up or down depending on traffic.
+
+
+In particular, one of my apps does a sizeable amount of traffic and it _just works._
+
+A large amount of requests are still uncached, and the apps just work.
+
+
+![](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/76d999f7-782e-4310-b5b6-db284d91164b/CleanShot_2022-09-30_at_14.59.18.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20221007%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20221007T140456Z&X-Amz-Expires=3600&X-Amz-Signature=7aa917db66d3c5ffd6181bb5c507a036092863e9d74864df0764dbf945a548ba&X-Amz-SignedHeaders=host&x-id=GetObject)
+
+
+### Middleware
+
+
+If you’re coming from Laravel, you don’t know how spoiled you are with middleware options.
+
+
+In Next.js you’re extremely limited on how to build and manage middleware.
+
+
+There is not central routes file in Next.js. The file structure of your app _is_ the routes definition.
+
+
+This means you’ll see a lot of this:
+
+
+```javascript
+export default withAuth(withDb(withSentry(withLogging(withoutCSRF(apiRoute))))))
+```
+
+
+Without this central manifest in code, you can’t define mappings of middleware to a group of routes.
+
+
+Eventually I wrote basic middleware and found a way to group them into categorical middleware.
+
+
+```javascript
+export default internalRoute(apiRoute);
+
+export default externalRoute(apiRoute);
+```
+
+
+It’s still kind of a pain, but it’s workable.
+
+
+### Cloudflare
+
+
+Vercel manages DNS on behalf of your app, which is nice in that you can have a dedicated public environment per branch or commit.
+
+However, to add an additional WAF (Web Application Firewall) to protect your app for DDoS and caching requests, I reach for Cloudflare.
+
+Unfortunately there’s some setup involved with Cloudflare + Vercel, to allow them to play nicely together. [The directions are a bit confusing](https://vercel.com/guides/using-cloudflare-with-vercel), but once you have it set up it’s a really nice combination.
+
+
+## Console Access
+
+
+Coming from Heroku and Rails/Laravel MVC style applications, you’re able to open a console to interact with your application to perform administrative tasks.
+
+This is not the case in Next.js with Vercel.
+
+
+Your infrastructure is essentially distributed into micro API endpoints, without a central “app”.
+
+This leaves you a few options to work around this.
+
+
+### Local CLI scripts
+
+
+1. Add a `.env.production` file locally and make sure to `.gitignore` it. 
+
+1. Then you can use a basic NPM/yarn script definition:
+
+```javascript
+// package.json
+...
+"scripts": {
+  "task:prod": "DOTENV_CONFIG_PATH=./.env.production babel-node --presets @babel/preset-env --plugins transform-class-properties -r dotenv/config"
+   ...other scripts
+}
+
+```
+
+
+Then you can define simple CLI scripts in a folder like `/tasks/getSubscriptionStatus.js`
+
+
+```javascript
+async function run() {
+  const [_yarn, _command, ...args] = process.argv;
+  
+  // now you can capture positional arguments under `args`
+}
+
+run();
+```
+
+
+Now you can just pass positional arguments to your tasks and use them in scripts in either local, staging or production context:
+
+
+```javascript
+yarn task:prod tasks/getSubscriptionStatus.js dev.myshopify.com
+```
+
+
+I tried other CLI tooling, it was overly complex and I prefer simple and memorable things that require a little copy & paste.
+
+
+### Using a service
+
+
+Instead of using local scripts, you could use tooling like Retool or [Airplane.dev](http://Airplane.dev) for remote administration. But my CLI scripts are doing just fine for now. 
+
+
+Once I need to outsource customer support, that’ll be what I reach for over creating my own admin dashboard.
+
+
+## Cost
+
+
+Vercel is insanely cheaper than Heroku or any VPS service I’ve used.
+
+However, the missing pieces to Heroku like free Redis, Papertrail and Background Queue system are not free.
+
+
+Just anecdotally, Heroku Redis premium was roughly the same cost was when I switch to QStash’s Pay as you Go plan.
+
+
+QStash has recently reduced it’s pricing to 100k jobs for **$1.** So I’ll most likely be sunsetting my custom implementation, and because Upstash is not going to support Bull.js in the future.
+
+
+## Summary 
+
