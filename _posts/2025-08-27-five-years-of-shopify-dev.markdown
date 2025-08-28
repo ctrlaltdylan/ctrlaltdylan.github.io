@@ -14,22 +14,22 @@ Back in 2020, I published my first Shopify app. My goal was simple: generate som
 
 5 years later, I'm now working full time on my apps. It's been a hell of a ride. Replacing my income with app revenue once seemed like an improbable dream. Now it's my full time reality.
 
-It all hit me when my newest Shopify swag came in the mail (thanks Liam), and I was comparing how much my son has grown between my first care package and now.
+It all hit me when my newest Shopify swag came in the mail (thanks again Liam), and I was comparing how much my son has grown between my first care package and now.
 
-I just need to express how grateful I am for the Shopify platform. They've been instrumental in facilicating this ecosystem of merchants and partners.
+![Weston holding the skateboard](https://res.cloudinary.com/tinyhouse/image/upload/v1756315757/Blog/Photos/shopify-skateboard.jpg)
 
-Since the App Competition in 2020, I learned so much from participating in their community and working directly with merchants, customers and Shopifolk alike. Thanks to their one of a kind app store, product and developer documentation, I've been able to grow with them:
+I just need to express how grateful I am for the Shopify platform. They've been instrumental in facilicating this ecosystem of merchants and partners. Since 2020 I've managed to:
 
-- Shopify featured my app as a [top 40 use of customer account extensions](https://www.shopify.com/blog/introducing-customer-account-extensions#data), and showcased it as an official partner of their Winter Editions launch.
-- Built the first Shopify POS integration for drivers license scanning
-- Built the first checkout extension for customer ID verification during checkout
+- Featured as a [top 40 use of customer account extensions](https://www.shopify.com/blog/introducing-customer-account-extensions#data), and showcased it as an [official launch partner of their Winter Editions](https://apps.shopify.com/stories/guide-customer-accounts).
+- Build the first [Shopify POS integration for drivers license scanning](https://getverdict.com/help/docs/shopify/pos)
+- Build the first [checkout extension for customer ID verification during checkout](https://getverdict.com/help/docs/flows/shopify-checkout-app-blocks#verifying-ids-during-checkout)
 - Attended two Editions.dev conferences in lovely Toronto 🇨🇦 which are now a family tradition
 - Made connections with other amazing and talented partners across the globe
-- Meeting Tobi, and
+- Meeting the genius legend himself, Tobi
 
 ![Hanging out with Patrick at Editions.dev](https://res.cloudinary.com/tinyhouse/image/upload/v1756387688/Blog/Photos/IMG_8504.jpg)
 
-I'm so thankful for Shopify's support, and for my closest mentors (you know who you are), merchants, customers and fellow partners that helped me start living my dream of working independently.
+I'm so thankful for Shopify's support, and for my closest mentors (you know who you are), merchants, customers and fellow partners that helped me realize my dream of working independently.
 
 There's no way I could fit all of the amazing experiences and lessons learned in these years into a single post. But I'll _try_ keep it to my top 5.
 
