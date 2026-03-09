@@ -54,5 +54,6 @@ plugins:
   - jekyll-paginate
   - jekyll-sitemap
 
+future: true
 paginate: 6
 paginate_path: "/blog/page:num/"
