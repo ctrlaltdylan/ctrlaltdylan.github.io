@@ -2,6 +2,7 @@ source "https://rubygems.org"
 
 gem 'jekyll', '3.9.0'
 gem 'csv'
+gem 'base64'
 gem "kramdown-parser-gfm"
 
 group :jekyll_plugins do
