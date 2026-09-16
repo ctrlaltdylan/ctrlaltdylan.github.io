@@ -57,3 +57,18 @@ plugins:
 future: true
 paginate: 6
 paginate_path: "/blog/page:num/"
+
+# Setting `exclude` replaces Jekyll's built-in list rather than adding to it,
+# so the defaults are repeated here alongside the build files we don't want
+# published. admin/config.yml is deliberately NOT excluded — Netlify CMS
+# fetches it from the live site.
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/
+  - netlify.toml
+  - README.md

@@ -1,0 +1,39 @@
+# Build + redirect config for dylanjpierce.com
+#
+# Historically these settings lived only in the Netlify UI, which made the
+# deploy unreproducible. Keeping them here means the build is described by
+# the repo.
+
+[build]
+  command = "bundle exec jekyll build"
+  publish = "_site"
+
+[build.environment]
+  # Gemfile.lock pins jekyll 3.9.5. Ruby 3.1 keeps csv/base64/bigdecimal as
+  # default gems, so the Ruby-3.4 shims in the Gemfile stay harmless.
+  # If the deploy log shows this version is unavailable, try 3.1.2 or 2.7.2.
+  RUBY_VERSION = "3.1.4"
+  JEKYLL_ENV = "production"
+
+# ---------------------------------------------------------------------------
+# blog.dylanjpierce.com -> dylanjpierce.com
+#
+# Only takes effect once blog.dylanjpierce.com is added as a domain alias on
+# this Netlify site AND its DNS points at Netlify. Until then it is a no-op.
+# :splat preserves the path, so every existing post URL survives the move and
+# passes its search ranking to the apex.
+# ---------------------------------------------------------------------------
+[[redirects]]
+  from = "https://blog.dylanjpierce.com/*"
+  to = "https://dylanjpierce.com/:splat"
+  status = 301
+  force = true
+
+# The site menu links to /blog/ but the page builds to /blog.html. Netlify's
+# pretty-URL handling papers over this; the rule makes it explicit so it does
+# not depend on a dashboard toggle. The real fix is moving blog.html to
+# blog/index.html, which would also make jekyll-paginate work.
+[[redirects]]
+  from = "/blog/"
+  to = "/blog.html"
+  status = 301
