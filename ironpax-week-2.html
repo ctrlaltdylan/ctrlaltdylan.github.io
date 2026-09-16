@@ -1,0 +1,672 @@
+---
+layout: null
+title: IronPAX Week 2 Scorecard
+permalink: /ironpax/week-2/
+---
+{% raw %}<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>IronPAX Week 2 Scorecard</title>
+<meta name="description" content="Tap your way around the field to score the F3 IronPAX Week 2 45-minute AMRAP. Total yards plus total reps, calculated for you.">
+<meta name="theme-color" content="#0a0b0a">
+<link rel="shortcut icon" href="/images/favicon.png">
+<meta property="og:title" content="IronPAX Week 2 Scorecard">
+<meta property="og:description" content="Tap your way around the field to score the F3 IronPAX Week 2 45-minute AMRAP.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://blog.dylanjpierce.com/ironpax/week-2/">
+<meta name="twitter:card" content="summary_large_image">
+</head>
+<body>
+<style>
+  :root{
+    --ink:#0a0b0a;
+    --ink2:#121513;
+    --panel:#191d1a;
+    --line:#2b322d;
+    --chalk:#f4f6f3;
+    --mute:#8a9690;
+    --turf-a:#17532f;
+    --turf-b:#1a5c34;
+    --ez:#7f1d1d;
+    --gold:#fbbf24;
+    --red:#ef4444;
+    --ezw:38px;
+    --cond:"Helvetica Neue","Arial Narrow",Arial,sans-serif;
+  }
+  *{box-sizing:border-box}
+  body{
+    margin:0;
+    background:var(--ink);
+    color:var(--chalk);
+    font-family:var(--cond);
+    -webkit-font-smoothing:antialiased;
+    -webkit-text-size-adjust:100%;
+  }
+  .ipx{max-width:960px;margin:0 auto;padding:20px 16px 72px}
+
+  /* ---------- masthead ---------- */
+  .ipx-top{
+    border:2px solid var(--chalk);
+    background:
+      repeating-linear-gradient(135deg,rgba(255,255,255,.03) 0 6px,transparent 6px 12px),
+      var(--ink2);
+    padding:18px 18px 16px;
+    position:relative;
+  }
+  .ipx-top::after{content:"";position:absolute;left:0;right:0;bottom:-8px;height:4px;background:var(--red)}
+  .ipx-kicker{
+    font-size:12px;font-weight:700;letter-spacing:.34em;text-transform:uppercase;
+    color:var(--red);margin:0 0 6px;
+  }
+  .ipx-title{
+    margin:0;font-size:clamp(30px,8vw,58px);line-height:.92;font-weight:800;
+    letter-spacing:-.01em;text-transform:uppercase;
+  }
+  .ipx-title span{display:block;color:var(--gold)}
+  .ipx-sub{
+    margin:10px 0 0;color:var(--mute);font-size:13px;letter-spacing:.16em;
+    text-transform:uppercase;font-weight:700;
+  }
+  .ipx-vid{
+    display:inline-block;margin-top:12px;color:var(--chalk);font-size:12px;font-weight:700;
+    letter-spacing:.16em;text-transform:uppercase;text-decoration:none;
+    border-bottom:2px solid var(--red);padding-bottom:2px;
+  }
+  .ipx-vid:hover{color:var(--gold)}
+
+  /* ---------- section headings ---------- */
+  .ipx-h{
+    display:flex;align-items:center;gap:12px;
+    margin:36px 0 12px;font-size:12px;font-weight:800;letter-spacing:.3em;
+    text-transform:uppercase;color:var(--mute);
+  }
+  .ipx-h::after{content:"";flex:1;height:1px;background:var(--line)}
+  .ipx-h b{color:var(--ink);background:var(--gold);padding:3px 8px;letter-spacing:.2em;font-size:11px}
+
+  /* ---------- round tabs ---------- */
+  .ipx-rounds{display:flex;flex-wrap:wrap;gap:6px}
+  .ipx-round{
+    flex:1 1 84px;min-width:84px;padding:9px 6px;cursor:pointer;
+    background:var(--panel);border:2px solid var(--line);color:var(--mute);
+    font-family:var(--cond);font-weight:800;text-transform:uppercase;letter-spacing:.1em;
+    font-size:11px;line-height:1.35;text-align:center;transition:.12s;
+  }
+  .ipx-round b{display:block;font-size:17px;letter-spacing:.02em;color:var(--chalk)}
+  .ipx-round:hover{border-color:var(--mute)}
+  .ipx-round[aria-selected="true"]{background:var(--chalk);border-color:var(--chalk);color:#3a4640}
+  .ipx-round[aria-selected="true"] b{color:var(--ink)}
+  .ipx-round[data-holds="1"]{border-color:var(--gold)}
+  .ipx-round[data-holds="1"]::after{content:"● YOU";display:block;font-size:9px;color:var(--gold);letter-spacing:.14em;margin-top:2px}
+  .ipx-round[aria-selected="true"][data-holds="1"]::after{color:var(--red)}
+
+  /* ---------- the field ---------- */
+  .ipx-fieldwrap{margin-top:12px;border:3px solid var(--chalk);background:var(--turf-a);position:relative}
+  .ipx-nums{
+    position:relative;height:20px;
+    background:linear-gradient(180deg,rgba(0,0,0,.35),transparent);
+  }
+  .ipx-nums span{
+    position:absolute;top:4px;transform:translateX(-50%);
+    font-size:10px;font-weight:800;color:rgba(255,255,255,.65);letter-spacing:.08em;
+  }
+  .ipx-field{position:relative;padding:10px 0}
+  .ipx-turf{
+    position:absolute;inset:0;
+    background:repeating-linear-gradient(90deg,var(--turf-a) 0 5%,var(--turf-b) 5% 10%);
+  }
+  .ipx-lines{
+    position:absolute;left:var(--ezw);right:var(--ezw);top:0;bottom:0;
+    background:repeating-linear-gradient(90deg,rgba(255,255,255,.26) 0 2px,transparent 2px 10%);
+  }
+  .ipx-lines::before,.ipx-lines::after{
+    content:"";position:absolute;top:0;bottom:0;width:2px;background:rgba(255,255,255,.7);
+  }
+  .ipx-lines::before{left:0}
+  .ipx-lines::after{right:0}
+  .ipx-fifty{position:absolute;left:50%;top:0;bottom:0;width:3px;background:rgba(255,255,255,.55);transform:translateX(-50%)}
+  .ipx-ez{
+    position:absolute;top:0;bottom:0;width:var(--ezw);
+    background:repeating-linear-gradient(135deg,#6d1919 0 7px,var(--ez) 7px 14px);
+    display:flex;align-items:center;justify-content:center;
+  }
+  .ipx-ez--l{left:0;border-right:2px solid rgba(255,255,255,.7)}
+  .ipx-ez--r{right:0;border-left:2px solid rgba(255,255,255,.7)}
+  .ipx-ez b{
+    writing-mode:vertical-rl;font-size:11px;letter-spacing:.32em;font-weight:800;
+    color:rgba(255,255,255,.82);text-transform:uppercase;
+  }
+  .ipx-ez--l b{transform:rotate(180deg)}
+
+  .ipx-lane{position:relative;height:46px;margin:5px 0}
+  .ipx-lane + .ipx-lane{margin-top:2px}
+
+  /* leg = a travel stage, width encodes yardage */
+  .ipx-leg,.ipx-stn{
+    position:absolute;top:50%;transform:translateY(-50%);
+    font-family:var(--cond);font-weight:800;text-transform:uppercase;
+    cursor:pointer;transition:.12s;text-align:left;
+    display:flex;align-items:center;gap:8px;
+    border:2px solid rgba(255,255,255,.5);
+    background:rgba(8,20,13,.72);color:var(--chalk);
+    padding:0 10px;height:38px;white-space:nowrap;overflow:hidden;
+  }
+  .ipx-leg{letter-spacing:.1em;font-size:clamp(9px,2.2vw,12px);min-width:118px}
+  .ipx-stn{
+    letter-spacing:.08em;font-size:clamp(9px,2.2vw,12px);
+    border-color:var(--gold);background:rgba(20,14,2,.85);
+  }
+  .ipx-leg .v,.ipx-stn .v{
+    font-size:11px;color:var(--gold);letter-spacing:.04em;flex:0 0 auto;
+  }
+  .ipx-stn .v{color:var(--chalk);background:var(--gold);color:#1a1405;padding:1px 6px}
+  .ipx-leg:hover,.ipx-stn:hover{border-color:#fff;background:rgba(8,20,13,.95)}
+  .ipx-leg .arw{color:rgba(255,255,255,.55);flex:0 0 auto;font-size:13px}
+
+  /* states */
+  .ipx-lane[data-state="done"] .ipx-leg,
+  .ipx-lane[data-state="done"] .ipx-stn{
+    background:var(--gold);border-color:var(--gold);color:#1a1405;
+  }
+  .ipx-lane[data-state="done"] .ipx-leg .v{color:#1a1405}
+  .ipx-lane[data-state="done"] .ipx-leg .arw{color:rgba(0,0,0,.45)}
+  .ipx-lane[data-state="done"] .ipx-stn .v{background:#1a1405;color:var(--gold)}
+  .ipx-lane[data-state="mark"] .ipx-leg,
+  .ipx-lane[data-state="mark"] .ipx-stn{
+    background:var(--red);border-color:#fff;color:#fff;
+    box-shadow:0 0 0 3px rgba(239,68,68,.35);
+  }
+  .ipx-lane[data-state="mark"] .v{background:#fff;color:var(--red)}
+  .ipx-lane[data-state="mark"] .ipx-leg .v{background:none;color:#fff}
+  .ipx-lane[data-state="next"] .ipx-leg,
+  .ipx-lane[data-state="next"] .ipx-stn{
+    border-style:dashed;border-color:#fff;
+  }
+  .ipx-tick{
+    position:absolute;top:50%;transform:translate(-50%,-50%);
+    width:9px;height:9px;background:var(--gold);border:2px solid #1a1405;border-radius:50%;
+  }
+
+  .ipx-hint{
+    margin:10px 0 0;font-size:11px;color:var(--mute);letter-spacing:.14em;
+    text-transform:uppercase;font-weight:700;line-height:1.7;
+  }
+
+  /* ---------- partial panel ---------- */
+  .ipx-partial{
+    margin-top:14px;border:2px solid var(--line);background:var(--panel);padding:16px;
+  }
+  .ipx-partial[hidden]{display:none}
+  .ipx-plabel{font-size:11px;letter-spacing:.24em;text-transform:uppercase;color:var(--mute);font-weight:800}
+  .ipx-pstage{
+    margin:6px 0 0;font-size:clamp(17px,4.6vw,24px);font-weight:800;text-transform:uppercase;
+    letter-spacing:.02em;color:var(--gold);
+  }
+  .ipx-pstage small{display:block;font-size:11px;letter-spacing:.16em;color:var(--mute);margin-top:4px}
+  .ipx-chips{display:flex;flex-wrap:wrap;gap:6px;margin-top:12px}
+  .ipx-chip{
+    padding:9px 14px;cursor:pointer;background:transparent;border:2px solid var(--line);
+    color:var(--chalk);font-family:var(--cond);font-weight:800;font-size:13px;letter-spacing:.08em;
+    transition:.12s;
+  }
+  .ipx-chip:hover{border-color:var(--mute)}
+  .ipx-chip[aria-pressed="true"]{background:var(--gold);border-color:var(--gold);color:#1a1405}
+  .ipx-free{display:flex;align-items:center;gap:10px;margin-top:12px;flex-wrap:wrap}
+  .ipx-free label{font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--mute);font-weight:800}
+  .ipx-free input{
+    width:128px;padding:10px 12px;background:var(--ink);border:2px solid var(--line);
+    color:var(--chalk);font-family:var(--cond);font-weight:800;font-size:19px;letter-spacing:.04em;
+  }
+  .ipx-free input:focus{outline:none;border-color:var(--gold)}
+  .ipx-warn{margin:10px 0 0;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--red);font-weight:800}
+  .ipx-warn[hidden]{display:none}
+
+  /* ---------- score ---------- */
+  .ipx-score{
+    margin-top:14px;border:3px solid var(--gold);background:var(--ink2);
+    display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.1fr);
+  }
+  .ipx-score__big{padding:22px 18px;border-right:3px solid var(--gold)}
+  .ipx-score__lab{font-size:11px;letter-spacing:.3em;text-transform:uppercase;color:var(--mute);font-weight:800}
+  .ipx-score__num{
+    font-size:clamp(46px,14vw,86px);line-height:.9;font-weight:800;color:var(--gold);
+    letter-spacing:-.02em;margin-top:6px;font-variant-numeric:tabular-nums;
+  }
+  .ipx-score__det{padding:18px;display:flex;flex-direction:column;gap:0;justify-content:center}
+  .ipx-row{
+    display:flex;justify-content:space-between;gap:12px;padding:7px 0;
+    border-bottom:1px solid var(--line);font-size:12px;letter-spacing:.08em;
+    text-transform:uppercase;font-weight:700;
+  }
+  .ipx-row:last-child{border-bottom:0}
+  .ipx-row span:first-child{color:var(--mute);min-width:0;overflow:hidden;text-overflow:ellipsis}
+  .ipx-row span:last-child{font-variant-numeric:tabular-nums;white-space:nowrap}
+  .ipx-row--tot{border-top:2px solid var(--gold);margin-top:4px;padding-top:9px;font-size:14px}
+  .ipx-row--tot span{color:var(--gold)!important}
+
+  .ipx-actions{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px}
+  .ipx-btn{
+    flex:1 1 auto;padding:15px 20px;cursor:pointer;text-align:center;text-decoration:none;
+    font-family:var(--cond);font-weight:800;font-size:13px;letter-spacing:.18em;text-transform:uppercase;
+    border:2px solid var(--chalk);background:transparent;color:var(--chalk);transition:.12s;
+  }
+  .ipx-btn:hover{background:var(--chalk);color:var(--ink)}
+  .ipx-btn--go{background:var(--red);border-color:var(--red);color:#fff;flex:2 1 260px}
+  .ipx-btn--go:hover{background:#fff;border-color:#fff;color:var(--red)}
+  .ipx-btn--off{opacity:.4;pointer-events:none}
+  .ipx-btn--ghost{flex:0 1 auto;border-color:var(--line);color:var(--mute)}
+
+  /* ---------- reference ---------- */
+  .ipx-ref{width:100%;border-collapse:collapse;font-size:12px}
+  .ipx-ref th,.ipx-ref td{
+    padding:9px 10px;border:1px solid var(--line);text-align:left;
+    letter-spacing:.1em;text-transform:uppercase;font-weight:700;
+  }
+  .ipx-ref th{background:var(--panel);color:var(--mute);font-size:10px;letter-spacing:.2em}
+  .ipx-ref td{font-variant-numeric:tabular-nums}
+  .ipx-ref td:first-child{color:var(--gold);font-weight:800}
+  .ipx-note{
+    margin-top:14px;border-left:3px solid var(--red);padding:12px 14px;background:var(--panel);
+    font-size:12px;line-height:1.85;color:var(--mute);letter-spacing:.06em;
+  }
+  .ipx-note b{color:var(--chalk)}
+  .ipx-foot{
+    margin-top:36px;padding-top:16px;border-top:1px solid var(--line);
+    font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:#5c6863;
+    line-height:2;
+  }
+  .ipx-foot a{color:#5c6863}
+  .ipx-by{
+    display:block;margin-bottom:6px;font-size:12px;letter-spacing:.22em;
+    font-weight:800;color:var(--gold);
+  }
+
+  .ipx-leg:focus-visible,.ipx-stn:focus-visible,.ipx-chip:focus-visible,
+  .ipx-round:focus-visible,.ipx-btn:focus-visible,.ipx-free input:focus-visible{
+    outline:3px solid var(--gold);outline-offset:2px;
+  }
+  .ipx-leg:focus-visible,.ipx-stn:focus-visible{outline-color:#fff}
+
+  @media (prefers-reduced-motion:reduce){
+    *,*::before,*::after{transition-duration:.01ms!important;animation-duration:.01ms!important}
+  }
+
+  /* reference table must scroll itself, never the page */
+  .ipx-refwrap{overflow-x:auto;-webkit-overflow-scrolling:touch}
+  .ipx-ref{min-width:420px}
+
+  @media (max-width:620px){
+    :root{--ezw:24px}
+    .ipx-score{grid-template-columns:1fr}
+    .ipx-score__big{border-right:0;border-bottom:3px solid var(--gold);padding:18px}
+    .ipx-ez b{font-size:9px;letter-spacing:.2em}
+    .ipx-lane{height:42px}
+    .ipx-leg,.ipx-stn{height:34px;padding:0 7px;gap:5px}
+  }
+</style>
+
+<div class="ipx">
+
+  <header class="ipx-top">
+    <p class="ipx-kicker">F3 Nation &middot; 45-Min AMRAP</p>
+    <h1 class="ipx-title">IronPAX <span>Week 2</span></h1>
+    <p class="ipx-sub">Scorecard &mdash; Total Yards + Total Reps</p>
+    <a class="ipx-vid" href="https://youtu.be/KUUJ_fmzk3E" target="_blank" rel="noopener">▶ Watch the IronPAX video</a>
+  </header>
+
+  <h2 class="ipx-h"><b>1</b> Pick your round</h2>
+  <div class="ipx-rounds" id="ipxRounds" role="tablist" aria-label="Round"></div>
+
+  <h2 class="ipx-h"><b>2</b> Tap the last thing you finished</h2>
+
+  <div class="ipx-fieldwrap">
+    <div class="ipx-nums" id="ipxNums"></div>
+    <div class="ipx-field">
+      <div class="ipx-turf"></div>
+      <div class="ipx-lines"><i class="ipx-fifty"></i></div>
+      <div class="ipx-ez ipx-ez--l"><b>F3</b></div>
+      <div class="ipx-ez ipx-ez--r"><b>IronPAX</b></div>
+      <div id="ipxLanes" style="position:relative"></div>
+    </div>
+  </div>
+
+  <p class="ipx-hint">
+    Everything before your tap counts automatically &mdash; you don't mark each round.<br>
+    Gold = banked &middot; Red = your mark &middot; Dashed = where the clock caught you.
+  </p>
+
+  <div class="ipx-partial" id="ipxPartial">
+    <p class="ipx-plabel">Then &mdash; how far did you get into the next one?</p>
+    <p class="ipx-pstage" id="ipxPStage">&mdash;<small id="ipxPMax"></small></p>
+    <div class="ipx-chips" id="ipxChips"></div>
+    <div class="ipx-free">
+      <label for="ipxFree">Or enter exactly</label>
+      <input id="ipxFree" type="number" inputmode="numeric" min="0" step="1" placeholder="0" aria-describedby="ipxPMax">
+      <span class="ipx-plabel" id="ipxUnit"></span>
+    </div>
+    <p class="ipx-warn" id="ipxWarn" hidden></p>
+  </div>
+
+  <h2 class="ipx-h"><b>3</b> Your score</h2>
+
+  <div class="ipx-score">
+    <div class="ipx-score__big">
+      <p class="ipx-score__lab">Week 2 Total</p>
+      <p class="ipx-score__num" id="ipxTotal">0</p>
+    </div>
+    <div class="ipx-score__det">
+      <div class="ipx-row"><span id="ipxLastLab">Last completed</span><span id="ipxLast">Nothing yet</span></div>
+      <div class="ipx-row"><span>Banked through there</span><span id="ipxBanked">0</span></div>
+      <div class="ipx-row"><span id="ipxPartLab">Partial credit</span><span id="ipxPart">0</span></div>
+      <div class="ipx-row ipx-row--tot"><span>Total</span><span id="ipxTotal2">0</span></div>
+    </div>
+  </div>
+
+  <div class="ipx-actions">
+    <a class="ipx-btn ipx-btn--go" id="ipxSubmit" href="#" target="_blank" rel="noopener">Submit to IronPAX &rarr;</a>
+    <button class="ipx-btn" id="ipxCopy" type="button">Copy score</button>
+    <button class="ipx-btn ipx-btn--ghost" id="ipxReset" type="button">Reset</button>
+  </div>
+
+  <h2 class="ipx-h"><b>4</b> If you'd rather do it by hand</h2>
+  <div class="ipx-refwrap">
+  <table class="ipx-ref">
+    <thead>
+      <tr><th>Round</th><th>Reps each</th><th>Round worth</th><th>Score if you finish it</th></tr>
+    </thead>
+    <tbody id="ipxRef"></tbody>
+  </table>
+  </div>
+
+  <div class="ipx-note">
+    <b>The round:</b> 100yd run &rarr; N&times;12 Bonnie Blairs &rarr; 100yd Bernie &rarr; N&times;12 HR Merkins
+    &rarr; 25yd Bear Crawl &rarr; N&times;12 WW1s &rarr; 25yd Crawl Bear &rarr; N&times;12 Burpees. Reps go up 12 every round.<br><br>
+    <b>Scoring:</b> every yard is a point and every rep is a point. A full round N is worth
+    <b>250 + 48N</b>; after N complete rounds you've banked <b>24N&sup2; + 274N</b>.<br><br>
+    <b>Worked example &mdash; Ojos:</b> finished rounds 1&ndash;4, then got the 100yd run and 2 Bonnie Blairs before time.
+    That's 1480 banked + 100 + 2 = <b>1582</b>.
+  </div>
+
+  <p class="ipx-foot">
+    <b class="ipx-by">Made by Duke from F3 - Cleveland</b>
+    Built from the Week 2 scorecard. Numbers match the spreadsheet exactly.
+    <a href="/">&larr; Back to the site</a>
+  </p>
+</div>
+
+<script>
+(function(){
+  "use strict";
+
+  // IronPAX Week 2 score submission (F3 Greenwood).
+  var SUBMIT_URL = "https://ironpax.f3greenwood.org/submit";
+
+  var ROUNDS = 8;
+  var STAGES = [
+    {label:"RUN",        short:"100yd Run",       type:"yards", pts:100, from:0,   to:100},
+    {label:"BONNIE BLAIRS",    short:"Bonnie Blairs", type:"reps",  at:100},
+    {label:"BERNIE",     short:"100yd Bernie",    type:"yards", pts:100, from:100, to:0},
+    {label:"HR MERKINS",       short:"HR Merkins",    type:"reps",  at:0},
+    {label:"BEAR CRAWL", short:"25yd Bear Crawl", type:"yards", pts:25,  from:0,   to:25},
+    {label:"WW1s",             short:"WW1s",          type:"reps",  at:25},
+    {label:"CRAWL BEAR", short:"25yd Crawl Bear", type:"yards", pts:25,  from:25,  to:0},
+    {label:"BURPEES",          short:"Burpees",       type:"reps",  at:0}
+  ];
+  var PER = STAGES.length;
+  var TOTAL_STAGES = ROUNDS * PER;
+
+  // Points for stage index `i` within round `n` (1-based round).
+  function stageVal(i, n){
+    var s = STAGES[i];
+    return s.type === "yards" ? s.pts : 12 * n;
+  }
+  // Points for a global stage index g (0-based).
+  function globalVal(g){ return stageVal(g % PER, Math.floor(g / PER) + 1); }
+
+  // Sum of every stage strictly before global index `done`.
+  function bankedThrough(done){
+    var t = 0;
+    for (var g = 0; g < done; g++) t += globalVal(g);
+    return t;
+  }
+
+  // state.done = number of fully completed stages (0..TOTAL_STAGES)
+  var state = {done:0, partial:0, view:1};
+  try {
+    var saved = JSON.parse(localStorage.getItem("ipx-wk2") || "null");
+    if (saved && typeof saved.done === "number") {
+      state.done = Math.max(0, Math.min(TOTAL_STAGES, saved.done|0));
+      state.partial = Math.max(0, saved.partial|0);
+      state.view = Math.max(1, Math.min(ROUNDS, saved.view|0 || 1));
+    }
+  } catch(e){}
+
+  function save(){
+    try { localStorage.setItem("ipx-wk2", JSON.stringify(state)); } catch(e){}
+  }
+
+  var $ = function(id){ return document.getElementById(id); };
+  var sub = $("ipxSubmit");
+  var roundsEl = $("ipxRounds"), lanesEl = $("ipxLanes"), numsEl = $("ipxNums");
+
+  /* ---------- yard numbers across the top ---------- */
+  (function(){
+    var html = "";
+    for (var y = 10; y <= 90; y += 10) {
+      var lab = y > 50 ? 100 - y : y;
+      html += '<span style="left:calc(var(--ezw) + (100% - 2*var(--ezw)) * ' + (y/100) + ')">' + lab + '</span>';
+    }
+    numsEl.innerHTML = html;
+  })();
+
+  /* ---------- round tabs ---------- */
+  (function(){
+    var html = "";
+    for (var n = 1; n <= ROUNDS; n++) {
+      html += '<button class="ipx-round" role="tab" data-n="' + n + '">' +
+              'Round<b>' + n + '</b>' + (12*n) + ' reps</button>';
+    }
+    roundsEl.innerHTML = html;
+    roundsEl.addEventListener("click", function(e){
+      var b = e.target.closest(".ipx-round");
+      if (!b) return;
+      state.view = +b.dataset.n;
+      save(); render();
+    });
+  })();
+
+  /* ---------- lanes (the field) ---------- */
+  function pos(y){ return "calc(var(--ezw) + (100% - 2*var(--ezw)) * " + (y/100) + ")"; }
+
+  (function(){
+    var html = "";
+    for (var i = 0; i < PER; i++) {
+      var s = STAGES[i];
+      html += '<div class="ipx-lane" data-i="' + i + '">';
+      if (s.type === "yards") {
+        var lo = Math.min(s.from, s.to), hi = Math.max(s.from, s.to);
+        var rightward = s.to > s.from;
+        var style = "left:" + pos(lo) + ";width:calc((100% - 2*var(--ezw)) * " + ((hi-lo)/100) + ")";
+        html += '<button class="ipx-leg" data-i="' + i + '" style="' + style + '">' +
+                  '<span class="arw">' + (rightward ? "&#9654;" : "&#9664;") + '</span>' +
+                  '<span class="nm">' + s.label + '</span>' +
+                  '<span class="v">+' + s.pts + '</span>' +
+                '</button>';
+      } else {
+        // station chip anchored at its yard mark, opening toward the field
+        var st;
+        if (s.at === 100)      st = "right:calc(var(--ezw) / 2)";
+        else if (s.at === 0)   st = "left:calc(var(--ezw) / 2)";
+        else                   st = "left:" + pos(s.at);
+        html += '<i class="ipx-tick" style="left:' + pos(s.at) + '"></i>';
+        html += '<button class="ipx-stn" data-i="' + i + '" style="' + st + '">' +
+                  '<span class="nm">' + s.label + '</span>' +
+                  '<span class="v" data-reps>&times;12</span>' +
+                '</button>';
+      }
+      html += '</div>';
+    }
+    lanesEl.innerHTML = html;
+    lanesEl.addEventListener("click", function(e){
+      var b = e.target.closest("[data-i]");
+      if (!b || !b.tagName || b.tagName !== "BUTTON") return;
+      var i = +b.dataset.i;
+      var g = (state.view - 1) * PER + i + 1;   // tapping stage i means i+1 stages are done
+      state.done = (state.done === g) ? g - 1 : g;  // tap again to un-mark
+      state.partial = 0;
+      save(); render();
+    });
+  })();
+
+  /* ---------- reference table ---------- */
+  (function(){
+    var html = "";
+    for (var n = 1; n <= ROUNDS; n++) {
+      html += "<tr><td>" + n + "</td><td>" + (12*n) + "</td><td>" + (250 + 48*n) +
+              "</td><td>" + (24*n*n + 274*n) + "</td></tr>";
+    }
+    $("ipxRef").innerHTML = html;
+  })();
+
+  /* ---------- partial controls ---------- */
+  var chipsEl = $("ipxChips"), freeEl = $("ipxFree");
+
+  chipsEl.addEventListener("click", function(e){
+    var c = e.target.closest(".ipx-chip");
+    if (!c) return;
+    state.partial = +c.dataset.v;
+    save(); render();
+  });
+  freeEl.addEventListener("input", function(){
+    var v = parseInt(freeEl.value, 10);
+    state.partial = isNaN(v) || v < 0 ? 0 : v;
+    save(); render(true);
+  });
+
+  function chipsFor(stage, max){
+    var out = [];
+    if (stage.type === "yards") {
+      out = stage.pts === 100 ? [25, 50, 75] : [5, 10, 15, 20];
+    } else {
+      var q = max / 4;
+      out = [q, q*2, q*3].filter(function(v){ return v === Math.round(v) && v > 0; });
+    }
+    return out.filter(function(v){ return v < max; });
+  }
+
+  /* ---------- render ---------- */
+  function render(skipInput){
+    var n = state.view;
+    var base = (n - 1) * PER;
+
+    // tabs
+    var holder = state.done > 0 ? Math.floor((state.done - 1) / PER) + 1 : 0;
+    Array.prototype.forEach.call(roundsEl.children, function(b){
+      var bn = +b.dataset.n;
+      b.setAttribute("aria-selected", bn === n ? "true" : "false");
+      b.dataset.holds = bn === holder ? "1" : "0";
+    });
+
+    // lanes
+    Array.prototype.forEach.call(lanesEl.children, function(lane){
+      var i = +lane.dataset.i;
+      var g = base + i + 1;            // stages completed if this one is the last finished
+      var st = "";
+      if (state.done >= g) st = (state.done === g) ? "mark" : "done";
+      else if (state.done === g - 1) st = "next";
+      lane.dataset.state = st;
+      var reps = lane.querySelector("[data-reps]");
+      if (reps) reps.innerHTML = "&times;" + (12 * n);
+    });
+
+    // partial panel
+    var done = state.done;
+    var pw = $("ipxPartial");
+    if (done >= TOTAL_STAGES) {
+      pw.hidden = true;
+      state.partial = 0;
+    } else {
+      pw.hidden = false;
+      var ni = done % PER, nn = Math.floor(done / PER) + 1;
+      var next = STAGES[ni], max = stageVal(ni, nn);
+      var unit = next.type === "yards" ? "yards" : "reps";
+
+      $("ipxPStage").firstChild.nodeValue = "R" + nn + " — " + next.label + " ";
+      $("ipxPMax").textContent = "Full stage = " + max + " " + unit + " · worth " + max + " pts";
+      $("ipxUnit").textContent = unit;
+      freeEl.max = max;
+
+      var cs = chipsFor(next, max), ch = "";
+      for (var k = 0; k < cs.length; k++) {
+        ch += '<button class="ipx-chip" data-v="' + cs[k] + '" aria-pressed="' +
+              (state.partial === cs[k]) + '">' + cs[k] + '</button>';
+      }
+      ch += '<button class="ipx-chip" data-v="0" aria-pressed="' + (state.partial === 0) + '">None</button>';
+      chipsEl.innerHTML = ch;
+
+      if (!skipInput) freeEl.value = state.partial ? state.partial : "";
+
+      var w = $("ipxWarn");
+      if (state.partial >= max) {
+        w.hidden = false;
+        w.textContent = "That's the whole stage — tap " + next.label + " on the field instead.";
+      } else {
+        w.hidden = true;
+      }
+    }
+
+    // score
+    var banked = bankedThrough(done);
+    var total = banked + state.partial;
+
+    if (done === 0) {
+      $("ipxLast").textContent = "Nothing yet";
+    } else {
+      var li = (done - 1) % PER, ln = Math.floor((done - 1) / PER) + 1;
+      $("ipxLast").textContent = "R" + ln + " · " + STAGES[li].short;
+    }
+    if (done < TOTAL_STAGES) {
+      var pi = done % PER, pn = Math.floor(done / PER) + 1;
+      $("ipxPartLab").textContent = "Into " + STAGES[pi].short;
+    } else {
+      $("ipxPartLab").textContent = "Partial credit";
+    }
+    $("ipxBanked").textContent = banked;
+    $("ipxPart").textContent = "+" + state.partial;
+    $("ipxTotal").textContent = total;
+    $("ipxTotal2").textContent = total;
+
+    if (SUBMIT_URL) {
+      sub.innerHTML = "Submit " + total + " to IronPAX &rarr;";
+    }
+  }
+
+  /* ---------- actions ---------- */
+  if (SUBMIT_URL) { sub.href = SUBMIT_URL; }
+  else { sub.classList.add("ipx-btn--off"); sub.textContent = "Submission link — add SUBMIT_URL"; sub.removeAttribute("href"); }
+
+  $("ipxCopy").addEventListener("click", function(){
+    var btn = this;
+    var txt = String(bankedThrough(state.done) + state.partial);
+    var done = function(){ btn.textContent = "Copied " + txt; setTimeout(function(){ btn.textContent = "Copy score"; }, 1600); };
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      navigator.clipboard.writeText(txt).then(done, done);
+    } else {
+      var ta = document.createElement("textarea");
+      ta.value = txt; document.body.appendChild(ta); ta.select();
+      try { document.execCommand("copy"); } catch(e){}
+      document.body.removeChild(ta); done();
+    }
+  });
+
+  $("ipxReset").addEventListener("click", function(){
+    state.done = 0; state.partial = 0; state.view = 1;
+    freeEl.value = ""; save(); render();
+  });
+
+  render();
+})();
+</script>
+</body>
+</html>{% endraw %}
