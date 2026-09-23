@@ -1,0 +1,662 @@
+---
+layout: null
+title: IronPAX Week 3 Scorecard
+permalink: /ironpax/week-3/
+---
+{% raw %}<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>IronPAX Week 3 Scorecard</title>
+<meta name="description" content="Score the F3 IronPAX Week 3 &quot;Belle&quot;Ringer 45-minute AMRAP. Tap your way around the star and get your total reps.">
+<meta name="theme-color" content="#0b0c0e">
+<link rel="shortcut icon" href="/images/favicon.png">
+<meta property="og:title" content="IronPAX Week 3 Scorecard">
+<meta property="og:description" content="Score the F3 IronPAX Week 3 &quot;Belle&quot;Ringer 45-minute AMRAP — total reps, calculated for you.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://blog.dylanjpierce.com/ironpax/week-3/">
+<meta name="twitter:card" content="summary_large_image">
+</head>
+<body>
+<style>
+  :root{
+    --ink:#0b0c0e;
+    --ink2:#131519;
+    --panel:#191c21;
+    --line:#2b3039;
+    --chalk:#f2f4f7;
+    --mute:#8b939e;
+    --ground:#1b1f26;
+    --ground2:#20242c;
+    --gold:#fbbf24;
+    --red:#ef4444;
+    --cone:#f97316;
+    --cond:"Helvetica Neue","Arial Narrow",Arial,sans-serif;
+  }
+  *{box-sizing:border-box}
+  body{
+    margin:0;background:var(--ink);color:var(--chalk);font-family:var(--cond);
+    -webkit-font-smoothing:antialiased;-webkit-text-size-adjust:100%;
+  }
+  .ipx{max-width:960px;margin:0 auto;padding:20px 16px 72px}
+
+  /* ---------- masthead ---------- */
+  .ipx-top{
+    border:2px solid var(--chalk);position:relative;padding:18px 18px 16px;
+    background:repeating-linear-gradient(135deg,rgba(255,255,255,.03) 0 6px,transparent 6px 12px),var(--ink2);
+  }
+  .ipx-top::after{content:"";position:absolute;left:0;right:0;bottom:-8px;height:4px;background:var(--cone)}
+  .ipx-kicker{margin:0 0 6px;font-size:12px;font-weight:700;letter-spacing:.34em;text-transform:uppercase;color:var(--cone)}
+  .ipx-title{margin:0;font-size:clamp(30px,8vw,58px);line-height:.92;font-weight:800;letter-spacing:-.01em;text-transform:uppercase}
+  .ipx-title span{display:block;color:var(--gold)}
+  .ipx-sub{margin:10px 0 0;color:var(--mute);font-size:13px;letter-spacing:.16em;text-transform:uppercase;font-weight:700}
+  .ipx-links{display:flex;flex-wrap:wrap;gap:16px;margin-top:12px}
+  .ipx-links a{
+    color:var(--chalk);font-size:12px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;
+    text-decoration:none;border-bottom:2px solid var(--cone);padding-bottom:2px;
+  }
+  .ipx-links a:hover{color:var(--gold)}
+
+  /* ---------- headings ---------- */
+  .ipx-h{
+    display:flex;align-items:center;gap:12px;margin:34px 0 12px;font-size:12px;font-weight:800;
+    letter-spacing:.3em;text-transform:uppercase;color:var(--mute);
+  }
+  .ipx-h::after{content:"";flex:1;height:1px;background:var(--line)}
+  .ipx-h b{color:var(--ink);background:var(--gold);padding:3px 8px;letter-spacing:.2em;font-size:11px}
+
+  /* ---------- trips stepper ---------- */
+  .ipx-trips{display:flex;align-items:stretch;gap:10px;flex-wrap:wrap}
+  .ipx-step{
+    display:flex;align-items:stretch;border:2px solid var(--line);background:var(--panel);
+  }
+  .ipx-step button{
+    width:56px;cursor:pointer;background:transparent;border:0;color:var(--chalk);
+    font-family:var(--cond);font-size:26px;font-weight:800;line-height:1;transition:.12s;
+  }
+  .ipx-step button:hover{background:var(--chalk);color:var(--ink)}
+  .ipx-step input{
+    width:88px;text-align:center;background:var(--ink);border:0;border-left:2px solid var(--line);
+    border-right:2px solid var(--line);color:var(--gold);font-family:var(--cond);
+    font-size:30px;font-weight:800;font-variant-numeric:tabular-nums;padding:12px 0;
+  }
+  .ipx-step input:focus{outline:none;background:#000}
+  .ipx-trips__x{
+    display:flex;flex-direction:column;justify-content:center;font-size:11px;
+    letter-spacing:.2em;text-transform:uppercase;color:var(--mute);font-weight:800;line-height:1.7;
+  }
+  .ipx-trips__x b{color:var(--gold);font-size:16px;letter-spacing:.04em;font-variant-numeric:tabular-nums}
+
+  /* ---------- star ---------- */
+  .ipx-star{
+    margin-top:12px;border:3px solid var(--chalk);position:relative;
+    background:
+      repeating-linear-gradient(46deg,rgba(255,255,255,.018) 0 3px,transparent 3px 9px),
+      radial-gradient(circle at 50% 46%,var(--ground2) 0%,var(--ground) 72%);
+  }
+  .ipx-star svg{display:block;width:100%;height:auto}
+  .ipx-spoke{stroke:rgba(255,255,255,.22);stroke-width:3;stroke-dasharray:9 8}
+  .ipx-spoke.on{stroke:var(--gold);stroke-dasharray:none;stroke-width:4}
+  .ipx-yd{
+    fill:rgba(255,255,255,.4);font-size:15px;font-weight:800;letter-spacing:.14em;
+    font-family:var(--cond);text-transform:uppercase;
+  }
+  .ipx-node{cursor:pointer}
+  .ipx-node circle{stroke:rgba(255,255,255,.55);stroke-width:3;fill:rgba(10,12,15,.82);transition:.12s}
+  .ipx-node:hover circle{stroke:#fff;fill:rgba(10,12,15,.97)}
+  .ipx-node text{font-family:var(--cond);font-weight:800;text-anchor:middle;pointer-events:none}
+  .ipx-node .r{fill:var(--chalk);font-size:26px;font-variant-numeric:tabular-nums}
+  .ipx-node .k{fill:rgba(255,255,255,.55);font-size:11px;letter-spacing:.14em}
+  .ipx-node.cone circle{stroke:var(--cone)}
+  .ipx-node.done circle{fill:var(--gold);stroke:var(--gold)}
+  .ipx-node.done .r{fill:#1a1405}
+  .ipx-node.done .k{fill:rgba(0,0,0,.5)}
+  .ipx-node.mark circle{fill:var(--red);stroke:#fff}
+  .ipx-node.mark .r{fill:#fff}
+  .ipx-node.mark .k{fill:rgba(255,255,255,.75)}
+  .ipx-node.next circle{stroke:#fff;stroke-dasharray:6 5}
+  .ipx-node:focus-visible circle{stroke:var(--gold);stroke-width:5}
+  .ipx-node:focus{outline:none}
+  .ipx-lbl{
+    font-family:var(--cond);font-weight:800;text-transform:uppercase;text-anchor:middle;
+    fill:var(--chalk);font-size:15px;letter-spacing:.06em;pointer-events:none;
+  }
+  .ipx-lbl.sm{fill:var(--mute);font-size:12px;letter-spacing:.16em}
+
+  /* ---------- sequence rail ---------- */
+  .ipx-rail{display:flex;flex-direction:column;gap:3px;margin-top:12px}
+  .ipx-seq{
+    display:grid;grid-template-columns:34px 1fr auto auto;align-items:center;gap:10px;
+    padding:9px 12px;cursor:pointer;text-align:left;width:100%;transition:.12s;
+    background:var(--panel);border:2px solid var(--line);color:var(--chalk);
+    font-family:var(--cond);font-weight:800;text-transform:uppercase;letter-spacing:.08em;font-size:12px;
+  }
+  .ipx-seq:hover{border-color:var(--mute)}
+  .ipx-seq__n{
+    color:var(--mute);font-size:11px;font-variant-numeric:tabular-nums;letter-spacing:.06em;
+  }
+  .ipx-seq__w{font-size:10px;letter-spacing:.16em;color:var(--mute);white-space:nowrap}
+  .ipx-seq__r{
+    background:var(--line);color:var(--chalk);padding:2px 8px;font-size:12px;
+    font-variant-numeric:tabular-nums;min-width:38px;text-align:center;
+  }
+  .ipx-seq.center{border-left:4px solid var(--mute)}
+  .ipx-seq.cone{border-left:4px solid var(--cone)}
+  .ipx-seq.done{background:var(--gold);border-color:var(--gold);color:#1a1405}
+  .ipx-seq.done .ipx-seq__n,.ipx-seq.done .ipx-seq__w{color:rgba(0,0,0,.55)}
+  .ipx-seq.done .ipx-seq__r{background:#1a1405;color:var(--gold)}
+  .ipx-seq.mark{background:var(--red);border-color:#fff;color:#fff}
+  .ipx-seq.mark .ipx-seq__n,.ipx-seq.mark .ipx-seq__w{color:rgba(255,255,255,.8)}
+  .ipx-seq.mark .ipx-seq__r{background:#fff;color:var(--red)}
+  .ipx-seq.next{border-style:dashed;border-color:#fff}
+  .ipx-seq:focus-visible{outline:3px solid var(--gold);outline-offset:2px}
+
+  .ipx-hint{
+    margin:10px 0 0;font-size:11px;color:var(--mute);letter-spacing:.14em;
+    text-transform:uppercase;font-weight:700;line-height:1.75;
+  }
+
+  /* ---------- partial ---------- */
+  .ipx-partial{margin-top:14px;border:2px solid var(--line);background:var(--panel);padding:16px}
+  .ipx-partial[hidden]{display:none}
+  .ipx-plabel{font-size:11px;letter-spacing:.24em;text-transform:uppercase;color:var(--mute);font-weight:800}
+  .ipx-pstage{
+    margin:6px 0 0;font-size:clamp(17px,4.6vw,24px);font-weight:800;text-transform:uppercase;
+    letter-spacing:.02em;color:var(--gold);
+  }
+  .ipx-pstage small{display:block;font-size:11px;letter-spacing:.16em;color:var(--mute);margin-top:4px}
+  .ipx-chips{display:flex;flex-wrap:wrap;gap:6px;margin-top:12px}
+  .ipx-chip{
+    padding:9px 14px;cursor:pointer;background:transparent;border:2px solid var(--line);color:var(--chalk);
+    font-family:var(--cond);font-weight:800;font-size:13px;letter-spacing:.08em;transition:.12s;
+  }
+  .ipx-chip:hover{border-color:var(--mute)}
+  .ipx-chip[aria-pressed="true"]{background:var(--gold);border-color:var(--gold);color:#1a1405}
+  .ipx-free{display:flex;align-items:center;gap:10px;margin-top:12px;flex-wrap:wrap}
+  .ipx-free label{font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--mute);font-weight:800}
+  .ipx-free input{
+    width:128px;padding:10px 12px;background:var(--ink);border:2px solid var(--line);color:var(--chalk);
+    font-family:var(--cond);font-weight:800;font-size:19px;letter-spacing:.04em;
+  }
+  .ipx-free input:focus{outline:none;border-color:var(--gold)}
+  .ipx-warn{margin:10px 0 0;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--cone);font-weight:800}
+  .ipx-warn[hidden]{display:none}
+
+  /* ---------- score ---------- */
+  .ipx-score{
+    margin-top:14px;border:3px solid var(--gold);background:var(--ink2);
+    display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.1fr);
+  }
+  .ipx-score__big{padding:22px 18px;border-right:3px solid var(--gold)}
+  .ipx-score__lab{font-size:11px;letter-spacing:.3em;text-transform:uppercase;color:var(--mute);font-weight:800}
+  .ipx-score__num{
+    font-size:clamp(46px,14vw,86px);line-height:.9;font-weight:800;color:var(--gold);
+    letter-spacing:-.02em;margin-top:6px;font-variant-numeric:tabular-nums;
+  }
+  .ipx-score__unit{font-size:12px;letter-spacing:.24em;text-transform:uppercase;color:var(--mute);font-weight:800;margin-top:8px}
+  .ipx-score__det{padding:18px;display:flex;flex-direction:column;justify-content:center}
+  .ipx-row{
+    display:flex;justify-content:space-between;gap:12px;padding:7px 0;border-bottom:1px solid var(--line);
+    font-size:12px;letter-spacing:.08em;text-transform:uppercase;font-weight:700;
+  }
+  .ipx-row:last-child{border-bottom:0}
+  .ipx-row span:first-child{color:var(--mute);min-width:0;overflow:hidden;text-overflow:ellipsis}
+  .ipx-row span:last-child{font-variant-numeric:tabular-nums;white-space:nowrap}
+  .ipx-row--tot{border-top:2px solid var(--gold);margin-top:4px;padding-top:9px;font-size:14px}
+  .ipx-row--tot span{color:var(--gold)!important}
+
+  .ipx-mod{
+    margin-top:12px;display:flex;align-items:flex-start;gap:10px;padding:12px 14px;
+    border:2px solid var(--line);background:var(--panel);cursor:pointer;
+  }
+  .ipx-mod input{width:20px;height:20px;accent-color:var(--cone);flex:0 0 auto;margin-top:1px;cursor:pointer}
+  .ipx-mod span{font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--mute);font-weight:700;line-height:1.7}
+  .ipx-mod[data-on="1"]{border-color:var(--cone)}
+  .ipx-mod[data-on="1"] span b{color:var(--cone)}
+  .ipx-mod span b{color:var(--chalk)}
+
+  .ipx-actions{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px}
+  .ipx-btn{
+    flex:1 1 auto;padding:15px 20px;cursor:pointer;text-align:center;text-decoration:none;
+    font-family:var(--cond);font-weight:800;font-size:13px;letter-spacing:.18em;text-transform:uppercase;
+    border:2px solid var(--chalk);background:transparent;color:var(--chalk);transition:.12s;
+  }
+  .ipx-btn:hover{background:var(--chalk);color:var(--ink)}
+  .ipx-btn--go{background:var(--cone);border-color:var(--cone);color:#1a0d02;flex:2 1 260px}
+  .ipx-btn--go:hover{background:#fff;border-color:#fff;color:var(--cone)}
+  .ipx-btn--ghost{flex:0 1 auto;border-color:var(--line);color:var(--mute)}
+  .ipx-btn:focus-visible,.ipx-chip:focus-visible,.ipx-step button:focus-visible,
+  .ipx-step input:focus-visible,.ipx-free input:focus-visible{outline:3px solid var(--gold);outline-offset:2px}
+
+  /* ---------- reference ---------- */
+  .ipx-refwrap{overflow-x:auto;-webkit-overflow-scrolling:touch}
+  .ipx-ref{width:100%;border-collapse:collapse;font-size:12px;min-width:430px}
+  .ipx-ref th,.ipx-ref td{
+    padding:9px 10px;border:1px solid var(--line);text-align:left;
+    letter-spacing:.1em;text-transform:uppercase;font-weight:700;
+  }
+  .ipx-ref th{background:var(--panel);color:var(--mute);font-size:10px;letter-spacing:.2em}
+  .ipx-ref td{font-variant-numeric:tabular-nums}
+  .ipx-ref td:first-child{color:var(--gold);font-weight:800}
+  .ipx-note{
+    margin-top:14px;border-left:3px solid var(--cone);padding:12px 14px;background:var(--panel);
+    font-size:12px;line-height:1.85;color:var(--mute);letter-spacing:.06em;
+  }
+  .ipx-note b{color:var(--chalk)}
+  .ipx-note + .ipx-note{margin-top:8px}
+  .ipx-foot{
+    margin-top:36px;padding-top:16px;border-top:1px solid var(--line);
+    font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:#5c6470;line-height:2;
+  }
+  .ipx-foot a{color:#5c6470}
+  .ipx-by{display:block;margin-bottom:6px;font-size:12px;letter-spacing:.22em;font-weight:800;color:var(--gold)}
+
+  @media (prefers-reduced-motion:reduce){
+    *,*::before,*::after{transition-duration:.01ms!important;animation-duration:.01ms!important}
+  }
+  @media (max-width:620px){
+    .ipx-score{grid-template-columns:1fr}
+    .ipx-score__big{border-right:0;border-bottom:3px solid var(--gold);padding:18px}
+    .ipx-seq{grid-template-columns:28px 1fr auto;gap:8px;font-size:11px}
+    .ipx-seq__w{display:none}
+    .ipx-lbl{font-size:18px}
+    .ipx-lbl.sm{font-size:15px}
+    .ipx-yd{font-size:19px}
+  }
+</style>
+
+<div class="ipx">
+
+  <header class="ipx-top">
+    <p class="ipx-kicker">F3 Nation &middot; 45-Min AMRAP &middot; Throwback to IPC 2022</p>
+    <h1 class="ipx-title">IronPAX <span>Week 3 &mdash; "Belle"Ringer</span></h1>
+    <p class="ipx-sub">Scorecard &mdash; Total Reps Only</p>
+    <div class="ipx-links">
+      <a href="https://ironpax.f3greenwood.org/submit" target="_blank" rel="noopener">Submit your score</a>
+      <a href="https://ironpax.f3greenwood.org/bracket" target="_blank" rel="noopener">Bracket</a>
+      <a href="https://f3greenwood.org/all/ironpax-challenge/ironpax-challenge-2026-week-3-belleringer" target="_blank" rel="noopener">Full workout</a>
+    </div>
+  </header>
+
+  <h2 class="ipx-h"><b>1</b> Complete trips</h2>
+  <div class="ipx-trips">
+    <div class="ipx-step">
+      <button type="button" id="ipxMinus" aria-label="One fewer complete trip">&minus;</button>
+      <input id="ipxTrips" type="number" inputmode="numeric" min="0" step="1" value="0" aria-label="Number of complete trips">
+      <button type="button" id="ipxPlus" aria-label="One more complete trip">+</button>
+    </div>
+    <div class="ipx-trips__x">
+      <span>&times; 125 reps per trip</span>
+      <b id="ipxTripReps">0 reps banked</b>
+    </div>
+  </div>
+  <p class="ipx-hint">A trip is one full lap of the star &mdash; all five cones and all five sets of manmakers.</p>
+
+  <h2 class="ipx-h"><b>2</b> Where the clock caught you</h2>
+
+  <div class="ipx-star">
+    <svg id="ipxSvg" viewBox="0 0 620 600" role="img" aria-label="Star layout: centre cone 1 with five cones 25 yards out"></svg>
+  </div>
+
+  <div class="ipx-rail" id="ipxRail"></div>
+
+  <p class="ipx-hint">
+    Tap the last station you finished &mdash; on the star or the list.<br>
+    Gold = banked &middot; Red = your mark &middot; Dashed = where you ran out of time &middot; Tap again to undo.
+  </p>
+
+  <div class="ipx-partial" id="ipxPartial">
+    <p class="ipx-plabel">Then &mdash; reps into the next station</p>
+    <p class="ipx-pstage" id="ipxPStage">&mdash;<small id="ipxPMax"></small></p>
+    <div class="ipx-chips" id="ipxChips"></div>
+    <div class="ipx-free">
+      <label for="ipxFree">Or enter exactly</label>
+      <input id="ipxFree" type="number" inputmode="numeric" min="0" step="1" placeholder="0">
+      <span class="ipx-plabel">reps</span>
+    </div>
+    <p class="ipx-warn" id="ipxWarn" hidden></p>
+  </div>
+
+  <h2 class="ipx-h"><b>3</b> Your score</h2>
+
+  <div class="ipx-score">
+    <div class="ipx-score__big">
+      <p class="ipx-score__lab">Week 3 Total</p>
+      <p class="ipx-score__num" id="ipxTotal">0</p>
+      <p class="ipx-score__unit">Reps</p>
+    </div>
+    <div class="ipx-score__det">
+      <div class="ipx-row"><span id="ipxTripLab">Complete trips</span><span id="ipxTripVal">0 &times; 125 = 0</span></div>
+      <div class="ipx-row"><span>Last station finished</span><span id="ipxLast">None yet</span></div>
+      <div class="ipx-row"><span>Reps this trip</span><span id="ipxThis">0</span></div>
+      <div class="ipx-row"><span id="ipxPartLab">Partial</span><span id="ipxPart">+0</span></div>
+      <div class="ipx-row ipx-row--tot"><span>Total reps</span><span id="ipxTotal2">0</span></div>
+    </div>
+  </div>
+
+  <label class="ipx-mod" id="ipxModWrap" data-on="0">
+    <input type="checkbox" id="ipxMod">
+    <span><b>I modified the workout.</b> The challenge asks you to say so when you submit &mdash; mods are fine, it's you vs you.</span>
+  </label>
+
+  <div class="ipx-actions">
+    <a class="ipx-btn ipx-btn--go" id="ipxSubmit" href="https://ironpax.f3greenwood.org/submit" target="_blank" rel="noopener">Submit 0 to IronPAX &rarr;</a>
+    <button class="ipx-btn" id="ipxCopy" type="button">Copy score</button>
+    <button class="ipx-btn ipx-btn--ghost" id="ipxReset" type="button">Reset</button>
+  </div>
+
+  <h2 class="ipx-h"><b>4</b> By hand</h2>
+  <div class="ipx-refwrap">
+    <table class="ipx-ref">
+      <thead><tr><th>Trips</th><th>Reps</th><th>Trips</th><th>Reps</th></tr></thead>
+      <tbody id="ipxRef"></tbody>
+    </table>
+  </div>
+
+  <div class="ipx-note">
+    <b>The trip:</b> 5 manmakers in the middle, then rifle carry out to a cone, do the work, farmer carry back.
+    Cones 2&ndash;6 are 10 We're Not Worthy, 15 goblet squats, 20 overhead tricep extensions, 25 KB swings, 30 curls,
+    with 5 manmakers at the centre before each one. <b>25 reps of manmakers + 100 reps at the cones = 125.</b>
+  </div>
+  <div class="ipx-note">
+    <b>Scoring:</b> reps only. Unlike Week 2, the 25-yard carries are worth nothing and the reps don't go up
+    between trips &mdash; every trip is the same 125.<br>
+    <b>Modifications:</b> shoulder carry for the carries; hand release merkins, OH press, air squats,
+    dips on the block, and rows for the five exercises. Say so on the submission if you used any.<br>
+    <b>Deadline:</b> midnight the Sunday after release for the weekly competition. Best score counts, so you can run it again.
+  </div>
+
+  <p class="ipx-foot">
+    <b class="ipx-by">Made by Duke from F3 - Cleveland</b>
+    <a href="/ironpax/week-2/">&larr; Week 2 scorecard</a> &middot; <a href="/">Back to the site</a>
+  </p>
+</div>
+
+<script>
+(function(){
+  "use strict";
+
+  var SUBMIT_URL = "https://ironpax.f3greenwood.org/submit";
+  var TRIP = 125;
+
+  // The Thang, in traversal order. cone 1 is the centre.
+  var STAGES = [
+    {cone:1, name:"MANMAKERS",            reps:5,  where:"CENTRE"},
+    {cone:2, name:"WE'RE NOT WORTHY",     reps:10, where:"CONE 2"},
+    {cone:1, name:"MANMAKERS",            reps:5,  where:"CENTRE"},
+    {cone:3, name:"GOBLET SQUATS",        reps:15, where:"CONE 3"},
+    {cone:1, name:"MANMAKERS",            reps:5,  where:"CENTRE"},
+    {cone:4, name:"OH TRICEP EXTENSIONS", reps:20, where:"CONE 4"},
+    {cone:1, name:"MANMAKERS",            reps:5,  where:"CENTRE"},
+    {cone:5, name:"KB SWINGS",            reps:25, where:"CONE 5"},
+    {cone:1, name:"MANMAKERS",            reps:5,  where:"CENTRE"},
+    {cone:6, name:"CURLS",                reps:30, where:"CONE 6"}
+  ];
+  var N = STAGES.length;
+
+  // Sum of reps for every stage before index `done`.
+  function cum(done){
+    var t = 0;
+    for (var i = 0; i < done; i++) t += STAGES[i].reps;
+    return t;
+  }
+  if (cum(N) !== TRIP) { /* guard: the ordered list must total the published 125 */ }
+
+  var state = {trips:0, done:0, partial:0, mod:false};
+  try {
+    var s = JSON.parse(localStorage.getItem("ipx-wk3") || "null");
+    if (s) {
+      state.trips   = Math.max(0, s.trips|0);
+      state.done    = Math.max(0, Math.min(N, s.done|0));
+      state.partial = Math.max(0, s.partial|0);
+      state.mod     = !!s.mod;
+    }
+  } catch(e){}
+  function save(){ try{ localStorage.setItem("ipx-wk3", JSON.stringify(state)); }catch(e){} }
+
+  var $ = function(id){ return document.getElementById(id); };
+  var svg = $("ipxSvg"), rail = $("ipxRail"), freeEl = $("ipxFree"), sub = $("ipxSubmit");
+
+  /* ---------- build the star ---------- */
+  var CX = 310, CY = 296, R = 198, MMR = 0.40;
+  var pt = {};   // cone number -> {x,y}
+  var mm = {};   // stage index of a centre set -> {x,y} on its outbound spoke
+
+  (function(){
+    var parts = [];
+    var coneOrder = [2,3,4,5,6];
+    for (var i = 0; i < 5; i++) {
+      var a = (-90 + i * 72) * Math.PI / 180;
+      pt[coneOrder[i]] = {x: CX + R * Math.cos(a), y: CY + R * Math.sin(a)};
+    }
+    // Each centre set (stages 0,2,4,6,8) sits on the spoke it launches you down.
+    for (var k = 0; k < 5; k++) {
+      var a2 = (-90 + k * 72) * Math.PI / 180;
+      mm[k * 2] = {x: CX + R * MMR * Math.cos(a2), y: CY + R * MMR * Math.sin(a2)};
+    }
+
+    // spokes
+    for (var c = 2; c <= 6; c++) {
+      parts.push('<line class="ipx-spoke" data-spoke="' + c + '" x1="' + CX + '" y1="' + CY +
+                 '" x2="' + pt[c].x.toFixed(1) + '" y2="' + pt[c].y.toFixed(1) + '"/>');
+    }
+    // 25yd label on the first spoke
+    parts.push('<text class="ipx-yd" x="' + (CX + 14) + '" y="' + (CY - R * 0.72) + '">25 YD</text>');
+    // centre marker
+    parts.push('<circle cx="' + CX + '" cy="' + CY + '" r="30" fill="rgba(10,12,15,.9)" stroke="rgba(255,255,255,.45)" stroke-width="3"/>');
+    parts.push('<text class="ipx-lbl" x="' + CX + '" y="' + (CY + 5) + '" font-size="13">CONE 1</text>');
+    parts.push('<text class="ipx-lbl sm" x="' + CX + '" y="' + (CY + 21) + '">CENTRE</text>');
+
+    // nodes
+    for (var i2 = 0; i2 < N; i2++) {
+      var st = STAGES[i2];
+      var isC = st.cone === 1;
+      var p = isC ? mm[i2] : pt[st.cone];
+      var r = isC ? 25 : 38;
+      parts.push(
+        '<g class="ipx-node ' + (isC ? "mmk" : "cone") + '" data-i="' + i2 + '" tabindex="0" role="button" ' +
+        'aria-label="Stage ' + (i2+1) + ': ' + st.reps + ' ' + st.name + ' at ' + st.where + '">' +
+        '<circle cx="' + p.x.toFixed(1) + '" cy="' + p.y.toFixed(1) + '" r="' + r + '"/>' +
+        '<text class="r" x="' + p.x.toFixed(1) + '" y="' + (p.y + (isC ? 7 : 4)).toFixed(1) + '"' +
+          (isC ? ' font-size="19"' : '') + '>' + st.reps + '</text>' +
+        (isC ? '' : '<text class="k" x="' + p.x.toFixed(1) + '" y="' + (p.y + 20).toFixed(1) + '">CONE ' + st.cone + '</text>') +
+        '</g>'
+      );
+      // cone captions sit outside the circle, pushed away from centre
+      if (!isC) {
+        var dx = p.x - CX, dy = p.y - CY, len = Math.sqrt(dx*dx + dy*dy);
+        var lx = p.x + (dx/len) * 60, ly = p.y + (dy/len) * 60;
+        var words = st.name.split(" ");
+        var line1 = words.length > 2 ? words.slice(0, 2).join(" ") : st.name;
+        var line2 = words.length > 2 ? words.slice(2).join(" ") : "";
+        parts.push('<text class="ipx-lbl" x="' + lx.toFixed(1) + '" y="' + ly.toFixed(1) + '">' + line1 + '</text>');
+        if (line2) parts.push('<text class="ipx-lbl" x="' + lx.toFixed(1) + '" y="' + (ly+17).toFixed(1) + '">' + line2 + '</text>');
+      }
+    }
+    svg.innerHTML = parts.join("");
+  })();
+
+  /* ---------- rail ---------- */
+  (function(){
+    var h = "";
+    for (var i = 0; i < N; i++) {
+      var st = STAGES[i];
+      h += '<button class="ipx-seq ' + (st.cone === 1 ? "center" : "cone") + '" data-i="' + i + '" type="button">' +
+             '<span class="ipx-seq__n">' + (i+1) + '</span>' +
+             '<span>' + st.name + '</span>' +
+             '<span class="ipx-seq__w">' + st.where + '</span>' +
+             '<span class="ipx-seq__r">' + st.reps + '</span>' +
+           '</button>';
+    }
+    rail.innerHTML = h;
+  })();
+
+  function pick(i){
+    var g = i + 1;
+    state.done = (state.done === g) ? g - 1 : g;
+    state.partial = 0;
+    save(); render();
+  }
+  rail.addEventListener("click", function(e){
+    var b = e.target.closest(".ipx-seq"); if (b) pick(+b.dataset.i);
+  });
+  svg.addEventListener("click", function(e){
+    var g = e.target.closest(".ipx-node"); if (g) pick(+g.dataset.i);
+  });
+  svg.addEventListener("keydown", function(e){
+    if (e.key !== "Enter" && e.key !== " ") return;
+    var g = e.target.closest(".ipx-node"); if (g) { e.preventDefault(); pick(+g.dataset.i); }
+  });
+
+  /* ---------- trips ---------- */
+  function setTrips(v){
+    state.trips = Math.max(0, isNaN(v) ? 0 : v|0);
+    save(); render();
+  }
+  $("ipxPlus").addEventListener("click", function(){ setTrips(state.trips + 1); });
+  $("ipxMinus").addEventListener("click", function(){ setTrips(state.trips - 1); });
+  $("ipxTrips").addEventListener("input", function(){ setTrips(parseInt(this.value, 10)); });
+
+  /* ---------- partial ---------- */
+  $("ipxChips").addEventListener("click", function(e){
+    var c = e.target.closest(".ipx-chip"); if (!c) return;
+    state.partial = +c.dataset.v; save(); render();
+  });
+  freeEl.addEventListener("input", function(){
+    var v = parseInt(freeEl.value, 10);
+    state.partial = (isNaN(v) || v < 0) ? 0 : v;
+    save(); render(true);
+  });
+
+  /* ---------- mods ---------- */
+  $("ipxMod").addEventListener("change", function(){
+    state.mod = this.checked;
+    $("ipxModWrap").dataset.on = this.checked ? "1" : "0";
+    save();
+  });
+
+  /* ---------- render ---------- */
+  function render(skipInput){
+    var done = state.done;
+
+    // star + rail states
+    for (var i = 0; i < N; i++) {
+      var cls = "";
+      if (done >= i + 1) cls = (done === i + 1) ? "mark" : "done";
+      else if (done === i) cls = "next";
+
+      var node = svg.querySelector('.ipx-node[data-i="' + i + '"]');
+      if (node) {
+        node.classList.remove("done","mark","next");
+        if (cls) node.classList.add(cls);
+      }
+      var seq = rail.querySelector('.ipx-seq[data-i="' + i + '"]');
+      if (seq) {
+        seq.classList.remove("done","mark","next");
+        if (cls) seq.classList.add(cls);
+      }
+    }
+    // light the spokes you've travelled
+    for (var c = 2; c <= 6; c++) {
+      var line = svg.querySelector('.ipx-spoke[data-spoke="' + c + '"]');
+      if (!line) continue;
+      var idx = -1;
+      for (var j = 0; j < N; j++) if (STAGES[j].cone === c) { idx = j; break; }
+      line.classList.toggle("on", done >= idx + 1);
+    }
+
+    // partial panel
+    var pw = $("ipxPartial");
+    if (done >= N) {
+      pw.hidden = true;
+      state.partial = 0;
+    } else {
+      pw.hidden = false;
+      var nx = STAGES[done], max = nx.reps;
+      $("ipxPStage").firstChild.nodeValue = nx.name + " @ " + nx.where + " ";
+      $("ipxPMax").textContent = "Full set = " + max + " reps";
+      freeEl.max = max;
+
+      var cs = [];
+      for (var q = 1; q <= 4; q++) {
+        var v = Math.round(max * q / 5);
+        if (v > 0 && v < max && cs.indexOf(v) === -1) cs.push(v);
+      }
+      var ch = "";
+      for (var k = 0; k < cs.length; k++) {
+        ch += '<button class="ipx-chip" type="button" data-v="' + cs[k] + '" aria-pressed="' +
+              (state.partial === cs[k]) + '">' + cs[k] + '</button>';
+      }
+      ch += '<button class="ipx-chip" type="button" data-v="0" aria-pressed="' + (state.partial === 0) + '">None</button>';
+      $("ipxChips").innerHTML = ch;
+      if (!skipInput) freeEl.value = state.partial ? state.partial : "";
+
+      var w = $("ipxWarn");
+      if (state.partial >= max) {
+        w.hidden = false;
+        w.textContent = "That's the full set — tap " + nx.name + " instead.";
+      } else { w.hidden = true; }
+    }
+
+    // score
+    var thisTrip = cum(done);
+    var banked = state.trips * TRIP;
+    var total = banked + thisTrip + state.partial;
+
+    $("ipxTrips").value = state.trips;
+    $("ipxTripReps").textContent = banked + " reps banked";
+    $("ipxTripVal").textContent = state.trips + " × " + TRIP + " = " + banked;
+    $("ipxLast").textContent = done === 0 ? "None yet" : (done + ". " + STAGES[done-1].name);
+    $("ipxThis").textContent = thisTrip;
+    $("ipxPartLab").textContent = done < N ? ("Into " + STAGES[done].name) : "Partial";
+    $("ipxPart").textContent = "+" + state.partial;
+    $("ipxTotal").textContent = total;
+    $("ipxTotal2").textContent = total;
+
+    if (done >= N) {
+      var w2 = $("ipxWarn");
+      w2.hidden = false;
+      w2.textContent = "Full trip logged here — you can bump Complete trips and clear this instead.";
+    }
+
+    $("ipxMod").checked = state.mod;
+    $("ipxModWrap").dataset.on = state.mod ? "1" : "0";
+    sub.innerHTML = "Submit " + total + " to IronPAX &rarr;";
+  }
+
+  /* ---------- actions ---------- */
+  if (SUBMIT_URL) sub.href = SUBMIT_URL;
+
+  $("ipxCopy").addEventListener("click", function(){
+    var btn = this;
+    var txt = String(state.trips * TRIP + cum(state.done) + state.partial);
+    var fin = function(){ btn.textContent = "Copied " + txt; setTimeout(function(){ btn.textContent = "Copy score"; }, 1600); };
+    if (navigator.clipboard && navigator.clipboard.writeText) navigator.clipboard.writeText(txt).then(fin, fin);
+    else {
+      var ta = document.createElement("textarea");
+      ta.value = txt; document.body.appendChild(ta); ta.select();
+      try { document.execCommand("copy"); } catch(e){}
+      document.body.removeChild(ta); fin();
+    }
+  });
+
+  $("ipxReset").addEventListener("click", function(){
+    state = {trips:0, done:0, partial:0, mod:false};
+    freeEl.value = ""; save(); render();
+  });
+
+  /* ---------- reference table ---------- */
+  (function(){
+    var h = "";
+    for (var r = 1; r <= 8; r++) {
+      h += "<tr><td>" + r + "</td><td>" + (r*TRIP) + "</td><td>" + (r+8) + "</td><td>" + ((r+8)*TRIP) + "</td></tr>";
+    }
+    $("ipxRef").innerHTML = h;
+  })();
+
+  render();
+})();
+</script>
+</body>
+</html>{% endraw %}
