@@ -9,11 +9,11 @@ permalink: /ironpax/week-3/
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>IronPAX Week 3 Scorecard</title>
-<meta name="description" content="Score the F3 IronPAX Week 3 &quot;Belle&quot;Ringer 45-minute AMRAP. Tap your way around the star and get your total reps.">
+<meta name="description" content="Score the F3 IronPAX Week 3 Belle Ringer 45-minute AMRAP. Tap your way around the star and get your total reps.">
 <meta name="theme-color" content="#0b0c0e">
 <link rel="shortcut icon" href="/images/favicon.png">
 <meta property="og:title" content="IronPAX Week 3 Scorecard">
-<meta property="og:description" content="Score the F3 IronPAX Week 3 &quot;Belle&quot;Ringer 45-minute AMRAP — total reps, calculated for you.">
+<meta property="og:description" content="Score the F3 IronPAX Week 3 Belle Ringer 45-minute AMRAP. Tap your way around the star and get your total reps.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://blog.dylanjpierce.com/ironpax/week-3/">
 <meta name="twitter:card" content="summary_large_image">
@@ -296,7 +296,7 @@ permalink: /ironpax/week-3/
   <h2 class="ipx-h"><b>2</b> Where the clock caught you</h2>
 
   <div class="ipx-star">
-    <svg id="ipxSvg" viewBox="0 0 620 600" role="img" aria-label="Star layout: centre cone 1 with five cones 25 yards out"></svg>
+    <svg id="ipxSvg" viewBox="0 0 620 600" role="img" aria-label="Star layout: center cone 1 with five cones 25 yards out"></svg>
   </div>
 
   <div class="ipx-rail" id="ipxRail"></div>
@@ -357,7 +357,7 @@ permalink: /ironpax/week-3/
   <div class="ipx-note">
     <b>The trip:</b> 5 manmakers in the middle, then rifle carry out to a cone, do the work, farmer carry back.
     Cones 2&ndash;6 are 10 We're Not Worthy, 15 goblet squats, 20 overhead tricep extensions, 25 KB swings, 30 curls,
-    with 5 manmakers at the centre before each one. <b>25 reps of manmakers + 100 reps at the cones = 125.</b>
+    with 5 manmakers at the center before each one. <b>25 reps of manmakers + 100 reps at the cones = 125.</b>
   </div>
   <div class="ipx-note">
     <b>Scoring:</b> reps only. Unlike Week 2, the 25-yard carries are worth nothing and the reps don't go up
@@ -380,17 +380,17 @@ permalink: /ironpax/week-3/
   var SUBMIT_URL = "https://ironpax.f3greenwood.org/submit";
   var TRIP = 125;
 
-  // The Thang, in traversal order. cone 1 is the centre.
+  // The Thang, in traversal order. cone 1 is the center.
   var STAGES = [
-    {cone:1, name:"MANMAKERS",            reps:5,  where:"CENTRE"},
+    {cone:1, name:"MANMAKERS",            reps:5,  where:"CENTER"},
     {cone:2, name:"WE'RE NOT WORTHY",     reps:10, where:"CONE 2"},
-    {cone:1, name:"MANMAKERS",            reps:5,  where:"CENTRE"},
+    {cone:1, name:"MANMAKERS",            reps:5,  where:"CENTER"},
     {cone:3, name:"GOBLET SQUATS",        reps:15, where:"CONE 3"},
-    {cone:1, name:"MANMAKERS",            reps:5,  where:"CENTRE"},
+    {cone:1, name:"MANMAKERS",            reps:5,  where:"CENTER"},
     {cone:4, name:"OH TRICEP EXTENSIONS", reps:20, where:"CONE 4"},
-    {cone:1, name:"MANMAKERS",            reps:5,  where:"CENTRE"},
+    {cone:1, name:"MANMAKERS",            reps:5,  where:"CENTER"},
     {cone:5, name:"KB SWINGS",            reps:25, where:"CONE 5"},
-    {cone:1, name:"MANMAKERS",            reps:5,  where:"CENTRE"},
+    {cone:1, name:"MANMAKERS",            reps:5,  where:"CENTER"},
     {cone:6, name:"CURLS",                reps:30, where:"CONE 6"}
   ];
   var N = STAGES.length;
@@ -421,7 +421,7 @@ permalink: /ironpax/week-3/
   /* ---------- build the star ---------- */
   var CX = 310, CY = 296, R = 198, MMR = 0.40;
   var pt = {};   // cone number -> {x,y}
-  var mm = {};   // stage index of a centre set -> {x,y} on its outbound spoke
+  var mm = {};   // stage index of a center set -> {x,y} on its outbound spoke
 
   (function(){
     var parts = [];
@@ -430,7 +430,7 @@ permalink: /ironpax/week-3/
       var a = (-90 + i * 72) * Math.PI / 180;
       pt[coneOrder[i]] = {x: CX + R * Math.cos(a), y: CY + R * Math.sin(a)};
     }
-    // Each centre set (stages 0,2,4,6,8) sits on the spoke it launches you down.
+    // Each center set (stages 0,2,4,6,8) sits on the spoke it launches you down.
     for (var k = 0; k < 5; k++) {
       var a2 = (-90 + k * 72) * Math.PI / 180;
       mm[k * 2] = {x: CX + R * MMR * Math.cos(a2), y: CY + R * MMR * Math.sin(a2)};
@@ -443,10 +443,10 @@ permalink: /ironpax/week-3/
     }
     // 25yd label on the first spoke
     parts.push('<text class="ipx-yd" x="' + (CX + 14) + '" y="' + (CY - R * 0.72) + '">25 YD</text>');
-    // centre marker
+    // center marker
     parts.push('<circle cx="' + CX + '" cy="' + CY + '" r="30" fill="rgba(10,12,15,.9)" stroke="rgba(255,255,255,.45)" stroke-width="3"/>');
     parts.push('<text class="ipx-lbl" x="' + CX + '" y="' + (CY + 5) + '" font-size="13">CONE 1</text>');
-    parts.push('<text class="ipx-lbl sm" x="' + CX + '" y="' + (CY + 21) + '">CENTRE</text>');
+    parts.push('<text class="ipx-lbl sm" x="' + CX + '" y="' + (CY + 21) + '">CENTER</text>');
 
     // nodes
     for (var i2 = 0; i2 < N; i2++) {
@@ -463,7 +463,7 @@ permalink: /ironpax/week-3/
         (isC ? '' : '<text class="k" x="' + p.x.toFixed(1) + '" y="' + (p.y + 20).toFixed(1) + '">CONE ' + st.cone + '</text>') +
         '</g>'
       );
-      // cone captions sit outside the circle, pushed away from centre
+      // cone captions sit outside the circle, pushed away from center
       if (!isC) {
         var dx = p.x - CX, dy = p.y - CY, len = Math.sqrt(dx*dx + dy*dy);
         var lx = p.x + (dx/len) * 60, ly = p.y + (dy/len) * 60;
