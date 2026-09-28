@@ -1,0 +1,677 @@
+---
+layout: null
+title: IronPAX Week 4 Scorecard
+permalink: /ironpax/week-4/
+---
+{% raw %}<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>IronPAX Week 4 Scorecard</title>
+<meta name="description" content="Score the F3 IronPAX Week 4 Crayola&#39;s Masterpiece 45-minute AMRAP. Color in the field as you go and get your total reps.">
+<meta name="theme-color" content="#0a0b0c">
+<link rel="shortcut icon" href="/images/favicon.png">
+<meta property="og:title" content="IronPAX Week 4 Scorecard">
+<meta property="og:description" content="Score the F3 IronPAX Week 4 Crayola&#39;s Masterpiece 45-minute AMRAP - total reps, calculated for you.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://blog.dylanjpierce.com/ironpax/week-4/">
+<meta name="twitter:card" content="summary_large_image">
+</head>
+<body>
+<style>
+  :root{
+    --ink:#0a0b0c;
+    --ink2:#121417;
+    --panel:#181b1f;
+    --line:#2a2f36;
+    --chalk:#f4f6f8;
+    --mute:#8a929c;
+    --turf-a:#0f3a22;
+    --turf-b:#123f26;
+    --ez:#14243a;
+    --gold:#fbbf24;
+    --cr1:#ef4444;
+    --cr2:#f97316;
+    --cr3:#facc15;
+    --cr4:#22c55e;
+    --cr5:#60a5fa;
+    --ezw:36px;
+    --cond:"Helvetica Neue","Arial Narrow",Arial,sans-serif;
+  }
+  *{box-sizing:border-box}
+  body{
+    margin:0;background:var(--ink);color:var(--chalk);font-family:var(--cond);
+    -webkit-font-smoothing:antialiased;-webkit-text-size-adjust:100%;
+  }
+  .ipx{max-width:960px;margin:0 auto;padding:20px 16px 72px}
+
+  /* ---------- masthead: the five crayons ---------- */
+  .ipx-top{
+    border:2px solid var(--chalk);position:relative;padding:18px 18px 16px;
+    background:repeating-linear-gradient(135deg,rgba(255,255,255,.03) 0 6px,transparent 6px 12px),var(--ink2);
+  }
+  .ipx-top::after{
+    content:"";position:absolute;left:0;right:0;bottom:-8px;height:5px;
+    background:linear-gradient(90deg,
+      var(--cr1) 0 20%,var(--cr2) 20% 40%,var(--cr3) 40% 60%,var(--cr4) 60% 80%,var(--cr5) 80% 100%);
+  }
+  .ipx-kicker{margin:0 0 6px;font-size:12px;font-weight:700;letter-spacing:.34em;text-transform:uppercase;color:var(--cr3)}
+  .ipx-title{margin:0;font-size:clamp(28px,7.4vw,56px);line-height:.94;font-weight:800;letter-spacing:-.01em;text-transform:uppercase}
+  .ipx-title span{display:block;color:var(--gold)}
+  .ipx-sub{margin:10px 0 0;color:var(--mute);font-size:13px;letter-spacing:.16em;text-transform:uppercase;font-weight:700}
+  .ipx-links{display:flex;flex-wrap:wrap;gap:16px;margin-top:12px;align-items:center}
+  .ipx-links a{
+    color:var(--chalk);font-size:12px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;
+    text-decoration:none;border-bottom:2px solid var(--cr1);padding-bottom:2px;
+  }
+  .ipx-links a:hover{color:var(--gold)}
+  .ipx-links a:focus-visible{outline:3px solid var(--gold);outline-offset:3px}
+
+  /* ---------- headings ---------- */
+  .ipx-h{
+    display:flex;align-items:center;gap:12px;margin:34px 0 12px;font-size:12px;font-weight:800;
+    letter-spacing:.3em;text-transform:uppercase;color:var(--mute);
+  }
+  .ipx-h::after{content:"";flex:1;height:1px;background:var(--line)}
+  .ipx-h b{color:var(--ink);background:var(--gold);padding:3px 8px;letter-spacing:.2em;font-size:11px}
+
+  /* ---------- trips ---------- */
+  .ipx-trips{display:flex;align-items:stretch;gap:10px;flex-wrap:wrap}
+  .ipx-step{display:flex;align-items:stretch;border:2px solid var(--line);background:var(--panel)}
+  .ipx-step button{
+    width:56px;cursor:pointer;background:transparent;border:0;color:var(--chalk);
+    font-family:var(--cond);font-size:26px;font-weight:800;line-height:1;transition:.12s;
+  }
+  .ipx-step button:hover{background:var(--chalk);color:var(--ink)}
+  .ipx-step input{
+    width:88px;text-align:center;background:var(--ink);border:0;
+    border-left:2px solid var(--line);border-right:2px solid var(--line);
+    color:var(--gold);font-family:var(--cond);font-size:30px;font-weight:800;
+    font-variant-numeric:tabular-nums;padding:12px 0;
+  }
+  .ipx-step input:focus{outline:none;background:#000}
+  .ipx-trips__x{
+    display:flex;flex-direction:column;justify-content:center;font-size:11px;letter-spacing:.2em;
+    text-transform:uppercase;color:var(--mute);font-weight:800;line-height:1.7;
+  }
+  .ipx-trips__x b{color:var(--gold);font-size:16px;letter-spacing:.04em;font-variant-numeric:tabular-nums}
+
+  /* ---------- the field ---------- */
+  .ipx-fieldwrap{margin-top:12px;border:3px solid var(--chalk);background:var(--turf-a);position:relative}
+  .ipx-nums{position:relative;height:20px;background:linear-gradient(180deg,rgba(0,0,0,.4),transparent)}
+  .ipx-nums span{
+    position:absolute;top:4px;transform:translateX(-50%);font-size:10px;font-weight:800;
+    color:rgba(255,255,255,.62);letter-spacing:.08em;
+  }
+  .ipx-nums span.fifty{color:var(--gold)}
+  .ipx-field{position:relative;padding:9px 0}
+  .ipx-turf{position:absolute;inset:0;background:repeating-linear-gradient(90deg,var(--turf-a) 0 5%,var(--turf-b) 5% 10%)}
+  .ipx-lines{
+    position:absolute;left:var(--ezw);right:var(--ezw);top:0;bottom:0;
+    background:repeating-linear-gradient(90deg,rgba(255,255,255,.22) 0 2px,transparent 2px 10%);
+  }
+  .ipx-lines::before,.ipx-lines::after{content:"";position:absolute;top:0;bottom:0;width:2px;background:rgba(255,255,255,.72)}
+  .ipx-lines::before{left:0}
+  .ipx-lines::after{right:0}
+  .ipx-fifty{position:absolute;left:50%;top:0;bottom:0;width:3px;background:var(--gold);opacity:.65;transform:translateX(-50%)}
+  .ipx-ez{
+    position:absolute;top:0;bottom:0;width:var(--ezw);
+    background:repeating-linear-gradient(135deg,#0f1c2e 0 7px,var(--ez) 7px 14px);
+    display:flex;align-items:center;justify-content:center;
+  }
+  .ipx-ez--l{left:0;border-right:2px solid rgba(255,255,255,.72)}
+  .ipx-ez--r{right:0;border-left:2px solid rgba(255,255,255,.72)}
+  .ipx-ez b{
+    writing-mode:vertical-rl;font-size:10px;letter-spacing:.3em;font-weight:800;
+    color:rgba(255,255,255,.8);text-transform:uppercase;
+  }
+  .ipx-ez--l b{transform:rotate(180deg)}
+
+  .ipx-lane{position:relative;height:40px}
+  .ipx-lane--hub{height:34px}
+
+  .ipx-chip{
+    position:absolute;top:50%;transform:translate(-50%,-50%);
+    display:flex;align-items:center;gap:7px;white-space:nowrap;overflow:hidden;
+    height:30px;padding:0 9px;cursor:pointer;transition:.12s;
+    font-family:var(--cond);font-weight:800;text-transform:uppercase;
+    font-size:clamp(8.5px,2vw,11px);letter-spacing:.07em;
+    border:2px solid var(--c,rgba(255,255,255,.5));
+    background:rgba(6,14,9,.8);color:var(--chalk);
+  }
+  .ipx-chip .n{
+    font-size:9px;color:var(--c,var(--mute));font-variant-numeric:tabular-nums;
+    letter-spacing:.04em;flex:0 0 auto;
+  }
+  .ipx-chip .v{font-size:10px;color:var(--c,var(--gold));flex:0 0 auto;font-variant-numeric:tabular-nums}
+  .ipx-chip--hub{
+    height:26px;border-color:rgba(255,255,255,.42);background:rgba(6,14,9,.72);
+    font-size:clamp(8px,1.8vw,10px);
+  }
+  .ipx-chip:hover{border-color:#fff;background:rgba(6,14,9,.96)}
+  .ipx-chip:focus-visible{outline:3px solid #fff;outline-offset:2px}
+
+  /* state: done = colored in, which is the whole point of the name */
+  .ipx-chip.done{background:var(--c,var(--chalk));border-color:var(--c,var(--chalk));color:#0a0b0c}
+  .ipx-chip.done .n,.ipx-chip.done .v{color:rgba(0,0,0,.6)}
+  .ipx-chip.done--hub{background:var(--chalk);border-color:var(--chalk);color:#0a0b0c}
+  .ipx-chip.mark{
+    background:var(--c,var(--chalk));border-color:#fff;color:#0a0b0c;
+    box-shadow:0 0 0 3px rgba(255,255,255,.4);
+  }
+  .ipx-chip.mark .n,.ipx-chip.mark .v{color:rgba(0,0,0,.65)}
+  .ipx-chip.next{border-style:dashed;border-color:#fff}
+
+  .ipx-tick{position:absolute;top:50%;transform:translate(-50%,-50%);width:7px;height:7px;border-radius:50%;background:var(--c);opacity:.85}
+
+  .ipx-hint{
+    margin:10px 0 0;font-size:11px;color:var(--mute);letter-spacing:.14em;
+    text-transform:uppercase;font-weight:700;line-height:1.75;
+  }
+
+  /* ---------- rail ---------- */
+  .ipx-rail{display:flex;flex-direction:column;gap:3px;margin-top:12px}
+  .ipx-seq{
+    display:grid;grid-template-columns:30px 1fr auto auto;align-items:center;gap:10px;
+    padding:9px 12px;cursor:pointer;text-align:left;width:100%;transition:.12s;
+    background:var(--panel);border:2px solid var(--line);border-left:4px solid var(--c,var(--mute));
+    color:var(--chalk);font-family:var(--cond);font-weight:800;text-transform:uppercase;
+    letter-spacing:.08em;font-size:12px;
+  }
+  .ipx-seq:hover{border-color:var(--mute);border-left-color:var(--c,var(--mute))}
+  .ipx-seq__n{color:var(--mute);font-size:11px;font-variant-numeric:tabular-nums}
+  .ipx-seq__w{font-size:10px;letter-spacing:.16em;color:var(--mute);white-space:nowrap}
+  .ipx-seq__r{
+    background:var(--line);color:var(--chalk);padding:2px 8px;font-size:12px;
+    font-variant-numeric:tabular-nums;min-width:34px;text-align:center;
+  }
+  .ipx-seq.done{background:var(--c,var(--chalk));border-color:var(--c,var(--chalk));color:#0a0b0c}
+  .ipx-seq.done .ipx-seq__n,.ipx-seq.done .ipx-seq__w{color:rgba(0,0,0,.6)}
+  .ipx-seq.done .ipx-seq__r{background:rgba(0,0,0,.72);color:#fff}
+  .ipx-seq.mark{background:var(--c,var(--chalk));border-color:#fff;color:#0a0b0c;box-shadow:inset 0 0 0 2px rgba(255,255,255,.55)}
+  .ipx-seq.mark .ipx-seq__n,.ipx-seq.mark .ipx-seq__w{color:rgba(0,0,0,.65)}
+  .ipx-seq.mark .ipx-seq__r{background:rgba(0,0,0,.72);color:#fff}
+  .ipx-seq.next{border-style:dashed;border-color:#fff;border-left-style:solid}
+  .ipx-seq:focus-visible{outline:3px solid var(--gold);outline-offset:2px}
+
+  /* ---------- partial ---------- */
+  .ipx-partial{margin-top:14px;border:2px solid var(--line);background:var(--panel);padding:16px}
+  .ipx-partial[hidden]{display:none}
+  .ipx-plabel{font-size:11px;letter-spacing:.24em;text-transform:uppercase;color:var(--mute);font-weight:800}
+  .ipx-pstage{
+    margin:6px 0 0;font-size:clamp(17px,4.6vw,24px);font-weight:800;text-transform:uppercase;
+    letter-spacing:.02em;color:var(--gold);
+  }
+  .ipx-pstage small{display:block;font-size:11px;letter-spacing:.16em;color:var(--mute);margin-top:4px}
+  .ipx-chips{display:flex;flex-wrap:wrap;gap:6px;margin-top:12px}
+  .ipx-pick{
+    padding:9px 14px;cursor:pointer;background:transparent;border:2px solid var(--line);color:var(--chalk);
+    font-family:var(--cond);font-weight:800;font-size:13px;letter-spacing:.08em;transition:.12s;
+  }
+  .ipx-pick:hover{border-color:var(--mute)}
+  .ipx-pick[aria-pressed="true"]{background:var(--gold);border-color:var(--gold);color:#1a1405}
+  .ipx-pick:focus-visible{outline:3px solid var(--gold);outline-offset:2px}
+  .ipx-free{display:flex;align-items:center;gap:10px;margin-top:12px;flex-wrap:wrap}
+  .ipx-free label{font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--mute);font-weight:800}
+  .ipx-free input{
+    width:128px;padding:10px 12px;background:var(--ink);border:2px solid var(--line);color:var(--chalk);
+    font-family:var(--cond);font-weight:800;font-size:19px;letter-spacing:.04em;
+  }
+  .ipx-free input:focus{outline:none;border-color:var(--gold)}
+  .ipx-warn{margin:10px 0 0;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--cr2);font-weight:800}
+  .ipx-warn[hidden]{display:none}
+
+  /* ---------- score ---------- */
+  .ipx-score{
+    margin-top:14px;border:3px solid var(--gold);background:var(--ink2);
+    display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.1fr);
+  }
+  .ipx-score__big{padding:22px 18px;border-right:3px solid var(--gold)}
+  .ipx-score__lab{font-size:11px;letter-spacing:.3em;text-transform:uppercase;color:var(--mute);font-weight:800}
+  .ipx-score__num{
+    font-size:clamp(46px,14vw,86px);line-height:.9;font-weight:800;color:var(--gold);
+    letter-spacing:-.02em;margin-top:6px;font-variant-numeric:tabular-nums;
+  }
+  .ipx-score__unit{font-size:12px;letter-spacing:.24em;text-transform:uppercase;color:var(--mute);font-weight:800;margin-top:8px}
+  .ipx-score__det{padding:18px;display:flex;flex-direction:column;justify-content:center}
+  .ipx-row{
+    display:flex;justify-content:space-between;gap:12px;padding:7px 0;border-bottom:1px solid var(--line);
+    font-size:12px;letter-spacing:.08em;text-transform:uppercase;font-weight:700;
+  }
+  .ipx-row:last-child{border-bottom:0}
+  .ipx-row span:first-child{color:var(--mute);min-width:0;overflow:hidden;text-overflow:ellipsis}
+  .ipx-row span:last-child{font-variant-numeric:tabular-nums;white-space:nowrap}
+  .ipx-row--tot{border-top:2px solid var(--gold);margin-top:4px;padding-top:9px;font-size:14px}
+  .ipx-row--tot span{color:var(--gold)!important}
+
+  .ipx-mod{
+    margin-top:12px;display:flex;align-items:flex-start;gap:10px;padding:12px 14px;
+    border:2px solid var(--line);background:var(--panel);cursor:pointer;
+  }
+  .ipx-mod input{width:20px;height:20px;accent-color:var(--cr2);flex:0 0 auto;margin-top:1px;cursor:pointer}
+  .ipx-mod span{font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--mute);font-weight:700;line-height:1.7}
+  .ipx-mod span b{color:var(--chalk)}
+  .ipx-mod[data-on="1"]{border-color:var(--cr2)}
+  .ipx-mod[data-on="1"] span b{color:var(--cr2)}
+
+  .ipx-actions{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px}
+  .ipx-btn{
+    flex:1 1 auto;padding:15px 20px;cursor:pointer;text-align:center;text-decoration:none;
+    font-family:var(--cond);font-weight:800;font-size:13px;letter-spacing:.18em;text-transform:uppercase;
+    border:2px solid var(--chalk);background:transparent;color:var(--chalk);transition:.12s;
+  }
+  .ipx-btn:hover{background:var(--chalk);color:var(--ink)}
+  .ipx-btn--go{background:var(--cr1);border-color:var(--cr1);color:#fff;flex:2 1 260px}
+  .ipx-btn--go:hover{background:#fff;border-color:#fff;color:var(--cr1)}
+  .ipx-btn--ghost{flex:0 1 auto;border-color:var(--line);color:var(--mute)}
+  .ipx-btn:focus-visible{outline:3px solid var(--gold);outline-offset:2px}
+
+  /* ---------- reference ---------- */
+  .ipx-refwrap{overflow-x:auto;-webkit-overflow-scrolling:touch}
+  .ipx-ref{width:100%;border-collapse:collapse;font-size:12px;min-width:430px}
+  .ipx-ref th,.ipx-ref td{padding:9px 10px;border:1px solid var(--line);text-align:left;letter-spacing:.1em;text-transform:uppercase;font-weight:700}
+  .ipx-ref th{background:var(--panel);color:var(--mute);font-size:10px;letter-spacing:.2em}
+  .ipx-ref td{font-variant-numeric:tabular-nums}
+  .ipx-ref td:first-child{color:var(--gold);font-weight:800}
+  .ipx-note{
+    margin-top:14px;border-left:3px solid var(--cr3);padding:12px 14px;background:var(--panel);
+    font-size:12px;line-height:1.85;color:var(--mute);letter-spacing:.06em;
+  }
+  .ipx-note b{color:var(--chalk)}
+  .ipx-note + .ipx-note{margin-top:8px;border-left-color:var(--cr5)}
+  .ipx-key{display:flex;flex-wrap:wrap;gap:12px;margin-top:12px}
+  .ipx-key i{
+    display:flex;align-items:center;gap:7px;font-style:normal;font-size:10px;
+    letter-spacing:.16em;text-transform:uppercase;color:var(--mute);font-weight:800;
+  }
+  .ipx-key i::before{content:"";width:13px;height:13px;background:var(--c);flex:0 0 auto}
+  .ipx-foot{
+    margin-top:36px;padding-top:16px;border-top:1px solid var(--line);
+    font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:#5c646e;line-height:2;
+  }
+  .ipx-foot a{color:#5c646e}
+  .ipx-by{display:block;margin-bottom:6px;font-size:12px;letter-spacing:.22em;font-weight:800;color:var(--gold)}
+
+  @media (prefers-reduced-motion:reduce){*,*::before,*::after{transition-duration:.01ms!important;animation-duration:.01ms!important}}
+  @media (max-width:620px){
+    :root{--ezw:22px}
+    .ipx-score{grid-template-columns:1fr}
+    .ipx-score__big{border-right:0;border-bottom:3px solid var(--gold);padding:18px}
+    .ipx-seq{grid-template-columns:26px 1fr auto;gap:8px;font-size:11px}
+    .ipx-seq__w{display:none}
+    .ipx-chip{height:26px;padding:0 6px;gap:5px}
+    .ipx-chip .n{display:none}
+    .ipx-chip--hub{height:23px}
+    .ipx-lane{height:34px}
+    .ipx-lane--hub{height:29px}
+    .ipx-ez b{font-size:9px;letter-spacing:.2em}
+  }
+</style>
+
+<div class="ipx">
+
+  <header class="ipx-top">
+    <p class="ipx-kicker">F3 Nation &middot; 45-Min AMRAP &middot; Final Week</p>
+    <h1 class="ipx-title">IronPAX <span>Week 4 &mdash; Crayola's Masterpiece</span></h1>
+    <p class="ipx-sub">Scorecard &mdash; Total Reps Only</p>
+    <div class="ipx-links">
+      <a href="https://ironpax.f3greenwood.org/submit" target="_blank" rel="noopener">Submit your score</a>
+      <a href="https://ironpax.f3greenwood.org/bracket" target="_blank" rel="noopener">Bracket</a>
+      <a href="https://f3greenwood.org/all/ironpax-challenge/ironpax-challenge-2026-week-4-crayolas-masterpiece" target="_blank" rel="noopener">Full workout</a>
+    </div>
+  </header>
+
+  <h2 class="ipx-h"><b>1</b> Complete trips</h2>
+  <div class="ipx-trips">
+    <div class="ipx-step">
+      <button type="button" id="ipxMinus" aria-label="One fewer complete trip">&minus;</button>
+      <input id="ipxTrips" type="number" inputmode="numeric" min="0" step="1" value="0" aria-label="Number of complete trips">
+      <button type="button" id="ipxPlus" aria-label="One more complete trip">+</button>
+    </div>
+    <div class="ipx-trips__x">
+      <span>&times; 150 reps per trip</span>
+      <b id="ipxTripReps">0 reps banked</b>
+    </div>
+  </div>
+  <p class="ipx-hint">One trip is all 15 sets &mdash; out to the goal line and back, both sides of the field.</p>
+
+  <h2 class="ipx-h"><b>2</b> Color in what you finished</h2>
+
+  <div class="ipx-fieldwrap">
+    <div class="ipx-nums" id="ipxNums"></div>
+    <div class="ipx-field">
+      <div class="ipx-turf"></div>
+      <div class="ipx-lines"><i class="ipx-fifty"></i></div>
+      <div class="ipx-ez ipx-ez--l"><b>Kraken</b></div>
+      <div class="ipx-ez ipx-ez--r"><b>Kraken</b></div>
+      <div id="ipxLanes" style="position:relative"></div>
+    </div>
+  </div>
+
+  <div class="ipx-key" id="ipxKey"></div>
+
+  <div class="ipx-rail" id="ipxRail"></div>
+
+  <p class="ipx-hint">
+    Tap the last set you finished &mdash; on the field or the list. Everything before it counts.<br>
+    Murder bunnies and block transports are worth nothing, so they aren't listed.
+  </p>
+
+  <div class="ipx-partial" id="ipxPartial">
+    <p class="ipx-plabel">Then &mdash; reps into the next set</p>
+    <p class="ipx-pstage" id="ipxPStage">&mdash;<small id="ipxPMax"></small></p>
+    <div class="ipx-chips" id="ipxPicks"></div>
+    <div class="ipx-free">
+      <label for="ipxFree">Or enter exactly</label>
+      <input id="ipxFree" type="number" inputmode="numeric" min="0" step="1" placeholder="0">
+      <span class="ipx-plabel">reps</span>
+    </div>
+    <p class="ipx-warn" id="ipxWarn" hidden></p>
+  </div>
+
+  <h2 class="ipx-h"><b>3</b> Your score</h2>
+
+  <div class="ipx-score">
+    <div class="ipx-score__big">
+      <p class="ipx-score__lab">Week 4 Total</p>
+      <p class="ipx-score__num" id="ipxTotal">0</p>
+      <p class="ipx-score__unit">Reps</p>
+    </div>
+    <div class="ipx-score__det">
+      <div class="ipx-row"><span>Complete trips</span><span id="ipxTripVal">0 &times; 150 = 0</span></div>
+      <div class="ipx-row"><span>Last set finished</span><span id="ipxLast">None yet</span></div>
+      <div class="ipx-row"><span>Reps this trip</span><span id="ipxThis">0</span></div>
+      <div class="ipx-row"><span id="ipxPartLab">Partial</span><span id="ipxPart">+0</span></div>
+      <div class="ipx-row ipx-row--tot"><span>Total reps</span><span id="ipxTotal2">0</span></div>
+    </div>
+  </div>
+
+  <label class="ipx-mod" id="ipxModWrap" data-on="0">
+    <input type="checkbox" id="ipxMod">
+    <span><b>I modified the workout.</b> The challenge asks you to say so when you submit &mdash; mods are fine, it's you vs you.</span>
+  </label>
+
+  <div class="ipx-actions">
+    <a class="ipx-btn ipx-btn--go" id="ipxSubmit" href="https://ironpax.f3greenwood.org/submit" target="_blank" rel="noopener">Submit 0 to IronPAX &rarr;</a>
+    <button class="ipx-btn" id="ipxCopy" type="button">Copy score</button>
+    <button class="ipx-btn ipx-btn--ghost" id="ipxReset" type="button">Reset</button>
+  </div>
+
+  <h2 class="ipx-h"><b>4</b> By hand</h2>
+  <div class="ipx-refwrap">
+    <table class="ipx-ref">
+      <thead><tr><th>Trips</th><th>Reps</th><th>Trips</th><th>Reps</th></tr></thead>
+      <tbody id="ipxRef"></tbody>
+    </table>
+  </div>
+
+  <div class="ipx-note">
+    <b>The trip:</b> start on the 50. Ten thrusters, then murder bunny out to a depth, do ten, cross to the
+    <b>opposite</b> side, do ten more, and come back to the 50 for ten more thrusters. The depths get further out
+    each time &mdash; 40, 30, 20, 10, goal line. <b>Five thruster sets + five mirrored pairs = 15 sets &times; 10 reps = 150.</b>
+  </div>
+  <div class="ipx-note">
+    <b>Scoring:</b> reps only, and every exercise is 10. The murder bunnies, reverse murder bunnies and block
+    transports score nothing &mdash; they're just how you get there. Reps don't escalate; every trip is the same 150.<br>
+    <b>Modifications:</b> lunges with block for murder bunny; goblet or air squats for thrusters; chest press to
+    knees for pullovers; hand release merkins for manmakers; curls and OH press for the curl-press-OH-squat;
+    weighted big boy sit-ups for BDE sit-ups. Flag any mods on the submission.<br>
+    <b>Deadline:</b> midnight the Sunday after release. Best score counts, so you can run it again.
+  </div>
+
+  <p class="ipx-foot">
+    <b class="ipx-by">Made by Duke from F3 - Cleveland</b>
+    <a href="/ironpax/week-3/">&larr; Week 3</a> &middot; <a href="/ironpax/week-2/">Week 2</a> &middot; <a href="/">Back to the site</a>
+  </p>
+</div>
+
+<script>
+(function(){
+  "use strict";
+
+  var SUBMIT_URL = "https://ironpax.f3greenwood.org/submit";
+  var TRIP = 150;
+  var REPS = 10;            // "Every exercise is 10 reps"
+
+  // Five depths, each a mirrored pair, each with its own crayon.
+  var LEGS = [
+    {yd:40, name:"PULLOVERS TO KNEES",   short:"Pullovers",   c:"var(--cr1)"},
+    {yd:30, name:"MANMAKERS",            short:"Manmakers",   c:"var(--cr2)"},
+    {yd:20, name:"CURL-PRESS-OH SQUAT",  short:"Curl/Press/OHS", c:"var(--cr3)"},
+    {yd:10, name:"BDE SIT-UPS",          short:"BDE Sit-ups", c:"var(--cr4)"},
+    {yd:0,  name:"KRAKEN BURPEES",       short:"Kraken Burpees", c:"var(--cr5)"}
+  ];
+
+  // The Thang, flattened to the 15 scoring sets in order.
+  var STAGES = [];
+  for (var li = 0; li < LEGS.length; li++) {
+    var L = LEGS[li];
+    STAGES.push({name:"THRUSTERS", short:"Thrusters", reps:REPS, yd:50,        hub:true,  leg:li, c:"var(--chalk)", where:"50"});
+    STAGES.push({name:L.name, short:L.short, reps:REPS, yd:L.yd,      hub:false, leg:li, c:L.c, where:(L.yd===0?"GOAL":String(L.yd))});
+    STAGES.push({name:L.name, short:L.short, reps:REPS, yd:100-L.yd,  hub:false, leg:li, c:L.c, where:(L.yd===0?"GOAL":String(L.yd))+" OPP"});
+  }
+  var N = STAGES.length;
+
+  function cum(done){ return done * REPS; }   // every set is 10
+
+  var state = {trips:0, done:0, partial:0, mod:false};
+  try {
+    var s = JSON.parse(localStorage.getItem("ipx-wk4") || "null");
+    if (s) {
+      state.trips   = Math.max(0, s.trips|0);
+      state.done    = Math.max(0, Math.min(N, s.done|0));
+      state.partial = Math.max(0, s.partial|0);
+      state.mod     = !!s.mod;
+    }
+  } catch(e){}
+  function save(){ try{ localStorage.setItem("ipx-wk4", JSON.stringify(state)); }catch(e){} }
+
+  var $ = function(id){ return document.getElementById(id); };
+  var lanesEl = $("ipxLanes"), railEl = $("ipxRail"), freeEl = $("ipxFree"), sub = $("ipxSubmit");
+
+  function pos(y){ return "calc(var(--ezw) + (100% - 2*var(--ezw)) * " + (y/100) + ")"; }
+
+  /* ---------- yard numbers ---------- */
+  (function(){
+    var h = "";
+    for (var y = 10; y <= 90; y += 10) {
+      var lab = y > 50 ? 100 - y : y;
+      h += '<span class="' + (y===50?"fifty":"") + '" style="left:' + pos(y) + '">' + lab + '</span>';
+    }
+    $("ipxNums").innerHTML = h;
+  })();
+
+  /* ---------- field lanes: hub row then its mirrored pair, five times ---------- */
+  (function(){
+    var h = "";
+    for (var i = 0; i < N; i += 3) {
+      // hub row (thrusters at the 50)
+      h += '<div class="ipx-lane ipx-lane--hub">' + chip(i, true) + '</div>';
+      // pair row (near + opposite)
+      h += '<div class="ipx-lane">' + tick(i+1) + tick(i+2) + chip(i+1) + chip(i+2) + '</div>';
+    }
+    lanesEl.innerHTML = h;
+
+    function tick(i){
+      var st = STAGES[i];
+      return '<i class="ipx-tick" style="left:' + pos(st.yd) + ';--c:' + st.c + '"></i>';
+    }
+    function chip(i, hub){
+      var st = STAGES[i], style;
+      // Goal-line chips would hang off the field, so anchor them at the goal line instead.
+      if (st.yd === 0)        style = "left:var(--ezw);transform:translateY(-50%)";
+      else if (st.yd === 100) style = "right:var(--ezw);left:auto;transform:translateY(-50%)";
+      else                    style = "left:" + pos(st.yd);
+      return '<button class="ipx-chip' + (hub ? " ipx-chip--hub" : "") + '" type="button" data-i="' + i + '" ' +
+             'style="' + style + ';--c:' + st.c + '" ' +
+             'aria-label="Set ' + (i+1) + ': ' + st.reps + ' ' + st.name + ' at ' + st.where + '">' +
+               '<span class="n">' + (i+1) + '</span>' +
+               '<span>' + st.name + '</span>' +
+               '<span class="v">' + st.reps + '</span>' +
+             '</button>';
+    }
+  })();
+
+  /* ---------- crayon key ---------- */
+  (function(){
+    var h = "";
+    for (var i = 0; i < LEGS.length; i++) {
+      h += '<i style="--c:' + LEGS[i].c + '">' + LEGS[i].short + ' &middot; ' + (LEGS[i].yd===0?"GOAL":LEGS[i].yd+" YD") + '</i>';
+    }
+    h += '<i style="--c:var(--chalk)">Thrusters &middot; 50 YD</i>';
+    $("ipxKey").innerHTML = h;
+  })();
+
+  /* ---------- rail ---------- */
+  (function(){
+    var h = "";
+    for (var i = 0; i < N; i++) {
+      var st = STAGES[i];
+      h += '<button class="ipx-seq" type="button" data-i="' + i + '" style="--c:' + st.c + '">' +
+             '<span class="ipx-seq__n">' + (i+1) + '</span>' +
+             '<span>' + st.name + '</span>' +
+             '<span class="ipx-seq__w">' + st.where + '</span>' +
+             '<span class="ipx-seq__r">' + st.reps + '</span>' +
+           '</button>';
+    }
+    railEl.innerHTML = h;
+  })();
+
+  function pick(i){
+    var g = i + 1;
+    state.done = (state.done === g) ? g - 1 : g;
+    state.partial = 0;
+    save(); render();
+  }
+  lanesEl.addEventListener("click", function(e){
+    var b = e.target.closest(".ipx-chip"); if (b) pick(+b.dataset.i);
+  });
+  railEl.addEventListener("click", function(e){
+    var b = e.target.closest(".ipx-seq"); if (b) pick(+b.dataset.i);
+  });
+
+  /* ---------- trips ---------- */
+  function setTrips(v){ state.trips = Math.max(0, isNaN(v) ? 0 : v|0); save(); render(); }
+  $("ipxPlus").addEventListener("click", function(){ setTrips(state.trips + 1); });
+  $("ipxMinus").addEventListener("click", function(){ setTrips(state.trips - 1); });
+  $("ipxTrips").addEventListener("input", function(){ setTrips(parseInt(this.value, 10)); });
+
+  /* ---------- partial ---------- */
+  $("ipxPicks").addEventListener("click", function(e){
+    var c = e.target.closest(".ipx-pick"); if (!c) return;
+    state.partial = +c.dataset.v; save(); render();
+  });
+  freeEl.addEventListener("input", function(){
+    var v = parseInt(freeEl.value, 10);
+    state.partial = (isNaN(v) || v < 0) ? 0 : v;
+    save(); render(true);
+  });
+
+  $("ipxMod").addEventListener("change", function(){
+    state.mod = this.checked;
+    $("ipxModWrap").dataset.on = this.checked ? "1" : "0";
+    save();
+  });
+
+  /* ---------- render ---------- */
+  function render(skipInput){
+    var done = state.done;
+
+    for (var i = 0; i < N; i++) {
+      var cls = "";
+      if (done >= i + 1) cls = (done === i + 1) ? "mark" : "done";
+      else if (done === i) cls = "next";
+
+      var chip = lanesEl.querySelector('.ipx-chip[data-i="' + i + '"]');
+      if (chip) {
+        chip.classList.remove("done","mark","next","done--hub");
+        if (cls) {
+          chip.classList.add(cls);
+          if (cls === "done" && STAGES[i].hub) chip.classList.add("done--hub");
+        }
+      }
+      var seq = railEl.querySelector('.ipx-seq[data-i="' + i + '"]');
+      if (seq) { seq.classList.remove("done","mark","next"); if (cls) seq.classList.add(cls); }
+    }
+
+    var pw = $("ipxPartial");
+    if (done >= N) {
+      pw.hidden = true; state.partial = 0;
+    } else {
+      pw.hidden = false;
+      var nx = STAGES[done], max = nx.reps;
+      $("ipxPStage").firstChild.nodeValue = nx.name + " @ " + nx.where + " ";
+      $("ipxPMax").textContent = "Full set = " + max + " reps";
+      freeEl.max = max;
+
+      var h = "";
+      for (var v = 2; v < max; v += 2) {
+        h += '<button class="ipx-pick" type="button" data-v="' + v + '" aria-pressed="' + (state.partial === v) + '">' + v + '</button>';
+      }
+      h += '<button class="ipx-pick" type="button" data-v="0" aria-pressed="' + (state.partial === 0) + '">None</button>';
+      $("ipxPicks").innerHTML = h;
+      if (!skipInput) freeEl.value = state.partial ? state.partial : "";
+
+      var w = $("ipxWarn");
+      if (state.partial >= max) {
+        w.hidden = false;
+        w.textContent = "That's the full set — tap " + nx.name + " instead.";
+      } else { w.hidden = true; }
+    }
+
+    var thisTrip = cum(done);
+    var banked = state.trips * TRIP;
+    var total = banked + thisTrip + state.partial;
+
+    $("ipxTrips").value = state.trips;
+    $("ipxTripReps").textContent = banked + " reps banked";
+    $("ipxTripVal").textContent = state.trips + " × " + TRIP + " = " + banked;
+    $("ipxLast").textContent = done === 0 ? "None yet" : (done + ". " + STAGES[done-1].short);
+    $("ipxThis").textContent = thisTrip;
+    $("ipxPartLab").textContent = done < N ? ("Into " + STAGES[done].short) : "Partial";
+    $("ipxPart").textContent = "+" + state.partial;
+    $("ipxTotal").textContent = total;
+    $("ipxTotal2").textContent = total;
+
+    if (done >= N) {
+      var w2 = $("ipxWarn");
+      w2.hidden = false;
+      w2.textContent = "Full trip colored in — you can bump Complete trips and clear this instead.";
+    }
+
+    $("ipxMod").checked = state.mod;
+    $("ipxModWrap").dataset.on = state.mod ? "1" : "0";
+    sub.innerHTML = "Submit " + total + " to IronPAX &rarr;";
+  }
+
+  if (SUBMIT_URL) sub.href = SUBMIT_URL;
+
+  $("ipxCopy").addEventListener("click", function(){
+    var btn = this, txt = String(state.trips * TRIP + cum(state.done) + state.partial);
+    var fin = function(){ btn.textContent = "Copied " + txt; setTimeout(function(){ btn.textContent = "Copy score"; }, 1600); };
+    if (navigator.clipboard && navigator.clipboard.writeText) navigator.clipboard.writeText(txt).then(fin, fin);
+    else {
+      var ta = document.createElement("textarea");
+      ta.value = txt; document.body.appendChild(ta); ta.select();
+      try { document.execCommand("copy"); } catch(e){}
+      document.body.removeChild(ta); fin();
+    }
+  });
+
+  $("ipxReset").addEventListener("click", function(){
+    state = {trips:0, done:0, partial:0, mod:false};
+    freeEl.value = ""; save(); render();
+  });
+
+  (function(){
+    var h = "";
+    for (var r = 1; r <= 8; r++) h += "<tr><td>" + r + "</td><td>" + (r*TRIP) + "</td><td>" + (r+8) + "</td><td>" + ((r+8)*TRIP) + "</td></tr>";
+    $("ipxRef").innerHTML = h;
+  })();
+
+  render();
+})();
+</script>
+</body>
+</html>{% endraw %}
