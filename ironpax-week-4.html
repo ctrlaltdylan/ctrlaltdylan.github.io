@@ -128,6 +128,19 @@ permalink: /ironpax/week-4/
   }
   .ipx-ez--l b{transform:rotate(180deg)}
 
+  /* all murder bunny work happens inside the 40-to-40 corridor */
+  .ipx-corridor{
+    position:absolute;top:0;bottom:0;
+    background:rgba(255,255,255,.055);
+    border-left:2px dashed rgba(255,255,255,.5);
+    border-right:2px dashed rgba(255,255,255,.5);
+  }
+  .ipx-corridor b{
+    position:absolute;left:50%;top:3px;transform:translateX(-50%);
+    font-size:9px;letter-spacing:.18em;font-weight:800;color:rgba(255,255,255,.62);
+    text-transform:uppercase;white-space:nowrap;
+  }
+
   .ipx-lane{position:relative;height:40px}
   .ipx-lane--hub{height:34px}
 
@@ -280,6 +293,25 @@ permalink: /ironpax/week-4/
   }
   .ipx-note b{color:var(--chalk)}
   .ipx-note + .ipx-note{margin-top:8px;border-left-color:var(--cr5)}
+  /* how you travel between the work */
+  .ipx-moves{margin-top:12px;border:2px solid var(--line);background:var(--panel)}
+  .ipx-moves__h{
+    padding:9px 12px;border-bottom:2px solid var(--line);font-size:10px;
+    letter-spacing:.24em;text-transform:uppercase;color:var(--mute);font-weight:800;
+  }
+  .ipx-move{
+    display:grid;grid-template-columns:auto minmax(96px,150px) 1fr;align-items:center;gap:12px;
+    padding:9px 12px;font-size:11px;letter-spacing:.1em;text-transform:uppercase;font-weight:800;
+  }
+  .ipx-move + .ipx-move{border-top:1px solid var(--line)}
+  .ipx-move__arw{
+    font-size:15px;color:var(--mv,var(--chalk));font-variant-numeric:tabular-nums;
+    letter-spacing:0;white-space:nowrap;
+  }
+  .ipx-move__nm{color:var(--mv,var(--chalk));white-space:nowrap}
+  .ipx-move__d{color:var(--mute);font-weight:700;letter-spacing:.06em;text-transform:none;font-size:11.5px}
+  .ipx-move--rev{background:rgba(255,255,255,.03)}
+
   .ipx-key{display:flex;flex-wrap:wrap;gap:12px;margin-top:12px}
   .ipx-key i{
     display:flex;align-items:center;gap:7px;font-style:normal;font-size:10px;
@@ -345,7 +377,32 @@ permalink: /ironpax/week-4/
       <div class="ipx-lines"><i class="ipx-fifty"></i></div>
       <div class="ipx-ez ipx-ez--l"><b>Kraken</b></div>
       <div class="ipx-ez ipx-ez--r"><b>Kraken</b></div>
+      <div class="ipx-corridor" id="ipxCorridor"><b>Murder Bunny corridor</b></div>
       <div id="ipxLanes" style="position:relative"></div>
+    </div>
+  </div>
+
+  <div class="ipx-moves">
+    <div class="ipx-moves__h">How you travel &mdash; none of it scores</div>
+    <div class="ipx-move" style="--mv:var(--chalk)">
+      <span class="ipx-move__arw">50 &rarr; 40</span>
+      <span class="ipx-move__nm">Forward Murder Bunny</span>
+      <span class="ipx-move__d">Out from the middle to the near 40.</span>
+    </div>
+    <div class="ipx-move ipx-move--rev" style="--mv:var(--cr3)">
+      <span class="ipx-move__arw">40 &rarr;&rarr; 40</span>
+      <span class="ipx-move__nm">Reverse Murder Bunny</span>
+      <span class="ipx-move__d">The full 20 yards across, straight through the 50, to the opposite 40.</span>
+    </div>
+    <div class="ipx-move" style="--mv:var(--chalk)">
+      <span class="ipx-move__arw">40 &rarr; 50</span>
+      <span class="ipx-move__nm">Forward Murder Bunny</span>
+      <span class="ipx-move__d">Opposite 40 back to the middle. Forward again, even though you're now travelling the other way.</span>
+    </div>
+    <div class="ipx-move" style="--mv:var(--cr5)">
+      <span class="ipx-move__arw">40 &#8943; goal</span>
+      <span class="ipx-move__nm">Transport block</span>
+      <span class="ipx-move__d">Everything past the 40s &mdash; 30, 20, 10, goal line. Carry it however you like.</span>
     </div>
   </div>
 
@@ -447,9 +504,14 @@ permalink: /ironpax/week-4/
   var STAGES = [];
   for (var li = 0; li < LEGS.length; li++) {
     var L = LEGS[li];
-    STAGES.push({name:"THRUSTERS", short:"Thrusters", reps:REPS, yd:50,        hub:true,  leg:li, c:"var(--chalk)", where:"50"});
-    STAGES.push({name:L.name, short:L.short, reps:REPS, yd:L.yd,      hub:false, leg:li, c:L.c, where:(L.yd===0?"GOAL":String(L.yd))});
-    STAGES.push({name:L.name, short:L.short, reps:REPS, yd:100-L.yd,  hub:false, leg:li, c:L.c, where:(L.yd===0?"GOAL":String(L.yd))+" OPP"});
+    var deep = L.yd < 40, tag = (L.yd === 0 ? "GOAL" : String(L.yd));
+    STAGES.push({name:"THRUSTERS", short:"Thrusters", reps:REPS, yd:50, hub:true, leg:li,
+                 c:"var(--chalk)", where:"50",
+                 travel: li === 0 ? "Start on the 50" : "Fwd MB back to 50"});
+    STAGES.push({name:L.name, short:L.short, reps:REPS, yd:L.yd, hub:false, leg:li, c:L.c, where:tag,
+                 travel: deep ? ("Fwd MB to 40, carry to " + tag) : "Fwd MB out to 40"});
+    STAGES.push({name:L.name, short:L.short, reps:REPS, yd:100-L.yd, hub:false, leg:li, c:L.c, where:tag + " OPP",
+                 travel: deep ? ("Rev MB across, carry to " + tag) : "Rev MB across to opp 40"});
   }
   var N = STAGES.length;
 
@@ -480,6 +542,13 @@ permalink: /ironpax/week-4/
       h += '<span class="' + (y===50?"fifty":"") + '" style="left:' + pos(y) + '">' + lab + '</span>';
     }
     $("ipxNums").innerHTML = h;
+  })();
+
+  /* ---------- murder bunny corridor: the 40-to-40 span ---------- */
+  (function(){
+    var el = document.getElementById("ipxCorridor");
+    el.style.left  = pos(40);
+    el.style.width = "calc((100% - 2*var(--ezw)) * 0.20)";
   })();
 
   /* ---------- field lanes: hub row then its mirrored pair, five times ---------- */
@@ -531,7 +600,7 @@ permalink: /ironpax/week-4/
       h += '<button class="ipx-seq" type="button" data-i="' + i + '" style="--c:' + st.c + '">' +
              '<span class="ipx-seq__n">' + (i+1) + '</span>' +
              '<span>' + st.name + '</span>' +
-             '<span class="ipx-seq__w">' + st.where + '</span>' +
+             '<span class="ipx-seq__w">' + st.travel + '</span>' +
              '<span class="ipx-seq__r">' + st.reps + '</span>' +
            '</button>';
     }
