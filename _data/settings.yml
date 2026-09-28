@@ -154,16 +154,17 @@ font_settings:
 
 advanced_settings:
   ajax_loading: true
-  analytics_code: |
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-38271182-3"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
+  # Cloudflare Web Analytics site token, from
+  # Cloudflare dashboard > Web Analytics > Manage site.
+  # Not a secret; it is meant to be public in the page HTML.
+  # Blank = no analytics rendered at all.
+  cloudflare_web_analytics_token: ''
 
-      gtag('config', 'UA-38271182-3');
-    </script>
+  # Was Universal Analytics (UA-38271182-3). Google stopped processing UA
+  # hits in July 2023, so the tag collected nothing while still loading
+  # googletagmanager.com on every page. Replaced by Cloudflare Web Analytics
+  # above; see _includes/analytics.html.
+  analytics_code: ''
   custom_styles: ""
   header_js: ""
   footer_js: ""

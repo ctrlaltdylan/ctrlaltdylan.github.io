@@ -1,0 +1,19 @@
+{%- comment -%}
+Cloudflare Web Analytics.
+
+Cookieless and privacy-first, so it needs no consent banner. The site token
+is not a secret -- it identifies the site to the beacon and is designed to
+sit in public HTML -- but it lives in _data/settings.yml so there is exactly
+one place to change it.
+
+Set advanced_settings.cloudflare_web_analytics_token to the token from
+Cloudflare dashboard > Web Analytics > Manage site. While it is blank this
+include renders nothing, so the site simply has no analytics rather than a
+broken beacon.
+
+Cloudflare's docs say to place this before the closing body tag.
+{%- endcomment -%}
+{%- assign cf_token = site.data.settings.advanced_settings.cloudflare_web_analytics_token -%}
+{%- if cf_token and cf_token != "" %}
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "{{ cf_token }}"}'></script>
+{%- endif -%}
