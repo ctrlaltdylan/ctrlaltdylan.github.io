@@ -98,14 +98,22 @@ permalink: /ironpax/week-4/
   .ipx-trips__x b{color:var(--gold);font-size:16px;letter-spacing:.04em;font-variant-numeric:tabular-nums}
 
   /* ---------- the field ---------- */
-  .ipx-fieldwrap{margin-top:12px;border:3px solid var(--chalk);background:var(--turf-a);position:relative}
+  .ipx-fieldwrap{
+    margin-top:12px;border:3px solid var(--chalk);background:var(--turf-a);position:relative;
+    overflow-x:auto;-webkit-overflow-scrolling:touch;
+  }
+  .ipx-fieldwrap > *{min-width:660px}
+  .ipx-swipe{
+    display:none;margin:8px 0 0;font-size:10px;letter-spacing:.18em;text-transform:uppercase;
+    color:var(--mute);font-weight:800;
+  }
   .ipx-nums{position:relative;height:20px;background:linear-gradient(180deg,rgba(0,0,0,.4),transparent)}
   .ipx-nums span{
     position:absolute;top:4px;transform:translateX(-50%);font-size:10px;font-weight:800;
     color:rgba(255,255,255,.62);letter-spacing:.08em;
   }
   .ipx-nums span.fifty{color:var(--gold)}
-  .ipx-field{position:relative;padding:9px 0}
+  .ipx-field{position:relative;padding:21px 0 9px}
   .ipx-turf{position:absolute;inset:0;background:repeating-linear-gradient(90deg,var(--turf-a) 0 5%,var(--turf-b) 5% 10%)}
   .ipx-lines{
     position:absolute;left:var(--ezw);right:var(--ezw);top:0;bottom:0;
@@ -300,8 +308,8 @@ permalink: /ironpax/week-4/
     letter-spacing:.24em;text-transform:uppercase;color:var(--mute);font-weight:800;
   }
   .ipx-move{
-    display:grid;grid-template-columns:auto minmax(96px,150px) 1fr;align-items:center;gap:12px;
-    padding:9px 12px;font-size:11px;letter-spacing:.1em;text-transform:uppercase;font-weight:800;
+    display:grid;grid-template-columns:auto auto 1fr;align-items:baseline;gap:6px 14px;
+    padding:10px 12px;font-size:11px;letter-spacing:.1em;text-transform:uppercase;font-weight:800;
   }
   .ipx-move + .ipx-move{border-top:1px solid var(--line)}
   .ipx-move__arw{
@@ -309,7 +317,10 @@ permalink: /ironpax/week-4/
     letter-spacing:0;white-space:nowrap;
   }
   .ipx-move__nm{color:var(--mv,var(--chalk));white-space:nowrap}
-  .ipx-move__d{color:var(--mute);font-weight:700;letter-spacing:.06em;text-transform:none;font-size:11.5px}
+  .ipx-move__d{
+    color:var(--mute);font-weight:700;letter-spacing:.06em;text-transform:none;
+    font-size:11.5px;line-height:1.55;min-width:0;
+  }
   .ipx-move--rev{background:rgba(255,255,255,.03)}
 
   .ipx-key{display:flex;flex-wrap:wrap;gap:12px;margin-top:12px}
@@ -326,8 +337,13 @@ permalink: /ironpax/week-4/
   .ipx-by{display:block;margin-bottom:6px;font-size:12px;letter-spacing:.22em;font-weight:800;color:var(--gold)}
 
   @media (prefers-reduced-motion:reduce){*,*::before,*::after{transition-duration:.01ms!important;animation-duration:.01ms!important}}
+  @media (max-width:760px){
+    .ipx-swipe{display:block}
+  }
   @media (max-width:620px){
     :root{--ezw:22px}
+    .ipx-move{grid-template-columns:auto 1fr;gap:3px 10px;padding:10px 12px}
+    .ipx-move__d{grid-column:1 / -1;margin-top:2px}
     .ipx-score{grid-template-columns:1fr}
     .ipx-score__big{border-right:0;border-bottom:3px solid var(--gold);padding:18px}
     .ipx-seq{grid-template-columns:26px 1fr auto;gap:8px;font-size:11px}
@@ -377,10 +393,12 @@ permalink: /ironpax/week-4/
       <div class="ipx-lines"><i class="ipx-fifty"></i></div>
       <div class="ipx-ez ipx-ez--l"><b>Kraken</b></div>
       <div class="ipx-ez ipx-ez--r"><b>Kraken</b></div>
-      <div class="ipx-corridor" id="ipxCorridor"><b>Murder Bunny corridor</b></div>
+      <div class="ipx-corridor" id="ipxCorridor"><b>Murder&nbsp;Bunny</b></div>
       <div id="ipxLanes" style="position:relative"></div>
     </div>
   </div>
+
+  <p class="ipx-swipe">&#8596; Swipe the field sideways</p>
 
   <div class="ipx-moves">
     <div class="ipx-moves__h">How you travel &mdash; none of it scores</div>
@@ -397,7 +415,7 @@ permalink: /ironpax/week-4/
     <div class="ipx-move" style="--mv:var(--chalk)">
       <span class="ipx-move__arw">40 &rarr; 50</span>
       <span class="ipx-move__nm">Forward Murder Bunny</span>
-      <span class="ipx-move__d">Opposite 40 back to the middle. Forward again, even though you're now travelling the other way.</span>
+      <span class="ipx-move__d">Opposite 40 back to the middle. Forward again, even though you're now traveling the other way.</span>
     </div>
     <div class="ipx-move" style="--mv:var(--cr5)">
       <span class="ipx-move__arw">40 &#8943; goal</span>
@@ -533,6 +551,8 @@ permalink: /ironpax/week-4/
   var lanesEl = $("ipxLanes"), railEl = $("ipxRail"), freeEl = $("ipxFree"), sub = $("ipxSubmit");
 
   function pos(y){ return "calc(var(--ezw) + (100% - 2*var(--ezw)) * " + (y/100) + ")"; }
+  // distance from the right edge to yard y, for right-anchoring a chip
+  function posR(y){ return "calc(100% - (var(--ezw) + (100% - 2*var(--ezw)) * " + (y/100) + "))"; }
 
   /* ---------- yard numbers ---------- */
   (function(){
@@ -571,6 +591,8 @@ permalink: /ironpax/week-4/
       // Goal-line chips would hang off the field, so anchor them at the goal line instead.
       if (st.yd === 0)        style = "left:var(--ezw);transform:translateY(-50%)";
       else if (st.yd === 100) style = "right:var(--ezw);left:auto;transform:translateY(-50%)";
+      else if (st.yd === 40)  style = "right:" + posR(40) + ";left:auto;margin-right:5px;transform:translateY(-50%)";
+      else if (st.yd === 60)  style = "left:" + pos(60) + ";margin-left:5px;transform:translateY(-50%)";
       else                    style = "left:" + pos(st.yd);
       return '<button class="ipx-chip' + (hub ? " ipx-chip--hub" : "") + '" type="button" data-i="' + i + '" ' +
              'style="' + style + ';--c:' + st.c + '" ' +
